@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.scss";
+import '@/styles/globals.scss';
+
 import LayoutPage from "@/components/layout/LayoutPage";
 import { ChakraProvider } from "@chakra-ui/react";
 
-const inter = Inter({ subsets: ["latin"] });
 
+const inter = Inter({ subsets: ["latin"] });
+ 
 export const metadata: Metadata = {
-  title: "FABRICA 17",
+  title: "GENIUS SCHOOL",
   description:
-    "Костюми · Сукні · Жакети · Спідниці, брюки, шорти · Сорочки, блузи, жилети · Светри, кардигани · Топи/майки · Футболки/лонгсліви · Взуття та аксесуари.",
+    "образование будущего",
 };
 
 export default function RootLayout({
