@@ -6,7 +6,7 @@ export const PHONE_NUMBER4 = '+996990852727'
 
 export const WHATSAPP_NUMBER = PHONE_NUMBER
  
-export const INSTAGRAM = 'vikatourkg'
+ 
 
 export const LOCATION = 'https://2gis.kg/bishkek/search/%D0%A7%D1%83%D0%B9%D0%BA%D0%BE%D0%B2%D0%B0%20132%D0%90/geo/70030076149211179/74.593056%2C42.865871'
 export const LOCATION2 = 'https://2gis.kg/bishkek/search/%D0%A7%D1%83%D0%B9%D0%BA%D0%BE%D0%B2%D0%B0%20132%2F3/geo/70030076169754015/74.593301%2C42.865282'
@@ -22,9 +22,9 @@ export const WHATSAPP_LINK3 = `https://wa.me/${PHONE_NUMBER3}`
 export const WHATSAPP_LINK4 = `https://wa.me/${PHONE_NUMBER4}`
 
  
-export const INSTAGRAM_LINK = `https://instagram.com/${INSTAGRAM}`
+export const INSTAGRAM_LINK = `https://www.instagram.com/genius___school.kg/profilecard/?igsh=bTMxOXQ0aHJpYmRz`
 
-export const TELEGRAM_LINK = `https://t.me/+996706677616`
+export const FACEBOOK_LINK = `https://www.facebook.com/greenschoolNZ/`
 
 export const LOCATION_LINK = 'https://go.2gis.com/g0ust'
 

@@ -81,8 +81,9 @@ const About = () => {
 						</Text>
 						<Box
 							mt={{ md: "16px", base: "-15px" }}
-							w={{ md: "235px", base: "170px" }}
+							w={{ md: "255px", base: "170px" }}
 							h={{ md: "60px", base: "45px" }}
+							p={1}
 							borderRadius={10}
 							bg="#FF9100"
 							transform="rotate(-2deg)">

@@ -2,8 +2,10 @@
 import Description from "@/components/ui/texts/Description";
 import Title from "@/components/ui/texts/Title";
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
+import { WHATSAPP_LINK } from "@/constants/admin";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 import { Box, Button, Container, Flex, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import React, { useEffect } from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
@@ -116,7 +118,7 @@ const Welcome = () => {
 							"Developing your children's talents with care and attention."
 						)}
 					</Description>
-
+      <Link href={WHATSAPP_LINK} target={"_blank"}> 
 					<Button
 						mt={8}
 						fontFamily="Arial"
@@ -138,6 +140,7 @@ const Welcome = () => {
 							<MdOutlineArrowOutward />
 						</span>
 					</Button>
+					</Link>
 				</Flex>
 			</Container>
 		</Box>

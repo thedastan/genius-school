@@ -22,6 +22,8 @@ import {
 import { useLanguageStore } from "@/stores/useLanguageStore";
 import Image from "next/image";
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
+import Link from "next/link";
+import { WHATSAPP_LINK } from "@/constants/admin";
 
 const Header = () => {
 	const { t, language, setLanguage } = useLanguageStore();
@@ -41,7 +43,7 @@ const Header = () => {
 		},
 		{
 			name: t("Руководство", "Leadership"),
-			link: "#leadership", // Updated to a unique link
+			link: "#branches",  
 		},
 		{
 			name: t("Контакты", "Contacts"),
@@ -55,18 +57,7 @@ const Header = () => {
 	const [isMobile, setIsMobile] = useState(false);
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	// const btnRef = React.useRef();
-
-	// const handleScroll = () => {
-	// 	const currentScrollY = window.scrollY;
-
-	// 	if (currentScrollY > lastScrollY && currentScrollY > 100) {
-	// 		setShowHeader(false);
-	// 	} else {
-	// 		setShowHeader(true);
-	// 	}
-	// 	setLastScrollY(currentScrollY);
-	// };
+	 
 	const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		const selectedLanguage = e.target.value as "ru" | "en";
 		setLanguage(selectedLanguage);
@@ -178,6 +169,7 @@ const Header = () => {
 														<option value="en">en</option>
 														<option value="ru">ru</option>
 													</Select>
+													<Link href={WHATSAPP_LINK} target={"_blank"}> 
 
 													<Button
 														fontFamily="Arial"
@@ -199,6 +191,7 @@ const Header = () => {
 															<MdOutlineArrowOutward />
 														</span>
 													</Button>
+													</Link>
 												</Flex>
 											</DrawerBody>
 										</DrawerContent>
@@ -241,7 +234,7 @@ const Header = () => {
 											<option value="en">en</option>
 											<option value="ru">ru</option>
 										</Select>
-
+                <Link href={WHATSAPP_LINK} target={"_blank"}> 
 										<Button
 											fontFamily="Arial"
 											display="flex"
@@ -262,6 +255,7 @@ const Header = () => {
 												<MdOutlineArrowOutward />
 											</span>
 										</Button>
+										</Link>
 									</Flex>
 								</Flex>
 							)}
