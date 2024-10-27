@@ -231,7 +231,7 @@ const Header = () => {
 											value={language}
 											name=""
 											id="">
-											<option value="en">en</option>
+											<option value="en">kg</option>
 											<option value="ru">ru</option>
 										</Select>
                 <Link href={WHATSAPP_LINK} target={"_blank"}> 

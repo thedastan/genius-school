@@ -57,7 +57,7 @@ const Mugs = () => {
 			<Container maxWidth={CONTAINER_WIDTH}>
 				<Box textAlign="center">  
 					<Title fontSize={{ md: 56, base: 40 }} fontFamily="Unbounded">
-					{t("Кружки", "Workshops")}
+					{t("Кружки", "Кружоктор")}
 					</Title>
 
 					<Flex
@@ -74,7 +74,7 @@ const Mugs = () => {
 								p={2}
 								borderRadius={5}
 								>
-								{t("Бесплатные", "Free of charge")}
+								{t("Бесплатные", "Акысыз")}
 							</Title>
 							{box.map((item, index) => (
 								<Flex alignItems="start" key={index} mt={4} gap="6px">
@@ -100,7 +100,7 @@ const Mugs = () => {
 								p={2}
 								borderRadius={5}
 								color="white">
-							{t("Платные", "Paid")}
+							{t("Платные", "Төлөмдүү")}
 							</Title>
 							{box1.map((item, index) => (
 								<Flex alignItems="start" key={index} mt={4} gap="6px">

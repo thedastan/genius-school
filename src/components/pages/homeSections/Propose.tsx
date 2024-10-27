@@ -25,7 +25,7 @@ const Propose = () => {
 						fontFamily="Unbounded"
 						fontSize={{ md: 56, base: 32 }}
 						fontWeight={500}>
-						{t("Что предлагает ", "What does the ")}
+						{t("Что предлагает ", "Эмне сунуштайт")}
 						<Box
 							as="span"
 							backgroundColor="#D5ED9F"

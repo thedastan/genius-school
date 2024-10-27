@@ -71,7 +71,8 @@ const About = () => {
 		<Box id="#about" w="100%" p="100px 0">
 			<Container maxW={CONTAINER_ABOUT}>
 				<Box>
-					<Flex flexDirection={{ md: "row", base: "column" }} gap={2}>
+					<Flex alignItems="center"
+						justifyContent="start" flexDirection={{ md: "row", base: "column" }} gap={2}>
 						<Text
 							color="black"
 							fontFamily="Unbounded"
@@ -80,8 +81,9 @@ const About = () => {
 							{t("О нашей", "Биздин")}
 						</Text>
 						<Box
+						 
 							mt={{ md: "16px", base: "-15px" }}
-							w={{ md: "255px", base: "185px" }}
+							// w={{ md: "255px", base: "185px" }}
 							h={{ md: "60px", base: "45px" }}
 							p={1}
 							borderRadius={10}
