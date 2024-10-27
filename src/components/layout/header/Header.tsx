@@ -30,23 +30,23 @@ const Header = () => {
 
 	const links = [
 		{
-			name: t("Главная", "Home"),
+			name: t("Главная", "Башкы бет"),
 			link: "#home",
 		},
 		{
-			name: t("О школе", "About the School"),
+			name: t("О школе", "Мектеп жөнүндө"),
 			link: "#about",
 		},
 		{
-			name: t("Филиалы", "Branches"),
+			name: t("Филиалы", "Филиалдар"),
 			link: "#branches",
 		},
 		{
-			name: t("Руководство", "Leadership"),
+			name: t("Руководство", "Башчылык"),
 			link: "#branches",  
 		},
 		{
-			name: t("Контакты", "Contacts"),
+			name: t("Контакты", "Байланыштар"),
 			link: "#delivery",
 		},
 	];

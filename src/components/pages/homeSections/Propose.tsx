@@ -75,12 +75,12 @@ const Propose = () => {
 							ml="10px"
 							p={5}>
 							<Text fontSize={22} fontWeight={700}>
-								{t("Школа полного дня", "full-day school.")}
+								{t("Школа полного дня", "Толук күндүк мектеп")}
 							</Text>
 							<Text fontSize={16}>
 								{t(
 									"Ваш ребенок находится под присмотром и обучается с утра до вечера, что удобно для работающих родителей.",
-									"Your child is supervised and taught from morning until evening, which is convenient for working parents."
+									"Сиздин балдарыңыз көзөмөлдө болуп, таңкы сааттан кечкиге чейин окуйт, бул жумушчу ата-энелер үчүн ыңгайлуу."
 								)}
 							</Text>
 						</Flex>
@@ -122,13 +122,13 @@ const Propose = () => {
 							<Text fontSize={22} fontWeight={700}>
 								{t(
 									"Небольшие классы — до 16 учеников",
-									"Small classes - up to 16 students."
+									"Кичинекей класстар — 16 окуучуга чейин."
 								)}
 							</Text>
 							<Text fontSize={16}>
 								{t(
 									"Учителя могут уделить внимание каждому ребенку благодаря малочисленным классам.",
-									"Teachers can give individual attention to each child due to small class sizes."
+									"Устаттар кичинекей класстар аркылуу ар бир балага көңүл бура алышат."
 								)}
 							</Text>
 						</Flex>
@@ -170,13 +170,13 @@ const Propose = () => {
 							<Text fontSize={22} fontWeight={700}>
 								{t(
 									"Сбалансированное 3-разовое питание",
-									"Balanced 3-course meals."
+									"Балансированный 3 жолу тамактануу"
 								)}
 							</Text>
 							<Text fontSize={16}>
 								{t(
 									"	В течение дня дети получают полноценное питание, что помогает поддерживать их энергию и здоровье.",
-									"During the day, children receive a balanced meal, which helps maintain their energy and health."
+									"Күн ичинде балдар толук тамактануу алышат, бул алардын энергиясын жана ден соолугун колдоого жардам берет."
 								)}
 							</Text>
 						</Flex>
@@ -216,12 +216,12 @@ const Propose = () => {
 							ml="6px"
 							p={5}>
 							<Text fontSize={22} fontWeight={700}>
-								{t("Изучение 5 языков", "Learning 5 languages.")}
+								{t("Изучение 5 языков", "5 тилди үйрөнүү")}
 							</Text>
 							<Text fontSize={16}>
 								{t(
 									"Мы обучаем английскому, русскому, китайскому, кыргызскому и программированию, готовя учеников к международному будущему.",
-									"Learning English, Russian, Chinese, Kyrgyz and programming, preparing students for an international future."
+									"English, орус, кытай, кыргыз тилдерин жана программалоону үйрөнүү, студенттерди эл аралык келечекке даярдоо."
 								)}
 							</Text>
 						</Flex>
@@ -261,10 +261,16 @@ const Propose = () => {
 							ml="10px"
 							p={5}>
 							<Text fontSize={22} fontWeight={700}>
-								{t("Выполнение домашних заданий в школе", "Homework in school.")}
+								{t(
+									"Выполнение домашних заданий в школе",
+									"Мектепте үй тапшырмаларын аткаруу"
+								)}
 							</Text>
 							<Text fontSize={16}>
-								{t("Домашние задания выполняются под присмотром учителей, что освобождает время для семьи по вечерам.", "Homework is done under the supervision of teachers, which frees up time for the family in the evenings.")}
+								{t(
+									"Домашние задания выполняются под присмотром учителей, что освобождает время для семьи по вечерам.",
+									"Үй тапшырмалары устаттардын көзөмөлүндө аткарыла, бул кечки убакытты үй-бүлө үчүн бошотот."
+								)}
 							</Text>
 						</Flex>
 					</Box>
@@ -303,10 +309,13 @@ const Propose = () => {
 							ml="10px"
 							p={5}>
 							<Text fontSize={22} fontWeight={700}>
-								{t("5 филиалов по всему Бишкеку", "5 branches in Bishkek")}
+								{t("5 филиалов по всему Бишкеку", "Бишкектеги 5 филиал")}
 							</Text>
 							<Text fontSize={16}>
-								{t("Удобное расположение филиалов по городу позволяет легко выбрать школу рядом с домом.", "The convenient location of branches in the city allows you to easily choose a school near your home.")}
+								{t(
+									"Удобное расположение филиалов по городу позволяет легко выбрать школу рядом с домом.",
+									"Шаардагы филиалдардын ыңгайлуу жайгашуусу, үйдүн жанына жакын мектепти оңой тандоого мүмкүндүк берет."
+								)}
 							</Text>
 						</Flex>
 					</Box>

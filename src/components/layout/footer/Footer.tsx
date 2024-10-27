@@ -21,23 +21,23 @@ const Footer = () => {
 
 	const links = [
 		{
-			name: t("Главная", "Home"),
+			name: t("Главная", "Башкы бет"),
 			link: "#home",
 		},
 		{
-			name: t("О школе", "About the School"),
+			name: t("О школе", "Мектеп жөнүндө"),
 			link: "#about",
 		},
 		{
-			name: t("Филиалы", "Branches"),
+			name: t("Филиалы", "Филиалдар"),
 			link: "#branches",
 		},
 		{
-			name: t("Руководство", "Leadership"),
+			name: t("Руководство", "Башчылык"),
 			link: "#branches", // Updated to a unique link
 		},
 		{
-			name: t("Контакты", "Contacts"),
+			name: t("Контакты", "Байланыштар"),
 			link: "#delivery",
 		},
 	];
@@ -117,7 +117,7 @@ const Footer = () => {
 						justifyContent="space-between"
 						flexDirection={{ lg: "row", base: "column" }}>
 						<Text fontSize="12px" fontWeight={400} color="#FFFFFF">
-							Политика конфиденциальности
+							{t("Политика конфиденциальности","Политикалык конфиденциальносу")}
 						</Text>
 						<Flex flexDirection={{ lg: "row", base: "column" }} gap={4}>
 							{links.map((item, index) => (
@@ -136,7 +136,7 @@ const Footer = () => {
 						</Flex>
 						<Link href={"https://motionweb.kg/"} target="_blank">
 							<Text fontSize="12px" fontWeight={400} color="#FFFFFF">
-								Разработал Motion Web LLC{" "}
+								{t("Разработал Motion Web LLC", "Motion Web LLC-ден жасалган")}
 							</Text>
 						</Link>
 					</Flex>

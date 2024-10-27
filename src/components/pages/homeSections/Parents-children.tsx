@@ -15,29 +15,30 @@ const Parentschildren = () => {
 
 	const box = [
 		{
-			title: t("кружки", "Clubs"),
+			title: t("кружки", "Кружоктор"),
 		},
 		{
 			title: t(
 				"программирование после 4-класса",
-				"Programming after 4th Grade"
+				"4-класстан кийин программалоо"
 			),
 		},
 		{
-			title: t("учебные проекты", "Educational Projects"),
+			title: t("учебные проекты", "Окуу долбоорлору"),
 		},
 		{
-			title: t("китайский язык", "Chinese Language"),
+			title: t("китайский язык", "Кытай тили"),
 		},
 		{
-			title: t("секции", "Sections"),
+			title: t("секции", "Секциялар"),
 		},
 		{
-			title: t("трехразовое питание", "Three Meals a Day"),
+			title: t("трехразовое питание", "Үч жолу тамактануу"),
 		},
 		{
-			title: t("образовательный туризм", "Educational Tourism"),
+			title: t("образовательный туризм", "Билим берүү туризми"),
 		},
+		
 	];
 
 	return (
@@ -62,7 +63,7 @@ const Parentschildren = () => {
 								fontSize={{ md: 50, base: 40 }}
 								fontWeight={500}
 								zIndex={1}>
-								{t("Почему родители","Why Parents")}
+								{t("Почему родители","Эмне учун ата-энелер")}
 							</Title>
 							<Flex
 							flexWrap="wrap"
@@ -76,7 +77,7 @@ const Parentschildren = () => {
 									fontSize={{ md: 50, base: 40 }}
 									fontWeight={500}
 									zIndex={1}>
-									{t("и дети", "and children")}
+									{t("и дети", "жана балдар")}
 								</Text>
 
 								<Box
@@ -94,7 +95,7 @@ const Parentschildren = () => {
 										fontFamily="Unbounded"
 										fontSize={{ md: 50, base: 40 }}
 										fontWeight={500}>
-										{t("выбирают наc", "choose us")}
+										{t("выбирают наc", "бизди тандайт")}
 									</Text>
 								</Box>
 							</Flex>
@@ -103,10 +104,11 @@ const Parentschildren = () => {
 								color="black"
 								mt={6}
 								w={{ md: "80%", base: "100%" }}
-								fontSize={20}>
+								fontSize={20}
+								textAlign="start">
 								{t(
 									"Школа ПРЕДЛАГАЕТ ЦЕЛОСТНУЮ СИСТЕМУ ОБРАЗОВАНИЯ, ВКЛЮЧАЮЩУЮ ИНТЕЛЛЕКТУАЛЬНОЕ, НРАВСТВЕННОЕ, ЭСТЕТИЧЕСКОЕ И ФИЗИЧЕСКОЕ РАЗВИТИЕ:",
-									"The school offers a comprehensive education system, Including intellectual, moral, aesthetic, and physical development:"
+									"Мектеп интеллектуалдык, моралдык, эстетикалык жана физикалык өнүгүүнү камтыган комплекстүү билим берүү системасын сунуштайт:"
 								)}
 							</Description>
 

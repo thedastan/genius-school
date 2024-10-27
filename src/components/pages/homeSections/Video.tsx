@@ -84,7 +84,7 @@ const Video = () => {
 						fontFamily="Unbounded"
 						fontWeight={600}
 						p={4}>
-						{t("Отзывы", "Reviews")}
+						{t("Отзывы", "Пикирлер")}
 					</Text>
 
 					<Button

@@ -7,7 +7,7 @@ interface LanguageStore {
 }
 
 export const useLanguageStore = create<LanguageStore>((set, get) => ({
-  language: "ky", 
+  language: "ru", 
   setLanguage: (language:   "ru" | "ky") => set({ language }),
   t: ( ru: string, en: string) => {
     const currentLanguage = get().language;

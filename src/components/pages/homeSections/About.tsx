@@ -40,7 +40,7 @@ const About = () => {
 			title: t("Цели обучения", "Learning Goals"),
 			disc: t(
 				"Мы воспитываем социально ответственных и уверенных в своих силах учеников.",
-				"We nurture socially responsible and self-confident students."
+				"Биз социалдык жоопкерчиликтүү жана өзүнө ишенген окуучуларды тарбиялайбыз."
 			),
 		},
 		{
@@ -48,7 +48,7 @@ const About = () => {
 			title: t("Современные методики", "Modern Methods"),
 			disc: t(
 				"Мы успешно сочетаем проверенные практики прошлого и современные подходы.",
-				"We successfully combine proven practices of the past with modern approaches."
+				"Биз өткөндүн текшерилген тажрыйбаларын жана заманбап ыкмаларды ийгиликтүү айкалыштырабыз."
 			),
 		},
 		{
@@ -56,14 +56,14 @@ const About = () => {
 			title: t("Genius School", "Genius School"),
 			disc: t(
 				"Наша школа — это лестница, по которой ученики развиваются всесторонне.",
-				"Our school is a ladder for students to develop comprehensively."
+			"Биздин мектебибиз — окуучуларды ар тараптан өнүктүргөн баскыч."
 			),
 		},
 	];
 
 	const links = [
 		{
-			name: t("узнать больше", "learn more"),
+			name: t("узнать больше", "Көбүрөөк маалымат алуу"),
 			link: "#what",
 		},
 	];
@@ -118,11 +118,11 @@ const About = () => {
 									fontWeight={400}
 									lineHeight="40px">
 									&quot;{t("Гениус.Кейджи", "Genius. Cage.")}&quot;{" "}
-									{t("– частная", "- private")}
+									{t("– частная", "- Жеке")}
 									<Box ml={{ md: "12px", base: "0px" }}>
 										{t(
 											"общеобразовательная школа.",
-											"general education school."
+											"Жалпы билим берүү мектеби."
 										)}
 									</Box>
 								</Text>

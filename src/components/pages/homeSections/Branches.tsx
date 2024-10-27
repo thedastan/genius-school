@@ -32,67 +32,71 @@ const Branches = () => {
 	const box = [
 		{
 			url: director,
-			title: t("Директор", "Director"),
-			disc: t("Айтиева Кымбат Сайтбековна", "Aitieva Kymbat Saitbekovna"),
+			title: t("Директор", "Директор"),
+			disc: t("Айтиева Кымбат Сайтбековна", "Айтиева Кымбат Сайтбековна"),
 		},
 		{
 			url: director2,
-			title: t("Академический директор", "Academic Director"),
+			title: t("Академический директор", "Академиялык директор"),
 			disc: t(
 				"Старокожева Анна Владимировна",
-				"Starokozheva Anna Vladimirovna"
+				"Старокожева Анна Владимировна"
 			),
 		},
 		{
 			url: director3,
-			title: t("Замдиректора по ВР", "Deputy Director for Educational Work"),
-			disc: t("Жээналиева Асель Мусаевна", "Zheenalieva Asel Musaevna"),
+			title: t("Замдиректора по ВР", "Билим берүү боюнча орун басар директор"),
+			disc: t("Жээналиева Асель Мусаевна", "Жээналиева Асель Мусаевна"),
 		},
+		
 	];
 
 	const box2 = [
 		{
 			url: director,
-			title: t("Директор", "Director"),
-			disc: t("Айтиева Кымбат Сайтбековна", "Aitieva Kymbat Saitbekovna"),
+			title: t("Директор", "Директор"),
+			disc: t("Айтиева Кымбат Сайтбековна", "Айтиева Кымбат Сайтбековна"),
 		},
 		{
 			url: director4,
-			title: t("Академический директор", "Academic Director"),
+			title: t("Академический директор", "Академиялык директор"),
 			disc: t(
 				"Анастасия Николаевна Борисовская",
-				"Anastasiya Nikolaevna Borisovskaya"
+				"Анастасия Николаевна Борисовская"
 			),
 		},
 		{
 			url: director5,
-			title: t("Замдиректора по ВР", "Deputy Director for Educational Work"),
-			disc: t("Бекташова Элеонора Кыркбаевна", "Bektashova Eleonora Kyrkaeva"),
+			title: t("Замдиректора по ВР", "Билим берүү боюнча орун басар директор"),
+			disc: t("Бекташова Элеонора Кыркбаевна", "Бекташова Элеонора Кыркбаевна"),
 		},
+		
 	];
 
 	const box3 = [
 		{
 			url: director6,
-			title: t("Директор", "Director"),
-			disc: t("Никитенко Светлана Викторовна", "Nikitenko Svitlana Viktorivna"),
+			title: t("Директор", "Директор"),
+			disc: t("Никитенко Светлана Викторовна", "Никитенко Светлана Викторовна"),
 		},
 		{
 			url: director7,
-			title: t("Академический директор", "Academic Director"),
+			title: t("Академический директор", "Академиялык директор"),
 			disc: t(
 				"Чынгышова Айнура Айтманбетовна",
-				"Chyngyshova Ainura Aitmanbetovna"
+				"Чынгышова Айнура Айтманбетовна"
 			),
 		},
+		
 	];
 
 	const box4 = [
 		{
 			url: director8,
-			title: t("Академический директор", "Academic Director"),
-			disc: t("Кекер Лариса Анатольевна", "Keker Larisa Anatolyevna"),
+			title: t("Академический директор", "Академиялык директор"),
+			disc: t("Кекер Лариса Анатольевна", "Кекер Лариса Анатольевна"),
 		},
+		
 	];
 
 	return (
@@ -110,12 +114,12 @@ const Branches = () => {
 						fontFamily="Unbounded"
 						fontSize={{ md: 56, base: 40 }}
 						fontWeight={500}>
-						{t("Филиалы по", "Branches")}
+						{t("Филиалы по", "Бишкектеги")}
 					</Text>
 					<Box
 						mt={{ md: "16px", base: "-15px" }}
-						w={{ md: "380px", base: "270px" }}
-						h={{ md: "69px", base: "45px" }}
+						// w={{ md: "380px", base: "270px" }}
+						h={{ md: "69px", base: "100%" }}
 						borderRadius={10}
 						bg="#D5ED9F"
 						transform="rotate(-2deg)">
@@ -127,7 +131,7 @@ const Branches = () => {
 							fontSize={{ md: 56, base: 40 }}
 							fontWeight={500}
 							p={1}>
-							{t("Бишкеку", "Bishkek")}
+							{t("Бишкеку", "Филиалдар")}
 						</Text>
 					</Box>
 				</Flex>
@@ -153,7 +157,7 @@ const Branches = () => {
 										alt="img"
 									/>
 								</Link>
-								<Text>{t("ул.Чуйкова 132А", "Chuykova St. 132A")}</Text>
+								<Text>{t("ул.Чуйкова 132А", "Чуйкова көчөсү 132А")}</Text>
 							</Flex>
 							<Box
 								display="flex"
@@ -220,7 +224,7 @@ const Branches = () => {
 										alt="img"
 									/>
 								</Link>
-								<Text>{t("ул.Чуйкова 132А", "Chuykova St. 132A")}</Text>
+								<Text>{t("ул.Чуйкова 132А", "Чуйкова көчөсү 132А")}</Text>
 							</Flex>
 							<Box width={50}
 										height={50} bg="white" p={2} borderRadius="50%">
@@ -280,7 +284,7 @@ const Branches = () => {
 										alt="img"
 									/>
 								</Link>
-								<Text>{t("ул.Ден Сяопина 126", "Den Xiaoping St. 126.")}</Text>
+								<Text>{t("ул.Ден Сяопина 126", "Дэн Сяопин көчөсү 126.")}</Text>
 							</Flex>
 							<Box width={51}
 										height={51} bg="white" p={2} borderRadius="50%">
@@ -339,7 +343,7 @@ const Branches = () => {
 										alt="img"
 									/>
 								</Link>
-								<Text>{t("Байтик Баатыра 5К", "Baytik Baatyra 5K.")}</Text>
+								<Text>{t("Байтик Баатыра 5К", "Байтик Баатыр 5К.")}</Text>
 							</Flex>
 							<Box width={51}
 										height={51} bg="white" p={2} borderRadius="50%">
@@ -402,7 +406,7 @@ const Branches = () => {
 								<Text>
 									{t(
 										"Филиал рядом с чуйкова 132А",
-										"Branch next to Chuykova St. 132A"
+									"Чуйкова көчөсү 132Анын жаныдагы филиал"
 									)}
 								</Text>
 							</Flex>

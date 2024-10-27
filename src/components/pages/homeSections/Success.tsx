@@ -15,7 +15,6 @@ import React from "react";
 import SuccessSlider2 from "./SuccessSlider2";
 import SuccessSlider3 from "./SuccessSlider3";
 import SuccessSlider1 from "./SuccessSlider1";
-import { taintObjectReference } from "next/dist/server/app-render/entry-base";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 
 const Success = () => {
@@ -49,7 +48,7 @@ const Success = () => {
 										},
 										_focus: { boxShadow: "none" },
 									}}>
-									{t("Занятия", "Lessons")}
+									{t("Занятия", "Сабактар")}
 								</Tab>
 								<Tab
 									fontWeight={700}
@@ -60,7 +59,7 @@ const Success = () => {
 										},
 										_focus: { boxShadow: "none" },
 									}}>
-									{t("Мероприятия", "Events")}
+									{t("Мероприятия", "Иш-чаралар")}
 								</Tab>
 								<Tab
 									fontWeight={700}
@@ -71,28 +70,30 @@ const Success = () => {
 										},
 										_focus: { boxShadow: "none" },
 									}}>
-									{t("Интерьер", "Interior")}
+									{t("Интерьер", "Интерьер")}
 								</Tab>
 							</TabList>
 
 							<Flex
-								mt={10}
+								textAlign="center"
 								justifyContent="center"
 								alignItems="center"
+								 
+								p="50px 0"
 								flexDirection={{ md: "row", base: "column" }}
 								gap={2}>
 								<Text
 									color="black"
 									fontFamily="Unbounded"
+									h={{ md: "69px", base: "100%" }}
 									fontSize={{ md: 56, base: 40 }}
 									fontWeight={500}>
-									{t("О нашей", "About the")}
+									{t("Успех в", "Жетишкендиктер")}
 								</Text>
 								<Box
-									textAlign="center"
 									mt={{ md: "16px", base: "-15px" }}
-									w={{ md: "235px", base: "175px" }}
-									h={{ md: "60px", base: "45px" }}
+									// w={{ md: "380px", base: "270px" }}
+									h={{ md: "69px", base: "100%" }}
 									borderRadius={10}
 									bg="#FF9100"
 									transform="rotate(-2deg)">
@@ -102,8 +103,9 @@ const Success = () => {
 										transform="rotate(2deg)"
 										fontFamily="Unbounded"
 										fontSize={{ md: 56, base: 40 }}
-										fontWeight={500}>
-										{t("школе", "School")}
+										fontWeight={500}
+										p={1}>
+										{t("каждом кадре", "Ар бир кадрда")}
 									</Text>
 								</Box>
 							</Flex>

@@ -66,28 +66,29 @@ const Stories = () => {
 	const box = [
 		{
 			url: img1,
-			title: t("Международная олимпиада", "International Olympiad"),
-			disc: t("Пару предложений о событии, его значимости и участниках", "A few sentences about the event, its significance, and participants."),
+			title: t("Международная олимпиада", "Эл аралык олимпиада"),
+			disc: t("Пару предложений о событии, его значимости и участниках", "Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."),
 			data: "12.03.2024",
 		},
 		{
 			url: img2,
-			title: t("Олимпиада по футболу", "Football Olympiad"),
-			disc: t("Пару предложений о событии, его значимости и участниках", "A few sentences about the event, its significance, and participants."),
+			title: t("Олимпиада по футболу", "Футбол олимпиадасы"),
+			disc: t("Пару предложений о событии, его значимости и участниках", "Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."),
 			data: "12.03.2024",
 		},
 		{
 			url: img3,
-			title: t("Международная олимпиада", "International Olympiad"),
-			disc: t("Пару предложений о событии, его значимости и участниках", "A few sentences about the event, its significance, and participants."),
+			title: t("Международная олимпиада", "Эл аралык олимпиада"),
+			disc: t("Пару предложений о событии, его значимости и участниках", "Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."),
 			data: "12.03.2024",
 		},
 		{
 			url: img4,
-			title: t("Олимпиада по футболу", "Football Olympiad"),
-			disc: t("Пару предложений о событии, его значимости и участниках", "A few sentences about the event, its significance, and participants."),
+			title: t("Олимпиада по футболу", "Футбол олимпиадасы"),
+			disc: t("Пару предложений о событии, его значимости и участниках", "Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."),
 			data: "12.03.2024",
 		},
+		
 		
 	];
 
@@ -146,7 +147,7 @@ const Stories = () => {
 							fontFamily="Unbounded"
 							fontSize={{ md: 56, base: 40 }}
 							fontWeight={500}>
-								{t("Истории", "Stories")}
+								{t("Истории", "Тарыхтар")}
 						</Text>
 						<Box
 							mt={{ md: "16px", base: "-15px" }}
@@ -164,7 +165,7 @@ const Stories = () => {
 								fontSize={{ md: 56, base: 40 }}
 								fontWeight={500}
 								p={1}>
-									{t("Награды", "Awards")}
+									{t("Награды", "Сыйлыктар")}
 							</Text>
 						</Box>
 					</Flex>
