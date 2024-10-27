@@ -96,6 +96,7 @@ const Mugs = () => {
 								fontSize={{ md: 32, base: 24 }}
 								fontWeight={500}
 								bg="#FF9100"
+								w={{ md: 260, base: 210 }}
 								p={2}
 								borderRadius={5}
 								color="white">

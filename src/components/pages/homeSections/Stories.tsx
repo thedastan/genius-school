@@ -150,9 +150,10 @@ const Stories = () => {
 						</Text>
 						<Box
 							mt={{ md: "16px", base: "-15px" }}
-							w={{ md: "380px", base: "270px" }}
+							w={{ md: "360px", base: "270px" }}
 							h={{ md: "60px", base: "45px" }}
 							borderRadius={10}
+							// p={1}
 							bg="#FF9100"
 							transform="rotate(-2deg)">
 							<Text

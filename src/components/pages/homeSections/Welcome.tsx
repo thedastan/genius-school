@@ -24,8 +24,7 @@ const Welcome = () => {
 		<Box id="#home" position="relative" padding="100px 0" overflow="hidden">
 			<Container maxW={CONTAINER_WIDTH} position="relative">
 				{" "}
-				{/* Set position to relative for absolute children */}
-				{/* Background Video */}
+				 
 				<video
 					autoPlay
 					loop
@@ -38,12 +37,11 @@ const Welcome = () => {
 						height: "100%",
 						objectFit: "cover",
 						borderRadius: "30px",
-						zIndex: -1, // Position behind other content
+						zIndex: -1,  
 					}}>
 					<source src="/genius.mp4" type="video/mp4" />
 					Your browser does not support the video tag.
 				</video>
-				{/* Gradient Overlay */}
 				<Box
 					position="absolute"
 					top="0"
@@ -51,8 +49,8 @@ const Welcome = () => {
 					width="100%"
 					height="100%"
 					borderRadius="30px"
-					bgGradient="linear(to-b, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))" // Adjust colors and opacity as needed
-					zIndex={0} // Set to lower value than the text content
+					bgGradient="linear(to-b, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"  
+					zIndex={0}  
 				/>
 				<Flex
 					className="fon"
@@ -105,7 +103,7 @@ const Welcome = () => {
 						fontSize={{ md: 56, base: 40 }}
 						fontWeight={500}
 						zIndex={1}>
-						 {t("образование будущего","Education of the future.")}
+						 {t("образование будущего","Келечектин билими")}
 					</Title>
 					<Description
 						textAlign={{ md: "start", base: "center" }}
@@ -115,7 +113,7 @@ const Welcome = () => {
 						fontSize={20}>
 						{t(
 							"Развиваем таланты ваших детей с заботой и вниманием",
-							"Developing your children's talents with care and attention."
+							"Балдарыңыздын таланттарын камкордук жана көңүл буруу менен өнүктүрөбүз."
 						)}
 					</Description>
       <Link href={WHATSAPP_LINK} target={"_blank"}> 
@@ -127,9 +125,10 @@ const Welcome = () => {
 						borderRadius="50px"
 						p="20px 10px 20px 20px"
 						fontSize={14}
-						fontWeight={700}
+						fontWeight={600}
+						zIndex={1}
 						color="#00712D">
-						 {t("Записаться на пробный урок","Sign up for a trial lesson")}
+						 {t("Записаться на пробный урок","Сынамык сабакка катталуу")}
 						<span
 							style={{
 								background: "#00712D",

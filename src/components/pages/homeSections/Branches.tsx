@@ -137,25 +137,37 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#2D7A73"
 						p="18px 18px 50px 18px">
-						<Flex justifyContent="space-between" gap={8}>
+						<Flex alignItems="center" justifyContent="space-between"  >
 							<Flex
 								alignItems="center"
 								justifyContent="start"
 								bg="white"
-								w="100%"
+								w="80%"
 								p={2}
 								gap={2}
 								borderRadius="50px">
-								<Link href={LOCATION} target={"_blank"}> 
-
-								<Image style={{ borderRadius: "50%" }} src={twogis} alt="img" />
+								<Link href={LOCATION} target={"_blank"}>
+									<Image
+										style={{ borderRadius: "50%" }}
+										src={twogis}
+										alt="img"
+									/>
 								</Link>
 								<Text>{t("ул.Чуйкова 132А", "Chuykova St. 132A")}</Text>
 							</Flex>
-							<Box bg="white" p={2} borderRadius="50%">
+							<Box
+								display="flex"
+								justifyContent="center"
+								alignItems="center"
+								width={51}
+								height={51}
+								p={2}
+								bg="white"
+								borderRadius="50%">
 								<Link href={WHATSAPP_LINK} target={"_blank"}>
 									<Image
 										width={50}
+										height={50}
 										style={{ borderRadius: "50%" }}
 										src={phone}
 										alt="img"
@@ -172,10 +184,8 @@ const Branches = () => {
 									borderRadius={10}
 									alignItems="center"
 									gap={4}>
-								 
-
 									<Image src={item.url} alt="img" />
-								 
+
 									<Flex flexDirection="column" gap={1}>
 										<Text color="grey" fontSize={14} fontWeight={400}>
 											{item.title}
@@ -194,25 +204,30 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#B698CA"
 						p="18px 18px 50px 18px">
-						<Flex justifyContent="space-between" gap={8}>
+						<Flex justifyContent="space-between"  >
 							<Flex
 								alignItems="center"
 								justifyContent="start"
 								bg="white"
-								w="100%"
+								w="80%"
 								p={2}
 								gap={2}
 								borderRadius="50px">
-								<Link href={LOCATION2} target={"_blank"}> 
-
-								<Image style={{ borderRadius: "50%" }} src={twogis} alt="img" />
+								<Link href={LOCATION2} target={"_blank"}>
+									<Image
+										style={{ borderRadius: "50%" }}
+										src={twogis}
+										alt="img"
+									/>
 								</Link>
 								<Text>{t("ул.Чуйкова 132А", "Chuykova St. 132A")}</Text>
 							</Flex>
-							<Box bg="white" p={2} borderRadius="50%">
+							<Box width={50}
+										height={50} bg="white" p={2} borderRadius="50%">
 								<Link href={WHATSAPP_LINK2} target={"_blank"}>
 									<Image
 										width={50}
+										height={50}
 										style={{ borderRadius: "50%" }}
 										src={phone}
 										alt="img"
@@ -229,10 +244,8 @@ const Branches = () => {
 									borderRadius={10}
 									alignItems="center"
 									gap={4}>
-								 
-
 									<Image src={item.url} alt="img" />
-								 
+
 									<Flex flexDirection="column" gap={1}>
 										<Text color="grey" fontSize={14} fontWeight={400}>
 											{item.title}
@@ -251,25 +264,30 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#F0926C"
 						p="18px 18px 50px 18px">
-						<Flex justifyContent="space-between" gap={8}>
+						<Flex justifyContent="space-between"  >
 							<Flex
 								alignItems="center"
 								justifyContent="start"
 								bg="white"
-								w="100%"
+								w="80%"
 								p={2}
 								gap={2}
 								borderRadius="50px">
-								<Link href={LOCATION3} target={"_blank"}> 
-									
-								<Image style={{ borderRadius: "50%" }} src={twogis} alt="img" />
+								<Link href={LOCATION3} target={"_blank"}>
+									<Image
+										style={{ borderRadius: "50%" }}
+										src={twogis}
+										alt="img"
+									/>
 								</Link>
 								<Text>{t("ул.Ден Сяопина 126", "Den Xiaoping St. 126.")}</Text>
 							</Flex>
-							<Box bg="white" p={2} borderRadius="50%">
+							<Box width={51}
+										height={51} bg="white" p={2} borderRadius="50%">
 								<Link href={WHATSAPP_LINK3} target={"_blank"}>
 									<Image
 										width={50}
+										height={50}
 										style={{ borderRadius: "50%" }}
 										src={phone}
 										alt="img"
@@ -305,24 +323,30 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#F8F5FE"
 						p="18px 18px 50px 18px">
-						<Flex justifyContent="space-between" gap={8}>
+						<Flex justifyContent="space-between"  >
 							<Flex
 								alignItems="center"
 								justifyContent="start"
 								bg="white"
-								w="100%"
+								w={{ md: "88%", base: "80%" }}
 								p={2}
 								gap={2}
 								borderRadius="50px">
-									<Link href={LOCATION4} target={"_blank"}> 
-								<Image style={{ borderRadius: "50%" }} src={twogis} alt="img" />
+								<Link href={LOCATION4} target={"_blank"}>
+									<Image
+										style={{ borderRadius: "50%" }}
+										src={twogis}
+										alt="img"
+									/>
 								</Link>
 								<Text>{t("Байтик Баатыра 5К", "Baytik Baatyra 5K.")}</Text>
 							</Flex>
-							<Box bg="white" p={2} borderRadius="50%">
+							<Box width={51}
+										height={51} bg="white" p={2} borderRadius="50%">
 								<Link href={WHATSAPP_LINK4} target={"_blank"}>
 									<Image
 										width={50}
+										height={50}
 										style={{ borderRadius: "50%" }}
 										src={phone}
 										alt="img"
@@ -359,17 +383,21 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#F8F5FE"
 						p="18px 18px 50px 18px">
-						<Flex justifyContent="space-between" gap={8}>
+						<Flex justifyContent="space-between"  >
 							<Flex
 								alignItems="center"
 								justifyContent="start"
 								bg="white"
-								w="100%"
+								w={{ md: "88%", base: "80%" }}
 								p={2}
 								gap={2}
 								borderRadius="50px">
-									<Link href={LOCATION} target={"_blank"}>  
-								<Image style={{ borderRadius: "50%" }} src={twogis} alt="img" />
+								<Link href={LOCATION} target={"_blank"}>
+									<Image
+										style={{ borderRadius: "50%" }}
+										src={twogis}
+										alt="img"
+									/>
 								</Link>
 								<Text>
 									{t(
@@ -378,10 +406,12 @@ const Branches = () => {
 									)}
 								</Text>
 							</Flex>
-							<Box bg="white" p={2} borderRadius="50%">
+							<Box width={51}
+										height={51} bg="white" p={2} borderRadius="50%">
 								<Link href={WHATSAPP_LINK4} target={"_blank"}>
 									<Image
 										width={50}
+										height={50}
 										style={{ borderRadius: "50%" }}
 										src={phone}
 										alt="img"

@@ -119,7 +119,7 @@ const Parentschildren = () => {
 									<Box
 										key={index}
 										borderRadius="50px"
-										p="6px"
+										p="10px 14px"
 										border="solid 1px grey"
 										 
 										>

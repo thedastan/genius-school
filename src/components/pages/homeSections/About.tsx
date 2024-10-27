@@ -28,11 +28,11 @@ const About = () => {
 			url: image1,
 			title: t(
 				"Достижения учеников и школы",
-				"Achievements of students and the school"
+				"Окуучулар менен мектептин жетишкендиктери"
 			),
 			disc: t(
 				"Наши ученики — победители республиканских и международных олимпиад.",
-				"Our students are winners of national and international olympiads."
+				"Биздин окуучулар — республикалык жана эл аралык олимпиадалардын жеңүүчүлөрү."
 			),
 		},
 		{
@@ -77,14 +77,15 @@ const About = () => {
 							fontFamily="Unbounded"
 							fontSize={{ md: 56, base: 40 }}
 							fontWeight={500}>
-							{t("О нашей", "About the")}
+							{t("О нашей", "Биздин")}
 						</Text>
 						<Box
 							mt={{ md: "16px", base: "-15px" }}
-							w={{ md: "255px", base: "170px" }}
+							w={{ md: "255px", base: "185px" }}
 							h={{ md: "60px", base: "45px" }}
 							p={1}
 							borderRadius={10}
+							textAlign="center"
 							bg="#FF9100"
 							transform="rotate(-2deg)">
 							<Text
@@ -94,7 +95,7 @@ const About = () => {
 								fontFamily="Unbounded"
 								fontSize={{ md: 56, base: 40 }}
 								fontWeight={500}>
-								{t("Школа", "School")}
+								{t("Школе", "Мектеп")}
 							</Text>
 						</Box>
 					</Flex>

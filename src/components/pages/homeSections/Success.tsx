@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
 import {
 	Box,
@@ -23,17 +23,23 @@ const Success = () => {
 	return (
 		<Box w="100%">
 			<Container maxW={CONTAINER_WIDTH}>
-				<Box bg="#F2F5EB" p={{ md: "50px 0", base: "50px 0" }}
-				borderRadius={20}>
+				<Box
+					bg="#F2F5EB"
+					p={{ md: "50px 0", base: "50px 0" }}
+					borderRadius={20}>
 					<Box>
-						<Tabs display="flex"
-						flexDirection="column"
-								justifyContent="center"
-								alignItems="center">
+						<Tabs
+							display="flex"
+							flexDirection="column"
+							justifyContent="center"
+							alignItems="center"
+							textAlign="center">
 							<TabList
-							w={{ md: 350, base: "100%" }}
-								 
-								 >
+								w={{ md: 350, base: "100%" }}
+								display="flex"
+								justifyContent="center"
+								alignItems="center"
+								textAlign="center">
 								<Tab
 									fontWeight={700}
 									sx={{
@@ -70,7 +76,7 @@ const Success = () => {
 							</TabList>
 
 							<Flex
-							mt={10}
+								mt={10}
 								justifyContent="center"
 								alignItems="center"
 								flexDirection={{ md: "row", base: "column" }}
@@ -83,11 +89,10 @@ const Success = () => {
 									{t("О нашей", "About the")}
 								</Text>
 								<Box
+									textAlign="center"
 									mt={{ md: "16px", base: "-15px" }}
-									w={{ md: "235px", base: "165px" }}
+									w={{ md: "235px", base: "175px" }}
 									h={{ md: "60px", base: "45px" }}
-								 
-
 									borderRadius={10}
 									bg="#FF9100"
 									transform="rotate(-2deg)">

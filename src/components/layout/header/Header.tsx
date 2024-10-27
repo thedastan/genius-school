@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
-import logo from "../../../assets/header.png";
+import logo from "../../../assets/logo.png";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 import {
@@ -59,7 +59,7 @@ const Header = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	 
 	const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
-		const selectedLanguage = e.target.value as "ru" | "en";
+		const selectedLanguage = e.target.value as "ru" | "ky";
 		setLanguage(selectedLanguage);
 	};
 	useEffect(() => {
@@ -113,7 +113,7 @@ const Header = () => {
 									display={{ lg: "flex", base: "block" }}
 									alignItems="center"
 									gap={5}>
-									<Image src={logo} alt="" />
+									<Image width={80} height={80} src={logo} alt="" />
 								</Box>
 							</ScrollLink>
 						</Box>
@@ -166,7 +166,7 @@ const Header = () => {
 														value={language}
 														name=""
 														id="">
-														<option value="en">en</option>
+														<option value="ky">kg</option>
 														<option value="ru">ru</option>
 													</Select>
 													<Link href={WHATSAPP_LINK} target={"_blank"}> 
