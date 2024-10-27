@@ -180,7 +180,7 @@ const Header = () => {
 														fontSize={14}
 														fontWeight={700}
 														color="#00712D">
-														{t("Записаться", "Sign up")}
+														{t("Записаться", "Катталуу")}
 														<span
 															style={{
 																background: "#00712D",

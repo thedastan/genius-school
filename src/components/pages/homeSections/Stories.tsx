@@ -120,7 +120,7 @@ const Stories = () => {
 								},
 								_focus: { boxShadow: "none" },
 							}}>
-							{t("Истории", "Stories")}
+							{t("Истории", "Тарыхтар")}
 						</Tab>
 						<Tab
 							fontWeight={700}
@@ -131,7 +131,7 @@ const Stories = () => {
 								},
 								_focus: { boxShadow: "none" },
 							}}>
-							{t("Награды", "Awards")}
+							{t("Награды", "Сыйлыктар")}
 						</Tab>
 					</TabList>
 
@@ -151,8 +151,8 @@ const Stories = () => {
 						</Text>
 						<Box
 							mt={{ md: "16px", base: "-15px" }}
-							w={{ md: "360px", base: "270px" }}
-							h={{ md: "60px", base: "45px" }}
+							// w={{ md: "360px", base: "270px" }}
+							h={{ md: "60px", base: "100%" }}
 							borderRadius={10}
 							// p={1}
 							bg="#FF9100"

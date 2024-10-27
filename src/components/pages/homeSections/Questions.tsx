@@ -70,7 +70,7 @@ const Questions = () => {
 							fontFamily="Unbounded"
 							fontSize={{ md: 56, base: 40 }}
 							fontWeight={500}>
-							{t("& Ответы", "& Answers")}
+							{t("& Ответы", "&  Жообтор")}
 						</Text>
 					</Box>
 				</Flex> 

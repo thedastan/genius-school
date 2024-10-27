@@ -116,9 +116,9 @@ const Footer = () => {
 						textAlign="center"
 						justifyContent="space-between"
 						flexDirection={{ lg: "row", base: "column" }}>
-						<Text fontSize="12px" fontWeight={400} color="#FFFFFF">
+						{/* <Text fontSize="12px" fontWeight={400} color="#FFFFFF">
 							{t("Политика конфиденциальности","Политикалык конфиденциальносу")}
-						</Text>
+						</Text> */}
 						<Flex flexDirection={{ lg: "row", base: "column" }} gap={4}>
 							{links.map((item, index) => (
 								<Text key={index} fontSize="14px">
@@ -136,7 +136,7 @@ const Footer = () => {
 						</Flex>
 						<Link href={"https://motionweb.kg/"} target="_blank">
 							<Text fontSize="12px" fontWeight={400} color="#FFFFFF">
-								{t("Разработал Motion Web LLC", "Motion Web LLC-ден жасалган")}
+								{t("Разработал Motion Web LLC", "Motion Web LLC тарабынан жасалган")}
 							</Text>
 						</Link>
 					</Flex>

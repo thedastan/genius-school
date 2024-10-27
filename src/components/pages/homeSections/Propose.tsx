@@ -22,10 +22,10 @@ const Propose = () => {
 					<Text
 						w="70%"
 						color="black"
-						fontFamily="Unbounded"
+						fontFamily="Montserrat ,sans-serif"
 						fontSize={{ md: 56, base: 32 }}
 						fontWeight={500}>
-						{t("Что предлагает ", "Эмне сунуштайт")}
+						{t("Что предлагает ", "Genius School ")}
 						<Box
 							as="span"
 							backgroundColor="#D5ED9F"
@@ -36,7 +36,9 @@ const Propose = () => {
 							display="inline-block"
 							marginLeft={{ md: "10px", base: "0px" }}
 							p={1}>
-							<Text transform="rotate(2deg)">Genius School</Text>
+							<Text transform="rotate(2deg)">
+								{t("Genius School ", "Эмнени сунуштайт")}
+							</Text>
 						</Box>
 					</Text>
 				</Flex>
@@ -55,7 +57,7 @@ const Propose = () => {
 						<Box
 							w={{ md: 340, base: "100%" }}
 							h={200}
-							bg="#D5ED9F"
+							bg="#D3D3D3"
 							borderRadius={10}
 							transform="rotate(5deg)"
 							transition="0.2s"
@@ -68,7 +70,7 @@ const Propose = () => {
 							h={200}
 							bg="white"
 							transition="0.2s"
-							_groupHover={{ bg: "#D5ED9F", transition: "0.2s" }}
+							_groupHover={{ bg: "#D3D3D3", transition: "0.2s" }}
 							borderRadius={10}
 							transform="rotate(0deg)"
 							mt={-210}
@@ -148,7 +150,7 @@ const Propose = () => {
 						<Box
 							w={{ md: 340, base: "100%" }}
 							h={200}
-							bg="#D5ED9F"
+							bg="#D3D3D3"
 							borderRadius={10}
 							transform="rotate(-3deg)"
 							transition="0.2s"
@@ -161,7 +163,7 @@ const Propose = () => {
 							h={200}
 							bg="white"
 							transition="0.2s"
-							_groupHover={{ bg: "#D5ED9F", transition: "0.2s" }}
+							_groupHover={{ bg: "#D3D3D3", transition: "0.2s" }}
 							borderRadius={10}
 							transform="rotate(0deg)"
 							mt={-210}
@@ -241,7 +243,7 @@ const Propose = () => {
 						<Box
 							w={{ md: 340, base: "100%" }}
 							h={200}
-							bg="#D5ED9F"
+							bg="#D3D3D3"
 							borderRadius={10}
 							transform="rotate(5deg)"
 							transition="0.2s"
@@ -254,7 +256,7 @@ const Propose = () => {
 							h={200}
 							bg="white"
 							transition="0.2s"
-							_groupHover={{ bg: "#D5ED9F", transition: "0.2s" }}
+							_groupHover={{ bg: "#D3D3D3", transition: "0.2s" }}
 							borderRadius={10}
 							transform="rotate(0deg)"
 							mt={-210}
@@ -289,7 +291,7 @@ const Propose = () => {
 						<Box
 							w={{ md: 340, base: "100%" }}
 							h={200}
-							bg="#D5ED9F"
+							bg="#D3D3D3"
 							borderRadius={10}
 							transform="rotate(5deg)"
 							transition="0.2s"
@@ -302,7 +304,7 @@ const Propose = () => {
 							h={200}
 							bg="white"
 							transition="0.2s"
-							_groupHover={{ bg: "#D5ED9F", transition: "0.2s" }}
+							_groupHover={{ bg: "#D3D3D3", transition: "0.2s" }}
 							borderRadius={10}
 							transform="rotate(0deg)"
 							mt={-210}
@@ -315,6 +317,99 @@ const Propose = () => {
 								{t(
 									"Удобное расположение филиалов по городу позволяет легко выбрать школу рядом с домом.",
 									"Шаардагы филиалдардын ыңгайлуу жайгашуусу, үйдүн жанына жакын мектепти оңой тандоого мүмкүндүк берет."
+								)}
+							</Text>
+						</Flex>
+					</Box>
+
+					<Box p={2} role="group">
+						<Image
+							style={{
+								marginLeft: "30px",
+								position: "absolute",
+								marginTop: "-40px",
+								zIndex: "10",
+							}}
+							src={img2}
+							alt="img"
+						/>
+						<Box
+							w={{ md: 340, base: "100%" }}
+							h={200}
+							bg="#F8C376"
+							borderRadius={10}
+							transform="rotate(-4deg)"
+							transition="0.2s"
+							_groupHover={{ bg: "White", transition: "0.2s" }}></Box>
+
+						<Flex
+							flexDirection="column"
+							gap={2}
+							w={{ md: 340, base: "100%" }}
+							h={200}
+							bg="white"
+							transition="0.2s"
+							_groupHover={{ bg: "#F8C376", transition: "0.2s" }}
+							borderRadius={10}
+							transform="rotate(0deg)"
+							mt={-210}
+							ml="6px"
+							p={5}>
+							<Text fontSize={22} fontWeight={700}>
+								{t("Ерансфер с дома на школу со школы домой", "5 тилди үйрөнүү")}
+							</Text>
+							<Text fontSize={16}>
+								{t(
+									"Мы предлагаем удобный и безопасный трансфер для учеников, обеспечивая перевозку с дома в школу и обратно.",
+									"English, орус, кытай, кыргыз тилдерин жана программалоону үйрөнүү, студенттерди эл аралык келечекке даярдоо."
+								)}
+							</Text>
+						</Flex>
+					</Box>
+
+					<Box p={2} role="group">
+						<Image
+							style={{
+								marginLeft: "30px",
+								position: "absolute",
+								marginTop: "-40px",
+								zIndex: "10",
+							}}
+							src={img}
+							alt="img"
+						/>
+						<Box
+							w={{ md: 340, base: "100%" }}
+							h={200}
+							bg="#D3D3D3"
+							borderRadius={10}
+							transform="rotate(5deg)"
+							transition="0.2s"
+							_groupHover={{ bg: "White", transition: "0.2s" }}></Box>
+
+						<Flex
+							flexDirection="column"
+							gap={2}
+							w={{ md: 340, base: "100%" }}
+							h={200}
+							bg="white"
+							transition="0.2s"
+							_groupHover={{ bg: "#D3D3D3", transition: "0.2s" }}
+							borderRadius={10}
+							transform="rotate(0deg)"
+							mt={-210}
+							ml="10px"
+							p={5}>
+							<Text fontSize={22} fontWeight={700}>
+								{t(
+									"Кружки",
+									"Мектепте үй тапшырмаларын аткаруу"
+								)}
+							</Text>
+							<Text fontSize={16}>
+								{t(
+									"Мы предлагаем широкий выбор кружков, направленных на развитие талантов и интересов наших учеников.",
+									"Үй тапшырмалары устаттардын көзөмөлүндө аткарыла, бул кечки убакытты үй-бүлө үчүн бошотот."
 								)}
 							</Text>
 						</Flex>

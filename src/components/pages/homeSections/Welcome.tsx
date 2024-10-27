@@ -15,7 +15,7 @@ const Welcome = () => {
 	useEffect(() => {
 		const link = document.createElement("link");
 		link.href =
-			"https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&display=swap";
+			 "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
 		link.rel = "stylesheet";
 		document.head.appendChild(link);
 	}, []);
@@ -71,25 +71,25 @@ const Welcome = () => {
 						gap={2}>
 						<Box
 							mt={{ md: "16px", base: "-15px" }}
-							w={{ md: "275px", base: "210px" }}
+							// w={{ md: "275px", base: "210px" }}
 							h={{ md: "60px", base: "45px" }}
 							p={1}
 							borderRadius={10}
-							bg="#D5ED9F"
+							bg="#D3D3D3"
 							transform="rotate(2deg)">
 							<Text
 								mt={{ md: "-16px", base: "-10px" }}
-								color="#00712D"
+								color="#FF9100"
 								transform="rotate(-2deg)"
-								fontFamily="Unbounded"
+								fontFamily="Montserrat ,sans-serif"
 								fontSize={{ md: 56, base: 40 }}
-								fontWeight={500}>
-								GENIUS
+								fontWeight={600}>
+								GENIUS.KG
 							</Text>
 						</Box>
 						<Text
 							color="white"
-							fontFamily="Unbounded"
+							fontFamily="Montserrat ,sans-serif"
 							fontSize={{ md: 56, base: 40 }}
 							fontWeight={500}
 							zIndex={1}>
@@ -99,7 +99,7 @@ const Welcome = () => {
 
 					<Title
 						color="white"
-						fontFamily="Unbounded"
+						fontFamily="Montserrat ,sans-serif"
 						fontSize={{ md: 56, base: 40 }}
 						fontWeight={500}
 						zIndex={1}>

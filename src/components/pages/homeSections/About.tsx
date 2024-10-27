@@ -18,7 +18,7 @@ const About = () => {
 	useEffect(() => {
 		const link = document.createElement("link");
 		link.href =
-			"https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&display=swap";
+			"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap";
 		link.rel = "stylesheet";
 		document.head.appendChild(link);
 	}, []);
@@ -37,7 +37,7 @@ const About = () => {
 		},
 		{
 			url: image2,
-			title: t("Цели обучения", "Learning Goals"),
+			title: t("Цели обучения", "Окуу максаттары"),
 			disc: t(
 				"Мы воспитываем социально ответственных и уверенных в своих силах учеников.",
 				"Биз социалдык жоопкерчиликтүү жана өзүнө ишенген окуучуларды тарбиялайбыз."
@@ -45,7 +45,7 @@ const About = () => {
 		},
 		{
 			url: image3,
-			title: t("Современные методики", "Modern Methods"),
+			title: t("Современные методики", "Заманава методдор"),
 			disc: t(
 				"Мы успешно сочетаем проверенные практики прошлого и современные подходы.",
 				"Биз өткөндүн текшерилген тажрыйбаларын жана заманбап ыкмаларды ийгиликтүү айкалыштырабыз."
@@ -75,12 +75,12 @@ const About = () => {
 						justifyContent="start" flexDirection={{ md: "row", base: "column" }} gap={2}>
 						<Text
 							color="black"
-							fontFamily="Unbounded"
+							fontFamily="Montserrat ,sans-serif"
 							fontSize={{ md: 56, base: 40 }}
 							fontWeight={500}>
-							{t("О нашей", "Биздин")}
+							{t("О Школе", "Мектеп жөнүндө ")}
 						</Text>
-						<Box
+						{/* <Box
 						 
 							mt={{ md: "16px", base: "-15px" }}
 							// w={{ md: "255px", base: "185px" }}
@@ -99,7 +99,7 @@ const About = () => {
 								fontWeight={500}>
 								{t("Школе", "Мектеп")}
 							</Text>
-						</Box>
+						</Box> */}
 					</Flex>
 
 					<Flex mt="40px" flexWrap="wrap" justifyContent="center" gap={10}>
@@ -108,7 +108,7 @@ const About = () => {
 							w={{ md: 760, base: "100%" }}
 							h={{ md: 300, base: "100%" }}
 							p={{ md: 8, base: 4 }}
-							bg="#D5ED9F"
+							bg="#D3D3D3"
 							borderRadius={20}>
 							<Image width={23} height={23} src={img} alt="" />
 							<Box p={6}>

@@ -108,7 +108,6 @@ const Video = () => {
 								borderRadius={20}
 								padding="0 20px"
 								position="relative">
-								{/* Video iframe */}
 								<iframe
 									className="video"
 									width="100%"
@@ -116,7 +115,6 @@ const Video = () => {
 									style={{ borderRadius: "20px" }}
 									src={el.link}></iframe>
 
-								{/* Transparent overlay to block clicks */}
 								<Box
 									position="absolute"
 									top="0"
@@ -126,21 +124,18 @@ const Video = () => {
 									borderRadius="20px"
 									background="transparent"
 									zIndex="1"
-									// bg="red"
 								/>
 
-								{/* Button to open modal */}
 								<Box bg="red" w="100%" display="flex" justifyContent="center">
 									<Button
 										onClick={() => openModal(el.link)}
 										position="absolute"
-										bottom="210px"
-										// left="130px"
+										bottom="200px"
 										zIndex="2"
 										borderRadius="50%"
 										display="flex"
-										w={20}
-										h={20}
+										w={24}
+										h={24}
 										bg="white"
 										color="#E03124"
 										fontSize={26}>
@@ -153,7 +148,6 @@ const Video = () => {
 				</Box>
 			</Container>
 
-			{/* Modal for video playback */}
 			<Modal size="6xl" isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />
 				<ModalContent>

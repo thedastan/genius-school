@@ -34,7 +34,7 @@ const Success = () => {
 							alignItems="center"
 							textAlign="center">
 							<TabList
-								w={{ md: 350, base: "100%" }}
+								w={{ md: 400, base: "100%" }}
 								display="flex"
 								justifyContent="center"
 								alignItems="center"
