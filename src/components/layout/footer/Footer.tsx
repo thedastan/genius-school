@@ -13,6 +13,7 @@ import Link from "next/link";
 import {
 	FACEBOOK_LINK,
 	INSTAGRAM_LINK,
+	PHONE_NUMBER_FIXSET,
 	WHATSAPP_LINK,
 } from "@/constants/admin";
 
@@ -44,6 +45,27 @@ const Footer = () => {
 	return (
 		<Box p="50px 0" bg="#1A1A1A" color="white">
 			<Container maxW={CONTAINER_WIDTH}>
+				<Link href={WHATSAPP_LINK} target={"_blank"}>
+					<Box
+						borderRadius="50%"
+						zIndex={1}
+						boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+						bg="white"
+						position="fixed" // Добавляем фиксированное позиционирование для Box
+						bottom={{ lg: "60px", base: "5px" }} // Расстояние от нижнего края
+						right={{ lg: "65px", base: "5px" }} // Расстояние от правого края
+					>
+						<Button
+							w={20}
+							h={20}
+							borderRadius="50%"
+							color="#1FBF35"
+							fontSize={40}>
+							<IoLogoWhatsapp />
+						</Button>
+					</Box>
+				</Link>
+
 				<Flex flexDirection="column" gap={10}>
 					<Flex
 						flexDirection={{ lg: "row", base: "column" }}
@@ -54,25 +76,25 @@ const Footer = () => {
 							textAlign={{ lg: "start", base: "center" }}
 							flexDirection={{ lg: "row", base: "column" }}
 							gap={4}>
-								<ScrollLink
+							<ScrollLink
 								activeClass="active"
 								to="#home"
 								spy={true}
 								smooth={true}
 								offset={-100}
 								duration={700}>
-								 <Image src={logo} alt="img" />
+								<Image src={logo} alt="img" />
 							</ScrollLink>
-							 
+
 							<Text
 								fontSize={{ lg: 22, base: 18 }}
 								fontWeight={400}
-								fontFamily="Unbounded">
+								fontFamily="Montserrat ,sans-serif">
 								Общеобразовательная <br /> частная школа
 							</Text>
 						</Flex>
 
-						<Flex gap={4}>
+						<Flex gap={4} mt={6}>
 							<Link href={INSTAGRAM_LINK} target={"_blank"}>
 								<Button
 									p={2}
@@ -121,7 +143,7 @@ const Footer = () => {
 						</Text> */}
 						<Flex flexDirection={{ lg: "row", base: "column" }} gap={4}>
 							{links.map((item, index) => (
-								<Text key={index} fontSize="14px">
+								<Text key={index} fontSize={{ lg: "14px", base: "20px" }}>
 									<ScrollLink
 										activeClass="active"
 										to={item.link}
@@ -135,8 +157,11 @@ const Footer = () => {
 							))}
 						</Flex>
 						<Link href={"https://motionweb.kg/"} target="_blank">
-							<Text fontSize="12px" fontWeight={400} color="#FFFFFF">
-								{t("Разработал Motion Web LLC", "Motion Web LLC тарабынан жасалган")}
+							<Text mt={6} fontSize="12px" fontWeight={400} color="#FFFFFF">
+								{t(
+									"Разработал Motion Web LLC",
+									"Motion Web LLC тарабынан жасалган"
+								)}
 							</Text>
 						</Link>
 					</Flex>

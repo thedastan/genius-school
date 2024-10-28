@@ -3,7 +3,7 @@ import Description from "@/components/ui/texts/Description";
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
 import { Box, Container, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../../../assets/kit.png";
 import img2 from "../../../assets/bird.png";
 import img3 from "../../../assets/cloud.png";
@@ -12,6 +12,15 @@ import Title from "@/components/ui/texts/Title";
 
 const Parentschildren = () => {
 	const { t } = useLanguageStore();
+
+
+	useEffect(() => {
+		const link = document.createElement("link");
+		link.href =
+			"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap";
+		link.rel = "stylesheet";
+		document.head.appendChild(link);
+	}, []);
 
 	const box = [
 		{
@@ -38,7 +47,6 @@ const Parentschildren = () => {
 		{
 			title: t("образовательный туризм", "Билим берүү туризми"),
 		},
-		
 	];
 
 	return (
@@ -48,7 +56,8 @@ const Parentschildren = () => {
 					<Flex
 						flexDirection={{ md: "row", base: "column" }}
 						bg="#F2F5EB"
-						p={{ md: 10, base: 4 }}>
+						p={{ md: 10, base: 4 }}
+						borderRadius={20}>
 						<Flex
 							flexDirection="column"
 							justifyContent="start"
@@ -59,43 +68,39 @@ const Parentschildren = () => {
 							<Title
 								textAlign="center"
 								color="black"
-								fontFamily="Unbounded"
-								fontSize={{ md: 50, base: 40 }}
+								fontFamily="Montserrat ,sans-serif"
+								fontSize={{ md: 50, base: 34 }}
 								fontWeight={500}
 								zIndex={1}>
-								{t("Почему родители","Эмне учун ата-энелер")}
+								{t("", "")}
 							</Title>
 							<Flex
-							flexWrap="wrap"
+								flexWrap="wrap"
 								textAlign="center"
 								alignItems={{ md: "start", base: "center" }}
 								flexDirection={{ md: "row", base: "column" }}
 								gap={2}>
 								<Text
 									color="black"
-									fontFamily="Unbounded"
-									fontSize={{ md: 50, base: 40 }}
+									fontFamily="Montserrat ,sans-serif"
+									fontSize={{ md: 50, base: 34 }}
 									fontWeight={500}
 									zIndex={1}>
-									{t("и дети", "жана балдар")}
+									{t("Почему нас ", "Бизди тандоо")}
 								</Text>
 
 								<Box
-									mt={{ md: "16px", base: "-10px" }}
-									w={{ md: "500px", base: "100%" }}
-									h={{ md: "60px", base: "100%" }}
 									p={1}
 									borderRadius={10}
 									bg="#D5ED9F"
 									transform="rotate(-2deg)">
 									<Text
-										mt={{ md: "-16px", base: "-10px" }}
 										color="#00712D"
 										transform="rotate(2deg)"
-										fontFamily="Unbounded"
-										fontSize={{ md: 50, base: 40 }}
+										fontFamily="Montserrat ,sans-serif"
+										fontSize={{ md: 50, base: 34 }}
 										fontWeight={500}>
-										{t("выбирают наc", "бизди тандайт")}
+										{t("выбирают", "   себеби")}
 									</Text>
 								</Box>
 							</Flex>
@@ -122,9 +127,7 @@ const Parentschildren = () => {
 										key={index}
 										borderRadius="50px"
 										p="10px 14px"
-										border="solid 1px grey"
-										 
-										>
+										border="solid 1px grey">
 										<Text fontSize={{ md: 16, base: 12 }} fontWeight={400}>
 											{item.title}
 										</Text>

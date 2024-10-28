@@ -41,7 +41,7 @@ const Stories = () => {
 	const sliderRef2 = useRef<Slider | null>(null);
 
 	const settings = {
-		dots: true,
+		dots: false,
 		infinite: true,
 		speed: 500,
 		slidesToShow: 4,
@@ -144,24 +144,23 @@ const Stories = () => {
 						gap={2}>
 						<Text
 							color="black"
-							fontFamily="Unbounded"
+							fontFamily="Montserrat ,sans-serif"
 							fontSize={{ md: 56, base: 40 }}
 							fontWeight={500}>
-								{t("Истории", "Тарыхтар")}
+								{t("Истории &", "Тарыхтар &")}
 						</Text>
 						<Box
 							mt={{ md: "16px", base: "-15px" }}
-							// w={{ md: "360px", base: "270px" }}
-							h={{ md: "60px", base: "100%" }}
+							 
 							borderRadius={10}
-							// p={1}
+							p={1}
 							bg="#FF9100"
 							transform="rotate(-2deg)">
 							<Text
 								mt={{ md: "-16px", base: "-10px" }}
 								color="white"
 								transform="rotate(2deg)"
-								fontFamily="Unbounded"
+								fontFamily="Montserrat ,sans-serif"
 								fontSize={{ md: 56, base: 40 }}
 								fontWeight={500}
 								p={1}>

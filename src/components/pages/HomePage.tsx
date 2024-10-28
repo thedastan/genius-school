@@ -20,7 +20,7 @@ const HomePage = () => {
       <Success/>
       <Branches/>
       <Stories/>
-      <Video/>
+      {/* <Video/> */}
       <Parentschildren/>
       <Questions/>
       

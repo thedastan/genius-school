@@ -24,6 +24,7 @@ import Image from "next/image";
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
 import Link from "next/link";
 import { WHATSAPP_LINK } from "@/constants/admin";
+import { GoArrowUpRight } from "react-icons/go";
 
 const Header = () => {
 	const { t, language, setLanguage } = useLanguageStore();
@@ -43,7 +44,7 @@ const Header = () => {
 		},
 		{
 			name: t("Руководство", "Башчылык"),
-			link: "#branches",  
+			link: "#branches",
 		},
 		{
 			name: t("Контакты", "Байланыштар"),
@@ -54,10 +55,12 @@ const Header = () => {
 	const [showHeader, setShowHeader] = useState(true);
 	const [lastScrollY, setLastScrollY] = useState(0);
 
+	const [selected, setSelected] = useState("RU");
+
 	const [isMobile, setIsMobile] = useState(false);
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	 
+
 	const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		const selectedLanguage = e.target.value as "ru" | "ky";
 		setLanguage(selectedLanguage);
@@ -101,23 +104,40 @@ const Header = () => {
 			<Container maxW={CONTAINER_WIDTH}>
 				<Box>
 					<Flex alignItems="center" justifyContent="space-between">
-						<Box>
-							<ScrollLink
-								activeClass="active"
-								to="#home"
-								spy={true}
-								smooth={true}
-								offset={-100}
-								duration={700}>
-								<Box
-									display={{ lg: "flex", base: "block" }}
-									alignItems="center"
-									gap={5}>
-									<Image width={80} height={80} src={logo} alt="" />
-								</Box>
-							</ScrollLink>
+						<Box
+							display={{ md: "none", base: "block" }}
+							justifyContent="start"
+							w="80%">
+							<Select
+								w={20}
+								border="none"
+								onChange={handleChangeLanguage}
+								value={language}
+								name=""
+								id="">
+								<option value="ru">🇰🇬</option>
+								<option value="ky">🇷🇺</option>
+							</Select>
 						</Box>
 						<Box>
+							<Flex w="120%"  height={80} justifyContent="center" alignItems="center">
+								<ScrollLink
+									activeClass="active"
+									to="#home"
+									spy={true}
+									smooth={true}
+									offset={-100}
+									duration={700}>
+									<Box
+										display={{ lg: "flex", base: "block" }}
+										alignItems="center"
+										gap={5}>
+										<Image width={80} height={80} src={logo} alt="img" />
+									</Box>
+								</ScrollLink>
+							</Flex>
+						</Box>
+						<Flex justifyContent="end" w="80%">
 							{isMobile ? (
 								<>
 									<Button onClick={onOpen} background="white" fontSize={20}>
@@ -154,7 +174,7 @@ const Header = () => {
 													))}
 												</Box>
 												<Flex
-												mt={6}
+													mt={6}
 													flexDirection="column"
 													gap={6}
 													alignItems="center"
@@ -166,31 +186,32 @@ const Header = () => {
 														value={language}
 														name=""
 														id="">
-														<option value="ky">kg</option>
-														<option value="ru">ru</option>
+														<option value="ky">🇰🇬</option>
+														<option value="ru">🇷🇺</option>
 													</Select>
-													<Link href={WHATSAPP_LINK} target={"_blank"}> 
 
-													<Button
-														fontFamily="Arial"
-														display="flex"
-														gap="10px"
-														borderRadius="50px"
-														p="20px 10px 20px 20px"
-														fontSize={14}
-														fontWeight={700}
-														color="#00712D">
-														{t("Записаться", "Катталуу")}
-														<span
-															style={{
-																background: "#00712D",
-																color: "white",
-																borderRadius: "50px",
-																padding: "5px",
-															}}>
-															<MdOutlineArrowOutward />
-														</span>
-													</Button>
+													<Link href={WHATSAPP_LINK} target={"_blank"}>
+														<Button
+															fontFamily="Arial"
+															display="flex"
+															gap="10px"
+															borderRadius="50px"
+															p="20px 10px 20px 20px"
+															fontSize={14}
+															fontWeight={700}
+															color="#00712D"
+															border="solid 1px #00712D">
+															{t("Записаться", "Катталуу")}
+															<span
+																style={{
+																	background: "#00712D",
+																	color: "white",
+																	borderRadius: "50px",
+																	padding: "5px",
+																}}>
+																<GoArrowUpRight />
+															</span>
+														</Button>
 													</Link>
 												</Flex>
 											</DrawerBody>
@@ -231,35 +252,37 @@ const Header = () => {
 											value={language}
 											name=""
 											id="">
-											<option value="en">kg</option>
-											<option value="ru">ru</option>
+											<option value="ru">🇰🇬</option>
+											<option value="ky">🇷🇺</option>
 										</Select>
-                <Link href={WHATSAPP_LINK} target={"_blank"}> 
-										<Button
-											fontFamily="Arial"
-											display="flex"
-											gap="10px"
-											borderRadius="50px"
-											p="20px 10px 20px 20px"
-											fontSize={14}
-											fontWeight={700}
-											color="#00712D">
-											{t("Записаться", "Sign up")}
-											<span
-												style={{
-													background: "#00712D",
-													color: "white",
-													borderRadius: "50px",
-													padding: "5px",
-												}}>
-												<MdOutlineArrowOutward />
-											</span>
-										</Button>
+										<Link href={WHATSAPP_LINK} target={"_blank"}>
+											<Button
+												fontFamily="Arial"
+												display="flex"
+												gap="10px"
+												borderRadius="50px"
+												p="20px 10px 20px 20px"
+												fontSize={14}
+												fontWeight={700}
+												color="#00712D"
+												border="solid 1px #00712D"
+												textTransform="uppercase">
+												{t("записаться", "катталуу")}
+												<span
+													style={{
+														background: "#00712D",
+														color: "white",
+														borderRadius: "50px",
+														padding: "5px",
+													}}>
+													<MdOutlineArrowOutward />
+												</span>
+											</Button>
 										</Link>
 									</Flex>
 								</Flex>
 							)}
-						</Box>
+						</Flex>
 					</Flex>
 				</Box>
 			</Container>

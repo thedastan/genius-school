@@ -4,12 +4,16 @@ import '@/styles/globals.scss';
 
 import LayoutPage from "@/components/layout/LayoutPage";
 import { ChakraProvider } from "@chakra-ui/react";
+import { SITE_NAME } from "@/constants/seo/seo.constants";
 
 
 const inter = Inter({ subsets: ["latin"] });
  
 export const metadata: Metadata = {
-  title: "GENIUS SCHOOL",
+  title: {
+		default: SITE_NAME,
+		template: `%s | ${SITE_NAME}`
+	},
   description:
     "образование будущего",
 };

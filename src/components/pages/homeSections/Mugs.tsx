@@ -58,7 +58,7 @@ const Mugs = () => {
 		<Box w="100%" p="150px 0">
 			<Container maxWidth={CONTAINER_WIDTH}>
 				<Box textAlign="center">  
-					<Title fontSize={{ md: 56, base: 40 }} fontFamily="Unbounded">
+					<Title fontSize={{ md: 56, base: 40 }} fontFamily="Montserrat ,sans-serif">
 					{t("Кружки", "Кружоктор")}
 					</Title>
 
@@ -69,7 +69,7 @@ const Mugs = () => {
 						mt={{ md: 20, base: 10 }}>
 						<Flex flexDirection="column" alignItems="start" gap={2}>
 							<Title
-								fontFamily="Unbounded"
+								fontFamily="Montserrat ,sans-serif"
 								fontSize={{ md: 32, base: 24 }}
 								fontWeight={500}
 								bg="#D5ED9F"
@@ -94,7 +94,7 @@ const Mugs = () => {
 
 						<Flex flexDirection="column" alignItems="start" gap={2}>
 							<Title
-								fontFamily="Unbounded"
+								fontFamily="Montserrat ,sans-serif"
 								fontSize={{ md: 32, base: 24 }}
 								fontWeight={500}
 								bg="#FF9100"

@@ -1,7 +1,9 @@
 export const PHONE_NUMBER = '+996550852727' 
 export const PHONE_NUMBER2 = '+996553852727' 
 export const PHONE_NUMBER3 = '+996554852727' 
-export const PHONE_NUMBER4 = '+996990852727' 
+export const PHONE_NUMBER4 = '+996990852727'  
+export const PHONE_NUMBER_FIXSET = "+996553852727"
+
 
 
 export const WHATSAPP_NUMBER = PHONE_NUMBER
@@ -16,10 +18,12 @@ export const LOCATION4 = 'https://2gis.kg/bishkek/search/%D0%91%D0%B0%D0%B9%D1%8
 
 /// links
 
-export const WHATSAPP_LINK = `https://wa.me/${PHONE_NUMBER}`
+// export const WHATSAPP_LINK = `https://wa.me/${PHONE_NUMBER}`
 export const WHATSAPP_LINK2 = `https://wa.me/${PHONE_NUMBER2}`
 export const WHATSAPP_LINK3 = `https://wa.me/${PHONE_NUMBER3}`
 export const WHATSAPP_LINK4 = `https://wa.me/${PHONE_NUMBER4}`
+export const WHATSAPP_LINK = `https://wa.me/${PHONE_NUMBER_FIXSET}`
+
 
  
 export const INSTAGRAM_LINK = `https://www.instagram.com/genius___school.kg/profilecard/?igsh=bTMxOXQ0aHJpYmRz`

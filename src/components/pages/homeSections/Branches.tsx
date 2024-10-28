@@ -1,9 +1,9 @@
 "use client";
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
-import { Box, Container, Flex, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Text, Button } from "@chakra-ui/react";
 import Image from "next/image";
-import twogis from "@/assets/twogis.png";
-import phone from "@/assets/phone.png";
+import twogis from "@/assets/2gis.png";
+import phone from "@/assets/phone2.png";
 
 import director from "@/assets/director.png";
 import director2 from "@/assets/director2.png";
@@ -20,14 +20,27 @@ import {
 	LOCATION2,
 	LOCATION3,
 	LOCATION4,
+	PHONE_NUMBER_FIXSET,
 	WHATSAPP_LINK,
 	WHATSAPP_LINK2,
 	WHATSAPP_LINK3,
 	WHATSAPP_LINK4,
 } from "@/constants/admin";
 
+import { FaPhone } from "react-icons/fa";
+import { useEffect } from "react";
+
 const Branches = () => {
 	const { t } = useLanguageStore();
+
+
+	useEffect(() => {
+		const link = document.createElement("link");
+		link.href =
+			"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap";
+		link.rel = "stylesheet";
+		document.head.appendChild(link);
+	}, []);
 
 	const box = [
 		{
@@ -38,17 +51,13 @@ const Branches = () => {
 		{
 			url: director2,
 			title: t("Академический директор", "Академиялык директор"),
-			disc: t(
-				"Старокожева Анна Владимировна",
-				"Старокожева Анна Владимировна"
-			),
+			disc: t("Старокожева Анна Владимировна", "Старокожева Анна Владимировна"),
 		},
 		{
 			url: director3,
 			title: t("Замдиректора по ВР", "Билим берүү боюнча орун басар директор"),
 			disc: t("Жээналиева Асель Мусаевна", "Жээналиева Асель Мусаевна"),
 		},
-		
 	];
 
 	const box2 = [
@@ -70,7 +79,6 @@ const Branches = () => {
 			title: t("Замдиректора по ВР", "Билим берүү боюнча орун басар директор"),
 			disc: t("Бекташова Элеонора Кыркбаевна", "Бекташова Элеонора Кыркбаевна"),
 		},
-		
 	];
 
 	const box3 = [
@@ -87,7 +95,6 @@ const Branches = () => {
 				"Чынгышова Айнура Айтманбетовна"
 			),
 		},
-		
 	];
 
 	const box4 = [
@@ -96,7 +103,6 @@ const Branches = () => {
 			title: t("Академический директор", "Академиялык директор"),
 			disc: t("Кекер Лариса Анатольевна", "Кекер Лариса Анатольевна"),
 		},
-		
 	];
 
 	return (
@@ -111,7 +117,7 @@ const Branches = () => {
 					gap={2}>
 					<Text
 						color="black"
-						fontFamily="Unbounded"
+						fontFamily="Montserrat ,sans-serif"
 						fontSize={{ md: 56, base: 40 }}
 						fontWeight={500}>
 						{t("Филиалы по", "Бишкектеги")}
@@ -127,7 +133,7 @@ const Branches = () => {
 							mt={{ md: "-16px", base: "-10px" }}
 							color="#00712D"
 							transform="rotate(2deg)"
-							fontFamily="Unbounded"
+							fontFamily="Montserrat ,sans-serif"
 							fontSize={{ md: 56, base: 40 }}
 							fontWeight={500}
 							p={1}>
@@ -141,24 +147,34 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#2D7A73"
 						p="18px 18px 50px 18px">
-						<Flex alignItems="center" justifyContent="space-between"  >
-							<Flex
-								alignItems="center"
-								justifyContent="start"
-								bg="white"
-								w="80%"
-								p={2}
-								gap={2}
-								borderRadius="50px">
+						<Flex
+							alignItems="center"
+							justifyContent="space-between"
+							gap={4}
+							width="100%">
+							<Box width="calc(100% - 51px)">
+								{" "}
+							 
 								<Link href={LOCATION} target={"_blank"}>
+								<Flex
+									alignItems="center"
+									justifyContent="start"
+									bg="white"
+									w="100%" // Keeps 100% width within parent Box
+									p={2}
+									gap={2}
+									borderRadius="50px">
 									<Image
 										style={{ borderRadius: "50%" }}
 										src={twogis}
+										width={36}
+										height={36}
 										alt="img"
 									/>
+									<Text>{t("ул.Чуйкова 132А", "Чуйкова көчөсү 132А")}</Text>
+								</Flex>
 								</Link>
-								<Text>{t("ул.Чуйкова 132А", "Чуйкова көчөсү 132А")}</Text>
-							</Flex>
+							</Box>
 							<Box
 								display="flex"
 								justifyContent="center"
@@ -179,6 +195,7 @@ const Branches = () => {
 								</Link>
 							</Box>
 						</Flex>
+
 						<Flex mt={4} flexDirection="column" gap={2}>
 							{box.map((item, index) => (
 								<Flex
@@ -200,6 +217,7 @@ const Branches = () => {
 									</Flex>
 								</Flex>
 							))}
+							 
 						</Flex>
 					</Box>
 
@@ -208,27 +226,44 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#B698CA"
 						p="18px 18px 50px 18px">
-						<Flex justifyContent="space-between"  >
 							<Flex
-								alignItems="center"
-								justifyContent="start"
-								bg="white"
-								w="80%"
-								p={2}
-								gap={2}
-								borderRadius="50px">
+							alignItems="center"
+							justifyContent="space-between"
+							gap={4}
+							width="100%">
+							<Box width="calc(100% - 51px)">
+								{" "}
+							 
 								<Link href={LOCATION2} target={"_blank"}>
+								<Flex
+									alignItems="center"
+									justifyContent="start"
+									bg="white"
+									w="100%" // Keeps 100% width within parent Box
+									p={2}
+									gap={2}
+									borderRadius="50px">
 									<Image
 										style={{ borderRadius: "50%" }}
 										src={twogis}
+										width={36}
+										height={36}
 										alt="img"
 									/>
+									<Text>{t("ул.Чуйкова 132/2", "Чуйкова көчөсү 132/2")}</Text>
+								</Flex>
 								</Link>
-								<Text>{t("ул.Чуйкова 132А", "Чуйкова көчөсү 132А")}</Text>
-							</Flex>
-							<Box width={50}
-										height={50} bg="white" p={2} borderRadius="50%">
-								<Link href={WHATSAPP_LINK2} target={"_blank"}>
+							</Box>
+							<Box
+								display="flex"
+								justifyContent="center"
+								alignItems="center"
+								width={51}
+								height={51}
+								p={2}
+								bg="white"
+								borderRadius="50%">
+								<Link href={WHATSAPP_LINK} target={"_blank"}>
 									<Image
 										width={50}
 										height={50}
@@ -268,27 +303,44 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#F0926C"
 						p="18px 18px 50px 18px">
-						<Flex justifyContent="space-between"  >
 							<Flex
-								alignItems="center"
-								justifyContent="start"
-								bg="white"
-								w="80%"
-								p={2}
-								gap={2}
-								borderRadius="50px">
+							alignItems="center"
+							justifyContent="space-between"
+							gap={4}
+							width="100%">
+							<Box width="calc(100% - 51px)">
+								{" "}
+							 
 								<Link href={LOCATION3} target={"_blank"}>
+								<Flex
+									alignItems="center"
+									justifyContent="start"
+									bg="white"
+									w="100%" // Keeps 100% width within parent Box
+									p={2}
+									gap={2}
+									borderRadius="50px">
 									<Image
 										style={{ borderRadius: "50%" }}
 										src={twogis}
+										width={36}
+										height={36}
 										alt="img"
 									/>
+									<Text>{t("ул.Ден Сяопина 126", "Дэн Сяопин көчөсү 126")}</Text>
+								</Flex>
 								</Link>
-								<Text>{t("ул.Ден Сяопина 126", "Дэн Сяопин көчөсү 126.")}</Text>
-							</Flex>
-							<Box width={51}
-										height={51} bg="white" p={2} borderRadius="50%">
-								<Link href={WHATSAPP_LINK3} target={"_blank"}>
+							</Box>
+							<Box
+								display="flex"
+								justifyContent="center"
+								alignItems="center"
+								width={51}
+								height={51}
+								p={2}
+								bg="white"
+								borderRadius="50%">
+								<Link href={WHATSAPP_LINK} target={"_blank"}>
 									<Image
 										width={50}
 										height={50}
@@ -327,27 +379,44 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#F8F5FE"
 						p="18px 18px 50px 18px">
-						<Flex justifyContent="space-between"  >
-							<Flex
-								alignItems="center"
-								justifyContent="start"
-								bg="white"
-								w={{ md: "88%", base: "80%" }}
-								p={2}
-								gap={2}
-								borderRadius="50px">
+						<Flex
+							alignItems="center"
+							justifyContent="space-between"
+							gap={4}
+							width="100%">
+							<Box width="calc(100% - 51px)">
+								{" "}
+							 
 								<Link href={LOCATION4} target={"_blank"}>
+								<Flex
+									alignItems="center"
+									justifyContent="start"
+									bg="white"
+									w="100%" // Keeps 100% width within parent Box
+									p={2}
+									gap={2}
+									borderRadius="50px">
 									<Image
 										style={{ borderRadius: "50%" }}
 										src={twogis}
+										width={36}
+										height={36}
 										alt="img"
 									/>
+									<Text>{t("Байтик Баатыра 5К", "Байтик Баатыр 5К.")}</Text>
+								</Flex>
 								</Link>
-								<Text>{t("Байтик Баатыра 5К", "Байтик Баатыр 5К.")}</Text>
-							</Flex>
-							<Box width={51}
-										height={51} bg="white" p={2} borderRadius="50%">
-								<Link href={WHATSAPP_LINK4} target={"_blank"}>
+							</Box>
+							<Box
+								display="flex"
+								justifyContent="center"
+								alignItems="center"
+								width={51}
+								height={51}
+								p={2}
+								bg="white"
+								borderRadius="50%">
+								<Link href={WHATSAPP_LINK} target={"_blank"}>
 									<Image
 										width={50}
 										height={50}
@@ -387,32 +456,44 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#F8F5FE"
 						p="18px 18px 50px 18px">
-						<Flex justifyContent="space-between"  >
 							<Flex
-								alignItems="center"
-								justifyContent="start"
-								bg="white"
-								w={{ md: "88%", base: "80%" }}
-								p={2}
-								gap={2}
-								borderRadius="50px">
+							alignItems="center"
+							justifyContent="space-between"
+							gap={4}
+							width="100%">
+							<Box width="calc(100% - 51px)">
+								{" "}
+							 
 								<Link href={LOCATION} target={"_blank"}>
+								<Flex
+									alignItems="center"
+									justifyContent="start"
+									bg="white"
+									w="100%" // Keeps 100% width within parent Box
+									p={2}
+									gap={2}
+									borderRadius="50px">
 									<Image
 										style={{ borderRadius: "50%" }}
 										src={twogis}
+										width={36}
+										height={36}
 										alt="img"
 									/>
+									<Text>{t("ул.Чуйкова 132/6", "Чуйкова көчөсү 132/6")}</Text>
+								</Flex>
 								</Link>
-								<Text>
-									{t(
-										"Филиал рядом с чуйкова 132А",
-									"Чуйкова көчөсү 132Анын жаныдагы филиал"
-									)}
-								</Text>
-							</Flex>
-							<Box width={51}
-										height={51} bg="white" p={2} borderRadius="50%">
-								<Link href={WHATSAPP_LINK4} target={"_blank"}>
+							</Box>
+							<Box
+								display="flex"
+								justifyContent="center"
+								alignItems="center"
+								width={51}
+								height={51}
+								p={2}
+								bg="white"
+								borderRadius="50%">
+								<Link href={PHONE_NUMBER_FIXSET} target={"_blank"}>
 									<Image
 										width={50}
 										height={50}

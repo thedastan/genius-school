@@ -63,7 +63,7 @@ const About = () => {
 
 	const links = [
 		{
-			name: t("узнать больше", "Көбүрөөк маалымат алуу"),
+			name: t("УЗНАТЬ БОЛЬШЕ", "КӨБҮРӨӨК МААЛЫМАТ АЛУУ"),
 			link: "#what",
 		},
 	];
@@ -106,7 +106,7 @@ const About = () => {
 						<Box
 							boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
 							w={{ md: 760, base: "100%" }}
-							h={{ md: 300, base: "100%" }}
+							// h={{ md: 300, base: "100%" }}
 							p={{ md: 8, base: 4 }}
 							bg="#D3D3D3"
 							borderRadius={20}>
@@ -169,7 +169,6 @@ const About = () => {
 							</Box>
 						</Box>
 
-						{/* <Flex flexWrap="wrap"> */}
 						{card.map((item, index) => (
 							<Flex
 								boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
@@ -184,12 +183,11 @@ const About = () => {
 								<Text fontSize={22} fontWeight={700}>
 									{item.title}
 								</Text>
-								<Text fontSize={16} fontWeight={400}>
+								<Text color="#636363" fontSize={16} fontWeight={400}>
 									{item.disc}
 								</Text>
 							</Flex>
 						))}
-						{/* </Flex> */}
 					</Flex>
 				</Box>
 			</Container>

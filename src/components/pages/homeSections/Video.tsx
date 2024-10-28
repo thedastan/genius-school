@@ -81,7 +81,7 @@ const Video = () => {
 				<Flex justifyContent="space-between" alignItems="center">
 					<Text
 						fontSize={{ lg: "56", base: "32" }}
-						fontFamily="Unbounded"
+						fontFamily="Montserrat ,sans-serif"
 						fontWeight={600}
 						p={4}>
 						{t("Отзывы", "Пикирлер")}

@@ -32,15 +32,18 @@ const Success = () => {
 							flexDirection="column"
 							justifyContent="center"
 							alignItems="center"
-							textAlign="center">
+							textAlign="center"
+							p={4}>
 							<TabList
-								w={{ md: 400, base: "100%" }}
+								// w={{ md: 400, base: "100%" }}
 								display="flex"
+								
 								justifyContent="center"
 								alignItems="center"
 								textAlign="center">
 								<Tab
 									fontWeight={700}
+									fontSize={{ md: 16, base: 12 }}
 									sx={{
 										_selected: {
 											color: "#FF9100",
@@ -52,6 +55,7 @@ const Success = () => {
 								</Tab>
 								<Tab
 									fontWeight={700}
+									fontSize={{ md: 16, base: 12 }}
 									sx={{
 										_selected: {
 											color: "#FF9100",
@@ -62,6 +66,7 @@ const Success = () => {
 									{t("Мероприятия", "Иш-чаралар")}
 								</Tab>
 								<Tab
+								fontSize={{ md: 16, base: 12 }}
 									fontWeight={700}
 									sx={{
 										_selected: {
@@ -78,34 +83,31 @@ const Success = () => {
 								textAlign="center"
 								justifyContent="center"
 								alignItems="center"
-								 
-								p="50px 0"
+								mt="30px"
 								flexDirection={{ md: "row", base: "column" }}
 								gap={2}>
 								<Text
 									color="black"
-									fontFamily="Unbounded"
-									h={{ md: "69px", base: "100%" }}
-									fontSize={{ md: 56, base: 40 }}
+									fontFamily="Montserrat ,sans-serif"
+									fontSize={{ md: 50, base: 40 }}
 									fontWeight={500}>
-									{t("Успех в", "Жетишкендиктер")}
+									{t("Успех в", "Ар бир сүрөттө")}
 								</Text>
 								<Box
 									mt={{ md: "16px", base: "-15px" }}
-									// w={{ md: "380px", base: "270px" }}
-									h={{ md: "69px", base: "100%" }}
 									borderRadius={10}
+									p={1}
 									bg="#FF9100"
 									transform="rotate(-2deg)">
 									<Text
 										mt={{ md: "-16px", base: "-10px" }}
 										color="white"
 										transform="rotate(2deg)"
-										fontFamily="Unbounded"
-										fontSize={{ md: 56, base: 40 }}
+										fontFamily="Montserrat ,sans-serif"
+										fontSize={{ md: 50, base: 40 }}
 										fontWeight={500}
 										p={1}>
-										{t("каждом кадре", "Ар бир кадрда")}
+										{t("каждом кадре", "ийгилик")}
 									</Text>
 								</Box>
 							</Flex>
