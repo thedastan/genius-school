@@ -18,7 +18,7 @@ import Link from "next/link";
 import cardfon1 from "@/assets/cardfon1.png";
 import cardfon2 from "@/assets/cardfon2.png";
 import cardfon3 from "@/assets/cardfon3.png";
-	
+
 import {
 	LOCATION,
 	LOCATION2,
@@ -476,7 +476,31 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#F8F5FE"
 						p="18px 18px 18px 18px">
-						<Flex  gap={8} justifyContent="space-between">
+						<Flex
+							flexDirection={{ md: "row", base: "column-reverse" }}
+							gap={4}
+							justifyContent="space-between">
+							<Box display={{ md: "none", base: "block" }}>
+								<Flex alignItems="center" gap={6}>
+									<Text
+										fontSize={18}
+										fontWeight={700}
+										color="#00712D"
+										display="flex"
+										alignItems="center"
+										justifyContent="center"
+										w="38px"
+										h="38px"
+										borderRadius="50px"
+										bg="white">
+										4
+									</Text>
+									<Link href={WHATSAPP_LINK4} target={"_blank"}>
+										<Text color="black">{PHONE_NUMBER4}</Text>
+									</Link>
+								</Flex>
+							</Box>
+
 							{box4.map((item, index) => (
 								<Flex
 									key={index}
@@ -529,7 +553,10 @@ const Branches = () => {
 													alt="img"
 												/>
 												<Text>
-													{t("ул.Байтик Баатыра 5К", "Байтик Баатыр көчөсү 5К.")}
+													{t(
+														"ул.Байтик Баатыра 5К",
+														"Байтик Баатыр көчөсү 5К."
+													)}
 												</Text>
 											</Flex>
 										</Link>
@@ -554,24 +581,26 @@ const Branches = () => {
 										</Link>
 									</Box>
 								</Flex>
-								<Flex p="8px 0" alignItems="center" gap={6}>
-									<Text
-										fontSize={18}
-										fontWeight={700}
-										color="#00712D"
-										display="flex"
-										alignItems="center"
-										justifyContent="center"
-										w="38px"
-										h="38px"
-										borderRadius="50px"
-										bg="white">
-										4
-									</Text>
-									<Link href={WHATSAPP_LINK4} target={"_blank"}>
-										<Text color="black">{PHONE_NUMBER4}</Text>
-									</Link>
-								</Flex>
+								<Box display={{ md: "flex", base: "none" }}>
+									<Flex p="8px 0" alignItems="center" gap={6}>
+										<Text
+											fontSize={18}
+											fontWeight={700}
+											color="#00712D"
+											display="flex"
+											alignItems="center"
+											justifyContent="center"
+											w="38px"
+											h="38px"
+											borderRadius="50px"
+											bg="white">
+											4
+										</Text>
+										<Link href={WHATSAPP_LINK4} target={"_blank"}>
+											<Text color="black">{PHONE_NUMBER4}</Text>
+										</Link>
+									</Flex>
+								</Box>
 							</Flex>
 						</Flex>
 					</Box>
@@ -581,9 +610,7 @@ const Branches = () => {
 						borderRadius={30}
 						bg="#F8F5FE"
 						p="18px 18px 18px 18px">
-						<Flex  gap={8} justifyContent="space-between">
-							 
-
+						<Flex gap={8} justifyContent="space-between">
 							<Flex w="100%" flexDirection="column" gap={2}>
 								<Flex
 									alignItems="center"

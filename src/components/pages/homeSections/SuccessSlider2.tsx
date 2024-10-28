@@ -268,27 +268,70 @@ const SuccessSlider2 = () => {
 
 				<Box w="100%" display={{ md: "none", base: "block" }} mt="50px">
 					<Slider ref={sliderRef2} {...settings}>
-						<Flex w="100%" p={1} justifyContent="center" gap={2}>
-							<Flex gap={2} p={2}>
-								<Image src={url4} alt="Image 4" />
-								<Image src={url1} alt="Image 1" />
-							</Flex>
-							<Box p="0 6px">
-								<Image src={url2} alt="Image 2" />
-							</Box>
-						</Flex>
-						<Flex p={1} justifyContent="center" gap={4}>
-							 <Box p="0 6px">
-							 <Image src={url3} alt="Image 3" />
-							 </Box>
-							<Flex gap={2} p={2}>
-								<Image src={url4} alt="Image 4" />
-								<Image src={url1} alt="Image 1" />
-							</Flex>
-						</Flex>
-						<Flex p={1} justifyContent="center" gap={4}>
-							<Image src={url5} alt="Image 5" />
-						</Flex>
+					<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url1}
+								alt="Image 1"
+							/>
+						</Box>
+
+						<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url2}
+								alt="Image 1"
+							/>
+						</Box>
+
+						<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url3}
+								alt="Image 1"
+							/>
+						</Box>
+
+						<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url4}
+								alt="Image 1"
+							/>
+						</Box>
+
+						<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url5}
+								alt="Image 1"
+							/>
+						</Box>
 					</Slider>
 				</Box>
 		</Box>
