@@ -24,7 +24,7 @@ const Success = () => {
 			<Container maxW={CONTAINER_WIDTH}>
 				<Box
 					bg="#F2F5EB"
-					p={{ md: "50px 0", base: "50px 0" }}
+					p={{ md: "50px 0", base: "10px 0" }}
 					borderRadius={20}>
 					<Box>
 						<Tabs

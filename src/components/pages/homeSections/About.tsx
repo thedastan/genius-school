@@ -5,10 +5,10 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import img from "../../../assets/about.png";
 
-import image1 from "../../../assets/Frame 2087328236.png";
-import image2 from "../../../assets/darts.png";
-import image3 from "../../../assets/lampa.png";
-import image4 from "../../../assets/lisson.png";
+import image1 from "../../../assets/about1.png";
+import image2 from "../../../assets/about2.png";
+import image3 from "../../../assets/about3.png";
+import image4 from "../../../assets/about4.png";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 import { Link as ScrollLink } from "react-scroll";
 import { IoArrowDownSharp } from "react-icons/io5";
@@ -45,7 +45,7 @@ const About = () => {
 		},
 		{
 			url: image3,
-			title: t("Современные методики", "Заманава методдор"),
+			title: t("Современные методики", "Заманбап методдор"),
 			disc: t(
 				"Мы успешно сочетаем проверенные практики прошлого и современные подходы.",
 				"Биз өткөндүн текшерилген тажрыйбаларын жана заманбап ыкмаларды ийгиликтүү айкалыштырабыз."
@@ -68,7 +68,7 @@ const About = () => {
 		},
 	];
 	return (
-		<Box id="#about" w="100%" p="100px 0">
+		<Box id="#about" w="100%"  p="0px 0px 100px 0px">
 			<Container maxW={CONTAINER_ABOUT}>
 				<Box>
 					<Flex alignItems="center"
@@ -104,11 +104,11 @@ const About = () => {
 
 					<Flex mt="40px" flexWrap="wrap" justifyContent="center" gap={10}>
 						<Box
-							boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+							// boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
 							w={{ md: 760, base: "100%" }}
 							// h={{ md: 300, base: "100%" }}
 							p={{ md: 8, base: 4 }}
-							bg="#D3D3D3"
+							bg="#F5F7F1"
 							borderRadius={20}>
 							<Image width={23} height={23} src={img} alt="" />
 							<Box p={6}>
@@ -117,8 +117,8 @@ const About = () => {
 									fontSize={{ md: 40, base: 28 }}
 									fontWeight={400}
 									lineHeight="40px">
-									&quot;{t("Гениус.Кейджи", "Genius. Cage.")}&quot;{" "}
-									{t("– частная", "- Жеке")}
+									&quot;{t("Гениус.Кейджи", "Гениус.Кейджи")}&quot;{" "}
+									{t("– частная", "")}
 									<Box ml={{ md: "12px", base: "0px" }}>
 										{t(
 											"общеобразовательная школа.",
@@ -179,7 +179,7 @@ const About = () => {
 								borderRadius={20}
 								p={8}
 								key={index}>
-								<Image src={item.url} alt="" />
+								<Image width={80} height={80} src={item.url} alt="" />
 								<Text fontSize={22} fontWeight={700}>
 									{item.title}
 								</Text>

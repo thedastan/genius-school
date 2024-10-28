@@ -59,6 +59,7 @@ const Welcome = () => {
 					bgPosition="center"
 					w="100%"
 					h="80vh"
+					maxH={600}
 					borderRadius={20}
 					flexDirection="column"
 					justifyContent="center"
@@ -88,6 +89,7 @@ const Welcome = () => {
 							</Text>
 						</Box>
 						<Text
+						display={{ md: "flex", base: "none" }}
 							color={{ md: "white", base: "black" }}
 							fontFamily="Montserrat ,sans-serif"
 							fontSize={{ md: 56, base: 36 }}
@@ -105,17 +107,17 @@ const Welcome = () => {
 						zIndex={1}>
 						{t("образование будущего", "Келечектин билими")}
 					</Title>
-					<Description
+					<Text
 						textAlign={{ md: "start", base: "center" }}
 						color={{ md: "white", base: "black" }}
 						zIndex={1}
-						mt={8}
-						fontSize={{ md: 20, base: 36 }}>
+						mt={4}
+						fontSize={{ md: 20, base: 20 }}>
 						{t(
 							"Развиваем таланты ваших детей с заботой и вниманием",
 							"Балдарыңыздын таланттарын камкордук жана көңүл буруу менен өнүктүрөбүз."
 						)}
-					</Description>
+					</Text>
 					<Link href={WHATSAPP_LINK} target={"_blank"}>
 						<Button
 							mt={8}

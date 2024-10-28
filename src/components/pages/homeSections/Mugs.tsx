@@ -55,7 +55,7 @@ const Mugs = () => {
 	];
 	
 	return (
-		<Box w="100%" p="150px 0">
+		<Box w="100%" p="50px 0">
 			<Container maxWidth={CONTAINER_WIDTH}>
 				<Box textAlign="center">  
 					<Title fontSize={{ md: 56, base: 40 }} fontFamily="Montserrat ,sans-serif">

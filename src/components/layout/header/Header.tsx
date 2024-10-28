@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/logonew.png";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 import {
@@ -42,13 +42,10 @@ const Header = () => {
 			name: t("Филиалы", "Филиалдар"),
 			link: "#branches",
 		},
-		{
-			name: t("Руководство", "Башчылык"),
-			link: "#branches",
-		},
+
 		{
 			name: t("Контакты", "Байланыштар"),
-			link: "#delivery",
+			link: "#branches",
 		},
 	];
 
@@ -95,7 +92,7 @@ const Header = () => {
 			left="0"
 			right="0"
 			height="80px"
-			backgroundColor="white"
+			background="white"
 			transition="top 0.3s"
 			zIndex="1000"
 			display="flex"
@@ -115,12 +112,16 @@ const Header = () => {
 								value={language}
 								name=""
 								id="">
-								<option value="ru">🇰🇬</option>
-								<option value="ky">🇷🇺</option>
+								<option value="ru">🇷🇺</option>
+								<option value="ky">🇰🇬</option>
 							</Select>
 						</Box>
 						<Box>
-							<Flex w="120%"  height={80} justifyContent="center" alignItems="center">
+							<Flex
+								w="120%"
+								// height={80}
+								justifyContent="center"
+								alignItems="center">
 								<ScrollLink
 									activeClass="active"
 									to="#home"
@@ -152,46 +153,37 @@ const Header = () => {
 
 											<DrawerBody>
 												<Box display="flex" flexDirection="column" gap={2}>
-													{links.map((item, index) => (
-														<Button
-															key={index}
-															background="white"
-															fontSize="14px"
-															border="solid 1px #495B4FB2"
-															borderRadius="50px"
-															onClick={onClose}>
-															<ScrollLink
-																activeClass="active"
-																to={item.link}
-																spy={true}
-																smooth={true}
-																offset={0}
-																duration={700}
-																onClick={onClose}>
-																{item.name}
-															</ScrollLink>
-														</Button>
-													))}
-												</Box>
-												<Flex
-													mt={6}
-													flexDirection="column"
-													gap={6}
-													alignItems="center"
-													justifyContent="center">
-													<Select
-														w={20}
-														border="none"
-														onChange={handleChangeLanguage}
-														value={language}
-														name=""
-														id="">
-														<option value="ky">🇰🇬</option>
-														<option value="ru">🇷🇺</option>
-													</Select>
+													<Flex
+														w="100%"
+														h="100%"
+														justifyContent="center"
+														alignItems="center">
+														<ScrollLink
+															activeClass="active"
+															to="#home"
+															spy={true}
+															smooth={true}
+															offset={-100}
+															duration={700}>
+															<Box
+																display={{ lg: "flex", base: "block" }}
+																alignItems="center"
+																gap={5}>
+																<Image
+																	width={80}
+																	height={80}
+																	src={logo}
+																	alt="img"
+																/>
+															</Box>
+														</ScrollLink>
+													</Flex>
 
 													<Link href={WHATSAPP_LINK} target={"_blank"}>
 														<Button
+															w="100%"
+															bg="white"
+															justifyContent="space-between"
 															fontFamily="Arial"
 															display="flex"
 															gap="10px"
@@ -213,7 +205,28 @@ const Header = () => {
 															</span>
 														</Button>
 													</Link>
-												</Flex>
+
+													{links.map((item, index) => (
+														<Button
+															key={index}
+															background="white"
+															fontSize="14px"
+															border="solid 1px #495B4FB2"
+															borderRadius="50px"
+															onClick={onClose}>
+															<ScrollLink
+																activeClass="active"
+																to={item.link}
+																spy={true}
+																smooth={true}
+																offset={0}
+																duration={700}
+																onClick={onClose}>
+																{item.name}
+															</ScrollLink>
+														</Button>
+													))}
+												</Box>
 											</DrawerBody>
 										</DrawerContent>
 									</Drawer>
@@ -252,8 +265,8 @@ const Header = () => {
 											value={language}
 											name=""
 											id="">
-											<option value="ru">🇰🇬</option>
-											<option value="ky">🇷🇺</option>
+											<option value="ru">🇷🇺</option>
+											<option value="ky">🇰🇬</option>
 										</Select>
 										<Link href={WHATSAPP_LINK} target={"_blank"}>
 											<Button

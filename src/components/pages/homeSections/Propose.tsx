@@ -70,7 +70,7 @@ const Propose = () => {
 							minH={200}
 							bg="white"
 							transition="0.2s"
-							_groupHover={{ bg: "#D3D3D3", transition: "0.2s" }}
+							_groupHover={{ bg: "#F5F7F1", transition: "0.2s" }}
 							borderRadius={10}
 							transform="rotate(-3deg)"
 							// mt={-210}
@@ -165,7 +165,7 @@ const Propose = () => {
 							minH={200}
 							bg="white"
 							transition="0.2s"
-							_groupHover={{ bg: "#D3D3D3", transition: "0.2s" }}
+							_groupHover={{ bg: "#F5F7F1", transition: "0.2s" }}
 							borderRadius={10}
 							transform="rotate(3deg)"
 							// mt={-210}
@@ -260,7 +260,7 @@ const Propose = () => {
 							minH={200}
 							bg="white"
 							transition="0.2s"
-							_groupHover={{ bg: "#D3D3D3", transition: "0.2s" }}
+							_groupHover={{ bg: "#F5F7F1", transition: "0.2s" }}
 							borderRadius={10}
 							transform="rotate(-3deg)"
 							// mt={-210}
@@ -309,7 +309,7 @@ const Propose = () => {
 							minH={200}
 							bg="white"
 							transition="0.2s"
-							_groupHover={{ bg: "#D3D3D3", transition: "0.2s" }}
+							_groupHover={{ bg: "#F5F7F1", transition: "0.2s" }}
 							borderRadius={10}
 							transform="rotate(-3deg)"
 							// mt={-210}
@@ -362,7 +362,7 @@ const Propose = () => {
 							ml="6px"
 							p={5}>
 							<Text fontSize={22} fontWeight={700}>
-								{t("Трансфер с дома на школу со школы домой", "5 тилди үйрөнүү")}
+								{t("Трансфер с дома на школу со школы домой", "Үйдөн мектепке, мектептен үйгө жеткирүү кызматы")}
 							</Text>
 							<Text color="#5f5f5f"  fontSize={16}>
 								{t(
@@ -401,7 +401,7 @@ const Propose = () => {
 							minH={200}
 							bg="white"
 							transition="0.2s"
-							_groupHover={{ bg: "#D3D3D3", transition: "0.2s" }}
+							_groupHover={{ bg: "#F5F7F1", transition: "0.2s" }}
 							borderRadius={10}
 							transform="rotate(-3deg)"
 							ml="6px"
@@ -409,13 +409,13 @@ const Propose = () => {
 							<Text fontSize={22} fontWeight={700}>
 								{t(
 									"Кружки",
-									"Мектепте үй тапшырмаларын аткаруу"
+									"Кружоктор"
 								)}
 							</Text>
 							<Text color="#5f5f5f" fontSize={16}>
 								{t(
 									"Мы предлагаем широкий выбор кружков, направленных на развитие талантов и интересов наших учеников.",
-									"Биз окуучуларыбыздын таланттарын жана кызыгууларына багытталган кеңири кружоктордун тандоосун сунуштайбыз."
+									"Биз окуучуларыбыздын таланттары менен кызыгууларын өнүктүрүүгө багытталган ар түрдүү ийримдерди сунуштайбыз."
 								)}
 							</Text>
 						</Flex>

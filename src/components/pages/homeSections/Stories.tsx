@@ -22,15 +22,15 @@ import { useEffect, useRef } from "react";
 
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
 
-import img1 from "@/assets/stor1.png";
-import img2 from "@/assets/stor2.png";
-import img3 from "@/assets/stor3.png";
-import img4 from "@/assets/stor4.png";
+import img1 from "@/assets/gallerea/photo_5258488427005993358_y.jpg";
+import img2 from "@/assets/gallerea/photo_5258488427005993357_y.jpg";
+import img3 from "@/assets/gallerea/photo_5258488427005993353_y.jpg";
+import img4 from "@/assets/gallerea/his3.jpg";
 
-import img5 from "@/assets/stor5.png";
-import img6 from "@/assets/stor6.png";
-import img7 from "@/assets/stor7.png";
-import img8 from "@/assets/stor8.png";
+import img5 from "@/assets/gallerea/medal.jpg";
+import img6 from "@/assets/gallerea/medal1.jpg";
+import img7 from "@/assets/gallerea/medal2.jpg";
+import img8 from "@/assets/gallerea/medal4.jpg";
 
 import Image from "next/image";
 import { useLanguageStore } from "@/stores/useLanguageStore";
@@ -67,29 +67,39 @@ const Stories = () => {
 		{
 			url: img1,
 			title: t("Международная олимпиада", "Эл аралык олимпиада"),
-			disc: t("Пару предложений о событии, его значимости и участниках", "Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."),
+			disc: t(
+				"Пару предложений о событии, его значимости и участниках",
+				"Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."
+			),
 			data: "12.03.2024",
 		},
 		{
 			url: img2,
 			title: t("Олимпиада по футболу", "Футбол олимпиадасы"),
-			disc: t("Пару предложений о событии, его значимости и участниках", "Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."),
+			disc: t(
+				"Пару предложений о событии, его значимости и участниках",
+				"Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."
+			),
 			data: "12.03.2024",
 		},
 		{
 			url: img3,
 			title: t("Международная олимпиада", "Эл аралык олимпиада"),
-			disc: t("Пару предложений о событии, его значимости и участниках", "Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."),
+			disc: t(
+				"Пару предложений о событии, его значимости и участниках",
+				"Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."
+			),
 			data: "12.03.2024",
 		},
 		{
 			url: img4,
 			title: t("Олимпиада по футболу", "Футбол олимпиадасы"),
-			disc: t("Пару предложений о событии, его значимости и участниках", "Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."),
+			disc: t(
+				"Пару предложений о событии, его значимости и участниках",
+				"Иш-чара, анын мааниси жана катышуучулары жөнүндө бир нече сүйлөм."
+			),
 			data: "12.03.2024",
 		},
-		
-		
 	];
 
 	const box2 = [{ url: img5 }, { url: img6 }, { url: img7 }, { url: img8 }];
@@ -147,11 +157,10 @@ const Stories = () => {
 							fontFamily="Montserrat ,sans-serif"
 							fontSize={{ md: 56, base: 40 }}
 							fontWeight={500}>
-								{t("Истории &", "Тарыхтар &")}
+							{t("Истории &", "Тарыхтар &")}
 						</Text>
 						<Box
 							mt={{ md: "16px", base: "-15px" }}
-							 
 							borderRadius={10}
 							p={1}
 							bg="#FF9100"
@@ -164,7 +173,7 @@ const Stories = () => {
 								fontSize={{ md: 56, base: 40 }}
 								fontWeight={500}
 								p={1}>
-									{t("Награды", "Сыйлыктар")}
+								{t("Награды", "Сыйлыктар")}
 							</Text>
 						</Box>
 					</Flex>
@@ -203,7 +212,26 @@ const Stories = () => {
 												bg="white"
 												borderRadius={10}
 												p={4}>
-												<Image src={el.url} alt="" />
+												<Box
+													borderRadius={10}
+													objectFit="cover"
+													overflow="hidden"
+													w="100%"
+													h={200}
+													 
+													>
+													<Image
+														style={{
+															objectFit: "cover",
+															width: "100%",
+															height: "100%",
+															 
+														}}
+														src={el.url}
+														alt=""
+													/>
+												</Box>
+
 												<Text fontSize={18} fontWeight={400}>
 													{el.title}
 												</Text>
@@ -231,7 +259,7 @@ const Stories = () => {
 									border="solid 1px #D4D4D4"
 									padding="8px 12px"
 									bg="white"
-									marginTop={300}
+									marginTop={350}
 									position="absolute"
 									color="black"
 									zIndex={1}>
@@ -253,7 +281,23 @@ const Stories = () => {
 												bg="white"
 												borderRadius={10}
 												p={4}>
-												<Image src={el.url} alt="" />
+												<Box
+													borderRadius={10}
+													objectFit="cover"
+													overflow="hidden"
+													w="100%"
+													h={330}
+													>
+													<Image
+														style={{
+															objectFit: "cover",
+															width: "100%",
+															height: "100%",
+														}}
+														src={el.url}
+														alt=""
+													/>
+												</Box>
 											</Box>
 										</Box>
 									))}

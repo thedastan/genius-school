@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 
-import logo from "@/assets/footer.png";
+import logo from "@/assets/footerimg.png";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookSquare, FaTelegramPlane } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -33,13 +33,10 @@ const Footer = () => {
 			name: t("Филиалы", "Филиалдар"),
 			link: "#branches",
 		},
-		{
-			name: t("Руководство", "Башчылык"),
-			link: "#branches", // Updated to a unique link
-		},
+		 
 		{
 			name: t("Контакты", "Байланыштар"),
-			link: "#delivery",
+			link: "#branches",
 		},
 	];
 	return (
@@ -83,14 +80,15 @@ const Footer = () => {
 								smooth={true}
 								offset={-100}
 								duration={700}>
-								<Image src={logo} alt="img" />
+								<Image width={60} height={60} src={logo} alt="img" />
 							</ScrollLink>
 
 							<Text
 								fontSize={{ lg: 22, base: 18 }}
 								fontWeight={400}
-								fontFamily="Montserrat ,sans-serif">
-								Общеобразовательная <br /> частная школа
+								fontFamily="Montserrat ,sans-serif"
+								w={{ lg: 300, base: "100%" }}>
+								{t("Общеобразовательная частная школа","Жалпы билим берүүчү мектеп")}
 							</Text>
 						</Flex>
 
