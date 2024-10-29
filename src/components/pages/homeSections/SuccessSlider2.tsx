@@ -15,6 +15,14 @@ import url4 from "@/assets/gallerea/gal3.jpg";
 import url5 from "@/assets/gallerea/gal4.jpg";
 import Image from "next/image";
 
+
+import url6 from "@/assets/gallerea/gal5.jpg";
+import url7 from "@/assets/gallerea/gal6.jpg";
+import url8 from "@/assets/gallerea/gal7.jpg";
+import url9 from "@/assets/gallerea/gal8.jpg";
+import url10 from "@/assets/gallerea/gal9.jpg";
+
+
 const SuccessSlider2 = () => {
 	const sliderRef = useRef<Slider | null>(null);
 	const sliderRef2 = useRef<Slider | null>(null);
@@ -93,7 +101,7 @@ const SuccessSlider2 = () => {
 												objectFit: "cover",
 												borderRadius: "10px",
 											}}
-											src={url1}
+											src={url6}
 											alt="Image 1"
 										/>{" "}
 									</Box>
@@ -107,7 +115,7 @@ const SuccessSlider2 = () => {
 												borderRadius: "10px",
 
 											}}
-											src={url2}
+											src={url7}
 											alt="Image 3"
 										/>
 									</Box>
@@ -122,7 +130,7 @@ const SuccessSlider2 = () => {
 												borderRadius: "10px",
 
 											}}
-											src={url3}
+											src={url8}
 											alt="Image 3"
 										/>
 									</Box>
@@ -135,7 +143,7 @@ const SuccessSlider2 = () => {
 												objectFit: "cover",
 												borderRadius: "10px",
 											}}
-											src={url4}
+											src={url9}
 											alt="Image 1"
 										/>{" "}
 									</Box>
@@ -150,7 +158,7 @@ const SuccessSlider2 = () => {
 											objectFit: "cover",
 											borderRadius: "10px",
 										}}
-										src={url5}
+										src={url10}
 										alt="Image 3"
 									/>
 								</Box>
@@ -268,6 +276,71 @@ const SuccessSlider2 = () => {
 
 				<Box w="100%" display={{ md: "none", base: "block" }} mt="50px">
 					<Slider ref={sliderRef2} {...settings}>
+
+					<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url10}
+								alt="Image 1"
+							/>
+						</Box>
+
+						<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url6}
+								alt="Image 1"
+							/>
+						</Box>
+
+						<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url7}
+								alt="Image 1"
+							/>
+						</Box>
+
+						<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url8}
+								alt="Image 1"
+							/>
+						</Box>
+
+						<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url9}
+								alt="Image 1"
+							/>
+						</Box>
 					<Box w="100%" h={300}>
 							<Image
 								style={{

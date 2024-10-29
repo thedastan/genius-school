@@ -20,20 +20,16 @@ import cardfon2 from "@/assets/cardfon2.png";
 import cardfon3 from "@/assets/cardfon3.png";
 
 import {
+	FIFEILIAL,
+	FOFILIAL,
 	LOCATION,
 	LOCATION2,
 	LOCATION3,
 	LOCATION4,
-	PHONE_NUMBER,
-	PHONE_NUMBER2,
-	PHONE_NUMBER3,
-	PHONE_NUMBER4,
-	PHONE_NUMBER_FIXSET,
+	ONEFILIAL,
+	THREEIFILIAL,
+	TWOFILIAL,
 	WHATSAPP_LINK,
-	WHATSAPP_LINK1,
-	WHATSAPP_LINK2,
-	WHATSAPP_LINK3,
-	WHATSAPP_LINK4,
 } from "@/constants/admin";
 
 import { FaPhone } from "react-icons/fa";
@@ -126,13 +122,12 @@ const Branches = () => {
 					<Text
 						color="black"
 						fontFamily="Montserrat ,sans-serif"
-						fontSize={{ md: 56, base: 32  }}
+						fontSize={{ md: 56, base: 32 }}
 						fontWeight={500}>
 						{t("Филиалы по", "Бишкектеги")}
 					</Text>
 					<Box
 						mt={{ md: "16px", base: "-15px" }}
-						// w={{ md: "380px", base: "270px" }}
 						h={{ md: "69px", base: "100%" }}
 						borderRadius={10}
 						bg="#D5ED9F"
@@ -142,7 +137,7 @@ const Branches = () => {
 							color="#00712D"
 							transform="rotate(2deg)"
 							fontFamily="Montserrat ,sans-serif"
-							fontSize={{ md: 56, base: 32  }}
+							fontSize={{ md: 56, base: 32 }}
 							fontWeight={500}
 							p={1}>
 							{t("Бишкеку", "Филиалдар")}
@@ -181,7 +176,7 @@ const Branches = () => {
 											height={36}
 											alt="img"
 										/>
-										<Text>{t("ул.Чуйкова 132А", "Чуйкова көчөсү 132А")}</Text>
+										<Text>{t("ул.Чуйкова, 132А", "Чуйков көчөсү, 132А")}</Text>
 									</Flex>
 								</Link>
 							</Box>
@@ -250,8 +245,8 @@ const Branches = () => {
 									bg="white">
 									1
 								</Text>
-								<Link href={WHATSAPP_LINK1} target={"_blank"}>
-									<Text color="white">{PHONE_NUMBER}</Text>
+								<Link href={`tel:${ONEFILIAL}`} target={"_blank"}>
+									<Text color="white">{ONEFILIAL}</Text>
 								</Link>
 							</Flex>
 						</Flex>
@@ -288,7 +283,9 @@ const Branches = () => {
 											height={36}
 											alt="img"
 										/>
-										<Text>{t("ул.Чуйкова 132/2", "Чуйкова көчөсү 132/2")}</Text>
+										<Text>
+											{t("ул.Чуйкова, 132/2", "Чуйков көчөсү, 132/2")}
+										</Text>
 									</Flex>
 								</Link>
 							</Box>
@@ -354,10 +351,10 @@ const Branches = () => {
 									h="38px"
 									borderRadius="50px"
 									bg="white">
-									1
+									2
 								</Text>
-								<Link href={WHATSAPP_LINK2} target={"_blank"}>
-									<Text color="white">{PHONE_NUMBER2}</Text>
+								<Link href={`tel:${TWOFILIAL}`} target={"_blank"}>
+									<Text color="white">{TWOFILIAL}</Text>
 								</Link>
 							</Flex>
 						</Flex>
@@ -395,7 +392,7 @@ const Branches = () => {
 											alt="img"
 										/>
 										<Text>
-											{t("ул.Ден Сяопина 126", "Дэн Сяопин көчөсү 126")}
+											{t("ул.Ден Сяопина, 126", "Дэн Сяопин көчөсү, 126")}
 										</Text>
 									</Flex>
 								</Link>
@@ -464,8 +461,8 @@ const Branches = () => {
 									bg="white">
 									3
 								</Text>
-								<Link href={WHATSAPP_LINK3} target={"_blank"}>
-									<Text color="white">{PHONE_NUMBER3}</Text>
+								<Link href={`tel:${THREEIFILIAL}`} target={"_blank"}>
+									<Text color="white">{THREEIFILIAL}</Text>
 								</Link>
 							</Flex>
 						</Flex>
@@ -495,8 +492,8 @@ const Branches = () => {
 										bg="white">
 										4
 									</Text>
-									<Link href={WHATSAPP_LINK4} target={"_blank"}>
-										<Text color="black">{PHONE_NUMBER4}</Text>
+									<Link href={`tel:${FOFILIAL}`} target={"_blank"}>
+										<Text color="black">{FOFILIAL}</Text>
 									</Link>
 								</Flex>
 							</Box>
@@ -554,8 +551,8 @@ const Branches = () => {
 												/>
 												<Text>
 													{t(
-														"ул.Байтик Баатыра 5К",
-														"Байтик Баатыр көчөсү 5К."
+														"ул.Байтик Баатыра, 5К",
+														"Байтик Баатыр көчөсү, 5К."
 													)}
 												</Text>
 											</Flex>
@@ -596,8 +593,8 @@ const Branches = () => {
 											bg="white">
 											4
 										</Text>
-										<Link href={WHATSAPP_LINK4} target={"_blank"}>
-											<Text color="black">{PHONE_NUMBER4}</Text>
+										<Link href={`tel:${FOFILIAL}`} target={"_blank"}>
+											<Text color="black">{FOFILIAL}</Text>
 										</Link>
 									</Flex>
 								</Box>
@@ -636,7 +633,7 @@ const Branches = () => {
 													alt="img"
 												/>
 												<Text>
-													{t("ул.Чуйкова 132/6", "Чуйкова көчөсү 132/6")}
+													{t("ул.Чуйкова, 132/6", "Чуйков көчөсү, 132/6")}
 												</Text>
 											</Flex>
 										</Link>
@@ -675,8 +672,8 @@ const Branches = () => {
 										bg="white">
 										5
 									</Text>
-									<Link href={WHATSAPP_LINK3} target={"_blank"}>
-										<Text color="black">{PHONE_NUMBER3}</Text>
+									<Link href={`tel:${FIFEILIAL}`} target={"_blank"}>
+										<Text color="black">{FIFEILIAL}</Text>
 									</Link>
 								</Flex>
 							</Flex>

@@ -4,6 +4,8 @@ import { Link as ScrollLink } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "../../../assets/logonew.png";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { CgMenuRight } from "react-icons/cg";
+
 
 import {
 	Flex,
@@ -141,8 +143,8 @@ const Header = () => {
 						<Flex justifyContent="end" w="80%">
 							{isMobile ? (
 								<>
-									<Button onClick={onOpen} background="white" fontSize={20}>
-										<GiHamburgerMenu />
+									<Button onClick={onOpen} background="white" fontSize={26}>
+										<CgMenuRight />
 									</Button>
 
 									<Drawer isOpen={isOpen} placement="right" onClose={onClose}>
@@ -188,7 +190,7 @@ const Header = () => {
 															display="flex"
 															gap="10px"
 															borderRadius="50px"
-															p="20px 10px 20px 20px"
+															p="20px 20px 20px 20px"
 															fontSize={14}
 															fontWeight={700}
 															color="#00712D"
