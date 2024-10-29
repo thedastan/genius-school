@@ -89,9 +89,17 @@ const Footer = () => {
 								fontFamily="Montserrat ,sans-serif"
 								w={{ lg: 300, base: "100%" }}>
 								{t(
-									"Общеобразовательная частная школа",
+									"Общеобразовательная \n частная школа",
 									"Жалпы билим берүүчү мектеп"
-								)}
+								)
+								.split("\n")
+								.map((line, index) => (
+									<React.Fragment key={index}>
+										{line}
+										<br />
+									</React.Fragment>
+								))
+								}
 							</Text>
 						</Flex>
 
@@ -108,17 +116,17 @@ const Footer = () => {
 								</Button>
 							</Link>
 
-							<Link href={FACEBOOK_LINK} target={"_blank"}>
+							{/* <Link href={FACEBOOK_LINK} target={"_blank"}>
 								<Button
 									p={2}
 									border="solid 1px white"
 									bg="#FFFFFF1A"
-									fontSize={22}
+									fontSize={20}
 									borderRadius={50}
 									color="white">
 									<FaFacebookSquare />
 								</Button>
-							</Link>
+							</Link> */}
 
 							<Link href={WHATSAPP_LINK} target={"_blank"}>
 								<Button
