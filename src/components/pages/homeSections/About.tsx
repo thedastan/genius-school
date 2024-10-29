@@ -56,7 +56,7 @@ const About = () => {
 			title: t("Genius School", "Genius School"),
 			disc: t(
 				"Наша школа — это лестница, по которой ученики развиваются всесторонне.",
-			"Биздин мектебибиз — окуучуларды ар тараптан өнүктүргөн баскыч."
+				"Биздин мектебибиз — окуучуларды ар тараптан өнүктүргөн баскыч."
 			),
 		},
 	];
@@ -68,11 +68,14 @@ const About = () => {
 		},
 	];
 	return (
-		<Box id="#about" w="100%"  p="0px 0px 100px 0px">
+		<Box id="#about" w="100%" p="0px 0px 100px 0px">
 			<Container maxW={CONTAINER_ABOUT}>
 				<Box>
-					<Flex alignItems="center"
-						justifyContent="start" flexDirection={{ md: "row", base: "column" }} gap={2}>
+					<Flex
+						alignItems="center"
+						justifyContent="start"
+						flexDirection={{ md: "row", base: "column" }}
+						gap={2}>
 						<Text
 							color="black"
 							fontFamily="Montserrat ,sans-serif"
@@ -80,7 +83,6 @@ const About = () => {
 							fontWeight={500}>
 							{t("О Школе", "Мектеп жөнүндө ")}
 						</Text>
-						 
 					</Flex>
 
 					<Flex mt="40px" flexWrap="wrap" justifyContent="center" gap={10}>
@@ -90,34 +92,44 @@ const About = () => {
 							bg="#F5F7F1"
 							borderRadius={20}>
 							<Image width={23} height={23} src={img} alt="" />
-							<Box p={6}>
+							<Box p={{ md: 8, base: "4px 0" }}>
 								<Text
 									color="#00712D"
-									fontSize={{ md: 40, base: 28 }}
+									fontSize={{ md: 40, base: 22 }}
 									fontWeight={400}
-									lineHeight="40px">
+									lineHeight={{ md: "40px", base: "30px" }}>
 									&quot;{t("Гениус.Кейджи", "Гениус.Кейджи")}&quot;{" "}
 									{t("– частная", "")}
 									<Box ml={{ md: "12px", base: "0px" }}>
 										{t(
-											"общеобразовательная школа.",
+											"общеобразовательная \n школа.",
 											"Жалпы билим берүү мектеби."
-										)}
+										)
+											.split("\n")
+											.map((line, index) => (
+												<React.Fragment key={index}>
+													{line}
+													<br />
+												</React.Fragment>
+											))}
 									</Box>
 								</Text>
 
-							 
 								{links.map((item, index) => (
 									<Button
 										key={index}
 										bg="#00712D"
-										mt={8}
+										w={{ md: "270px", base: "100%" }}
+										mt={{ md: 8, base: 4 }}
 										fontFamily="Arial"
 										display="flex"
 										alignItems="center"
 										gap="10px"
 										borderRadius="50px"
-										p="20px 10px 20px 20px"
+										p={{
+											md: "20px 10px 20px 20px",
+											base: "25px 20px 25px 20px",
+										}}
 										fontSize="14px"
 										fontWeight="700"
 										color="white">
@@ -138,7 +150,7 @@ const About = () => {
 												bg="white"
 												color="#00712D"
 												borderRadius="50px"
-												p="5px"
+												p={{ md: "5px", base: "8px" }}
 												fontSize="14px">
 												<IoArrowDownSharp />
 											</Box>

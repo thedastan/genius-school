@@ -114,9 +114,16 @@ const Welcome = () => {
 						mt={4}
 						fontSize={{ md: 20, base: 20 }}>
 						{t(
-							"Развиваем таланты ваших детей с заботой и вниманием",
+							"Развиваем таланты ваших детей \n с  заботой и вниманием",
 							"Балдарыңыздын таланттарын камкордук жана көңүл буруу менен өнүктүрөбүз."
-						)}
+						)
+						.split("\n")
+								.map((line, index) => (
+									<React.Fragment key={index}>
+										{line}
+										<br />
+									</React.Fragment>))
+						}
 					</Text>
 					<Link href={WHATSAPP_LINK} target={"_blank"}>
 						<Button
