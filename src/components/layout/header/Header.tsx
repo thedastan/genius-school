@@ -185,7 +185,7 @@ const Header = () => {
 														<Button
 															w="100%"
 															bg="white"
-															justifyContent="space-between"
+															justifyContent="center"
 															fontFamily="Arial"
 															display="flex"
 															gap="10px"

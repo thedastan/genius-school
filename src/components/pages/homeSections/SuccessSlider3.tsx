@@ -285,33 +285,33 @@ const SuccessSlider3 = () => {
 									objectFit: "cover",
 									borderRadius: "10px",
 								}}
-								src={url10}
-								alt="Image 1"
-							/>
-						</Box>
-
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
-								src={url6}
-								alt="Image 1"
-							/>
-						</Box>
-
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
 								src={url7}
+								alt="Image 1"
+							/>
+						</Box>
+
+						<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url4}
+								alt="Image 1"
+							/>
+						</Box>
+
+						<Box w="100%" h={300}>
+							<Image
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "10px",
+								}}
+								src={url3}
 								alt="Image 1"
 							/>
 						</Box>
@@ -376,7 +376,7 @@ const SuccessSlider3 = () => {
 									objectFit: "cover",
 									borderRadius: "10px",
 								}}
-								src={url3}
+								src={url10}
 								alt="Image 1"
 							/>
 						</Box>
@@ -389,7 +389,7 @@ const SuccessSlider3 = () => {
 									objectFit: "cover",
 									borderRadius: "10px",
 								}}
-								src={url4}
+								src={url6}
 								alt="Image 1"
 							/>
 						</Box>
