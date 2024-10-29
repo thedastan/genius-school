@@ -1,8 +1,8 @@
-export const ONEFILIAL = '+996550 852 727' 
+export const ONEFILIAL = '+996 550 852 727' 
 export const TWOFILIAL = '+996 553 852 727' 
 export const THREEIFILIAL = '+996 554 852 727' 
 export const FOFILIAL = '+996 990 852 727'  
-export const FIFEILIAL = '+996 990 852 727'  
+export const FIFEILIAL = '+996 550 852 727'  
 
 export const PHONE_NUMBER_FIXSET = "+996 553 852 727"
 
