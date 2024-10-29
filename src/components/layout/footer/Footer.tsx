@@ -135,11 +135,12 @@ const Footer = () => {
 						gap="20px"
 						textAlign="center"
 						justifyContent="space-between"
+						alignItems="center"
 						flexDirection={{ lg: "row", base: "column" }}>
 						{/* <Text fontSize="12px" fontWeight={400} color="#FFFFFF">
 							{t("Политика конфиденциальности","Политикалык конфиденциальносу")}
 						</Text> */}
-						<Flex flexDirection={{ lg: "row", base: "column" }} gap={4}>
+						<Flex  flexDirection={{ lg: "row", base: "column" }} gap={4}>
 							{links.map((item, index) => (
 								<Text key={index} fontSize={{ lg: "14px", base: "20px" }}>
 									<ScrollLink
@@ -155,10 +156,10 @@ const Footer = () => {
 							))}
 						</Flex>
 						<Link href={"https://motionweb.kg/"} target="_blank">
-							<Text mt={6} fontSize="12px" fontWeight={400} color="#FFFFFF">
+							<Text w={{ lg: "200px", base: "150px" }} mt={{ lg:0, base: 6 }} fontSize="12px" fontWeight={400} color="#FFFFFF">
 								{t(
-									"Разработал Motion Web LLC",
-									"Motion Web LLC тарабынан жасалган"
+									"Разработана в Motion Web",
+									"Motion Web IT Студия Тарабынан жасалган"
 								)}
 							</Text>
 						</Link>
