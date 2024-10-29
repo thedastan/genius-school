@@ -126,7 +126,7 @@ const Branches = () => {
 					<Text
 						color="black"
 						fontFamily="Montserrat ,sans-serif"
-						fontSize={{ md: 56, base: 40 }}
+						fontSize={{ md: 56, base: 32  }}
 						fontWeight={500}>
 						{t("Филиалы по", "Бишкектеги")}
 					</Text>
@@ -142,7 +142,7 @@ const Branches = () => {
 							color="#00712D"
 							transform="rotate(2deg)"
 							fontFamily="Montserrat ,sans-serif"
-							fontSize={{ md: 56, base: 40 }}
+							fontSize={{ md: 56, base: 32  }}
 							fontWeight={500}
 							p={1}>
 							{t("Бишкеку", "Филиалдар")}

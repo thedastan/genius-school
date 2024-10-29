@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 		template: `%s | ${SITE_NAME}`
 	},
   description:
-    "образование будущего",
+    "Развиваем таланты ваших детей с заботой и вниманием",
 };
 
 export default function RootLayout({

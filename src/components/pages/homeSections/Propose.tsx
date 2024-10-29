@@ -30,6 +30,7 @@ const Propose = () => {
 							as="span"
 							backgroundColor="#D5ED9F"
 							transform="rotate(-2deg)"
+							fontSize={{ md: 56, base: 30 }}
 							borderRadius={5}
 							color="#00712D"
 							padding="1px"

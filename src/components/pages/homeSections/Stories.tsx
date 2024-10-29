@@ -65,7 +65,7 @@ const Stories = () => {
 
 	const box = [
 		{
-			url: img1,
+			url: img3,
 			title: t("Международная олимпиада", "Эл аралык олимпиада"),
 			disc: t(
 				"Пару предложений о событии, его значимости и участниках",
@@ -83,7 +83,7 @@ const Stories = () => {
 			data: "12.03.2024",
 		},
 		{
-			url: img3,
+			url: img1,
 			title: t("Международная олимпиада", "Эл аралык олимпиада"),
 			disc: t(
 				"Пару предложений о событии, его значимости и участниках",
@@ -155,7 +155,7 @@ const Stories = () => {
 						<Text
 							color="black"
 							fontFamily="Montserrat ,sans-serif"
-							fontSize={{ md: 56, base: 40 }}
+							fontSize={{ md: 56, base: 32  }}
 							fontWeight={500}>
 							{t("Истории &", "Тарыхтар &")}
 						</Text>
@@ -170,7 +170,7 @@ const Stories = () => {
 								color="white"
 								transform="rotate(2deg)"
 								fontFamily="Montserrat ,sans-serif"
-								fontSize={{ md: 56, base: 40 }}
+								fontSize={{ md: 56, base: 32  }}
 								fontWeight={500}
 								p={1}>
 								{t("Награды", "Сыйлыктар")}
@@ -184,7 +184,7 @@ const Stories = () => {
 								justifyContent="flex-end"
 								alignItems="center"
 								position="relative"
-								mt="30px">
+								mt="0px">
 								<Button
 									onClick={() => sliderRef1.current?.slickNext()}
 									border="solid 1px #D4D4D4"

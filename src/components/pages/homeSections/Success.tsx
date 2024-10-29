@@ -89,7 +89,7 @@ const Success = () => {
 								<Text
 									color="black"
 									fontFamily="Montserrat ,sans-serif"
-									fontSize={{ md: 50, base: 40 }}
+									fontSize={{ md: 50, base: 32  }}
 									fontWeight={500}>
 									{t("Успех в", "Ар бир сүрөттө")}
 								</Text>
@@ -104,7 +104,7 @@ const Success = () => {
 										color="white"
 										transform="rotate(2deg)"
 										fontFamily="Montserrat ,sans-serif"
-										fontSize={{ md: 50, base: 40 }}
+										fontSize={{ md: 50, base: 32  }}
 										fontWeight={500}
 										p={1}>
 										{t("каждом кадре", "ийгилик")}

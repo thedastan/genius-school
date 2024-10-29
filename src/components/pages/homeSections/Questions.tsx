@@ -277,13 +277,13 @@ const Questions = () => {
 					<Text
 						color="black"
 						fontFamily="Montserrat ,sans-serif"
-						fontSize={{ md: 56, base: 40 }}
+						fontSize={{ md: 56, base: 32  }}
 						fontWeight={500}>
 						{t("Вопросы", "Суроолор")}
 					</Text>
 					<Box
 						mt={{ md: "16px", base: "-15px" }}
-						w={{ md: "380px", base: "300px" }}
+						// w={{ md: "380px", base: "300px" }}
 						h={{ md: "60px", base: "45px" }}
 						borderRadius={10}
 						bg="#D5ED9F"
@@ -294,7 +294,7 @@ const Questions = () => {
 							p={1}
 							transform="rotate(2deg)"
 							fontFamily="Montserrat ,sans-serif"
-							fontSize={{ md: 56, base: 40 }}
+							fontSize={{ md: 56, base: 32  }}
 							fontWeight={500}>
 							{t("& Ответы", "&  Жообтор")}
 						</Text>

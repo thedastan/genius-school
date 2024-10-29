@@ -76,37 +76,16 @@ const About = () => {
 						<Text
 							color="black"
 							fontFamily="Montserrat ,sans-serif"
-							fontSize={{ md: 56, base: 40 }}
+							fontSize={{ md: 56, base: 34 }}
 							fontWeight={500}>
 							{t("О Школе", "Мектеп жөнүндө ")}
 						</Text>
-						{/* <Box
 						 
-							mt={{ md: "16px", base: "-15px" }}
-							// w={{ md: "255px", base: "185px" }}
-							h={{ md: "60px", base: "45px" }}
-							p={1}
-							borderRadius={10}
-							textAlign="center"
-							bg="#FF9100"
-							transform="rotate(-2deg)">
-							<Text
-								mt={{ md: "-16px", base: "-10px" }}
-								color="white"
-								transform="rotate(2deg)"
-								fontFamily="Unbounded"
-								fontSize={{ md: 56, base: 40 }}
-								fontWeight={500}>
-								{t("Школе", "Мектеп")}
-							</Text>
-						</Box> */}
 					</Flex>
 
 					<Flex mt="40px" flexWrap="wrap" justifyContent="center" gap={10}>
 						<Box
-							// boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
 							w={{ md: 760, base: "100%" }}
-							// h={{ md: 300, base: "100%" }}
 							p={{ md: 8, base: 4 }}
 							bg="#F5F7F1"
 							borderRadius={20}>
