@@ -38,9 +38,9 @@ const Head = () => {
 				{`
 			{
 				"@type": "WebSite",
-				"name": "grniusschool",
+				"name": "geniusschool",
 				"url": "https://genius-school.kg",
-				"description": "Развиваем таланты ваших детей с заботой и вниманием"
+				"description": "Частная общеобразовательная школа в Бишкеке"
 			}
 			`}
 			</script>

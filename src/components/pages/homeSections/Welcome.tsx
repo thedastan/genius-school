@@ -73,7 +73,7 @@ const Welcome = () => {
 						gap={2}>
 						<Box
 							mt={{ md: "16px", base: "-15px" }}
-							h={{ md: "60px", base: "45px" }}
+							h={{ md: "64px", base: "50px" }}
 							p={1}
 							borderRadius={10}
 							bg="#FF9100 "
@@ -85,7 +85,7 @@ const Welcome = () => {
 								fontFamily="Montserrat ,sans-serif"
 								fontSize={{ md: 56, base: 40 }}
 								fontWeight={600}>
-								GENIUS.KG
+								{t("GENIUS.KG", "Гениус.Кейжи")}
 							</Text>
 						</Box>
 						<Text
@@ -95,7 +95,7 @@ const Welcome = () => {
 							fontSize={{ md: 56, base: 36 }}
 							fontWeight={500}
 							zIndex={1}>
-							SCHOOL
+							 {t("SCHOOL", "")}
 						</Text>
 					</Flex>
 
@@ -108,6 +108,26 @@ const Welcome = () => {
 						{t("образование будущего", "Келечектин билими")}
 					</Title>
 					<Text
+					display={{ md: "flex", base: "none" }}
+						textAlign={{ md: "start", base: "center" }}
+						color={{ md: "white", base: "black" }}
+						zIndex={1}
+						mt={4}
+						fontSize={{ md: 20, base: 20 }}>
+						{t(
+							"Развиваем таланты ваших детей  с  заботой и вниманием",
+							"Балдарыңыздын таланттарын камкордук жана көңүл буруу менен өнүктүрөбүз."
+						)
+						.split("\n")
+								.map((line, index) => (
+									<React.Fragment key={index}>
+										{line}
+										<br />
+									</React.Fragment>))
+						}
+					</Text>
+					<Text
+					display={{ md: "none", base: "block" }}
 						textAlign={{ md: "start", base: "center" }}
 						color={{ md: "white", base: "black" }}
 						zIndex={1}

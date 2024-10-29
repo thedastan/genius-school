@@ -6,8 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import { useEffect, useRef } from "react";
-
-import { CONTAINER_WIDTH } from "@/config/_variables.config";
+ 
 import url1 from "@/assets/gallerea/gal10.jpg";
 import url2 from "@/assets/gallerea/gal11.jpg";
 import url3 from "@/assets/gallerea/gal13.jpg";
