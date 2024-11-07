@@ -10,9 +10,15 @@ import img3 from "../../../assets/cloud.png";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 import Title from "@/components/ui/texts/Title";
 
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const MotionFlex = motion(Flex as any);
+
 const Parentschildren = () => {
 	const { t } = useLanguageStore();
 
+	const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
 	useEffect(() => {
 		const link = document.createElement("link");
@@ -27,16 +33,13 @@ const Parentschildren = () => {
 			title: t("кружки", "Кружоктор"),
 		},
 		{
-			title: t(
-				"программирование после 4-класса",
-				"4-класстан кийин программалоо"
-			),
+			title: t("программирование с 4 класса", "4-класстан баштап программалоо"),
 		},
 		{
 			title: t("учебные проекты", "Окуу долбоорлору"),
 		},
 		{
-			title: t("китайский язык", "Кытай тили"),
+			title: t("многообразие иностранных языков", "чет тилинин көп түрдүүлүгү"),
 		},
 		{
 			title: t("секции", "Секциялар"),
@@ -51,7 +54,7 @@ const Parentschildren = () => {
 
 	return (
 		<>
-			<Box w="100%" p="50px 0">
+			<Box ref={ref} bg="#F2F5EB" w="100%" pt="48px">
 				<Container maxW={CONTAINER_WIDTH}>
 					<Flex
 						flexDirection={{ md: "row", base: "column" }}
@@ -65,11 +68,17 @@ const Parentschildren = () => {
 							color="black"
 							textAlign="center"
 							gap={0}>
-							 
-							 <Text  lineHeight={{ md: "81px", base: "41px" }} textAlign="start" color="black" fontSize={{ md: 70, base: 30 }} fontWeight={500}>
-                  {t("Почему родители и дети выбирают наc", "Ата-энелер бизди тандоо себеби")}
-									 
-                </Text>
+							<Text
+								lineHeight={{ md: "81px", base: "41px" }}
+								textAlign="start"
+								color="black"
+								fontSize={{ md: 70, base: 30 }}
+								fontWeight={500}>
+								{t(
+									"Почему родители и дети выбирают наc",
+									"Ата-энелер бизди тандоо себеби"
+								)}
+							</Text>
 							<Description
 								color="black"
 								mt={6}
@@ -90,9 +99,13 @@ const Parentschildren = () => {
 								{box.map((item, index) => (
 									<Box
 										key={index}
+										zIndex={1}
 										borderRadius="50px"
 										p="10px 14px"
-										border="solid 1px grey">
+										border="solid 1px grey"
+										transition="0.3s"
+										_hover={{bg:"#FF9100", transition:"0.3s",color:"white",border:"solid 1px white"}}
+										>
 										<Text fontSize={{ md: 16, base: 12 }} fontWeight={400}>
 											{item.title}
 										</Text>
@@ -101,18 +114,24 @@ const Parentschildren = () => {
 							</Flex>
 						</Flex>
 
-						<Flex
+						<MotionFlex
+							initial={{ opacity: 0, y: 50 }}
+							animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+							transition={{ duration: 1 }}
 							marginTop={{ md: 0, base: 6 }}
 							flexDirection="column"
 							alignItems="end">
 							<Image src={img2} alt="img" />
 							<Image className="kit_img" src={img} alt="img" />
-						</Flex>
+						</MotionFlex>
 					</Flex>
 				</Container>
-				<Box>
+				<MotionFlex
+					initial={{ opacity: 0, y: 50 }}
+					animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+					transition={{ duration: 1 }}>
 					<Image className="cloud" src={img3} alt="" />
-				</Box>
+				</MotionFlex>
 			</Box>
 		</>
 	);

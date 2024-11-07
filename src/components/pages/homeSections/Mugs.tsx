@@ -8,11 +8,16 @@ import star1 from "../../../assets/star2.png";
 
 import Image from "next/image";
 import { useLanguageStore } from "@/stores/useLanguageStore";
- 
+
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const MotionFlex = motion(Flex as any);
 
 const Mugs = () => {
+	const { t } = useLanguageStore();
 
-  const { t } = useLanguageStore();
+	const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
 	useEffect(() => {
 		const link = document.createElement("link");
@@ -38,9 +43,8 @@ const Mugs = () => {
 		{
 			title: t("Хореография", "Хореография"),
 		},
-		
 	];
-	
+
 	const box1 = [
 		{
 			title1: t("Таэквандо", "Таэквандо"),
@@ -51,23 +55,24 @@ const Mugs = () => {
 		{
 			title1: t("Спортивно-бальные танцы", "Спорттук бальный бийлер"),
 		},
-		
 	];
-	
+
 	return (
 		<Box w="100%" p="70px 0">
 			<Container maxWidth={CONTAINER_WIDTH}>
-				<Box textAlign="center">  
-					<Title fontWeight={500} fontSize={{ md: 56, base: 32  }} fontFamily="Montserrat ,sans-serif">
-					{t("Кружки", "Кружоктор")}
+				<Box textAlign="center">
+					<Title
+						fontWeight={500}
+						fontSize={{ md: 56, base: 32 }}
+						fontFamily="Montserrat ,sans-serif">
+						{t("Кружки", "Кружоктор")}
 					</Title>
 
-					<Flex
+					<Flex ref={ref}
 						flexDirection={{ md: "row", base: "column" }}
 						justifyContent="center"
 						gap={{ md: 40, base: 10 }}
 						mt={{ md: 20, base: 10 }}>
-						 
 						<Flex flexDirection="column" alignItems="start" gap={2}>
 							<Title
 								fontFamily="Montserrat ,sans-serif"
@@ -75,14 +80,17 @@ const Mugs = () => {
 								fontWeight={600}
 								bg="#118A39"
 								w={{ md: 280, base: "100%" }}
-							 
 								p="15px 0px"
 								borderRadius={40}
 								color="white">
-							{t("Бесплатные", "Акысыз")}
+								{t("Бесплатные", "Акысыз")}
 							</Title>
 							{box.map((item, index) => (
-								<Flex alignItems="start" key={index} mt={4} gap="6px">
+								<MotionFlex initial={{ opacity: 0, x: 20 }}
+								animate={
+									inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
+								}
+								transition={{ delay: index * 0.3, duration: 0.5 }} alignItems="start" key={index} mt={4} gap="6px">
 									<Image width={27} height={27} src={star} alt="" />
 									<Text
 										textAlign="start"
@@ -90,7 +98,7 @@ const Mugs = () => {
 										fontWeight={700}>
 										{item.title}
 									</Text>
-								</Flex>
+								</MotionFlex>
 							))}
 						</Flex>
 
@@ -104,10 +112,19 @@ const Mugs = () => {
 								p="15px 0px"
 								borderRadius={40}
 								color="white">
-							{t("Платные", "Төлөмдүү")}
+								{t("Платные", "Төлөмдүү")}
 							</Title>
 							{box1.map((item, index) => (
-								<Flex alignItems="start" key={index} mt={4} gap="6px">
+								<MotionFlex
+									initial={{ opacity: 0, x: 20 }}
+									animate={
+										inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
+									}
+									transition={{ delay: index * 0.3, duration: 0.5 }}
+									alignItems="start"
+									key={index}
+									mt={4}
+									gap="6px">
 									<Image width={27} height={27} src={star1} alt="" />
 									<Text
 										textAlign="start"
@@ -115,7 +132,7 @@ const Mugs = () => {
 										fontWeight={700}>
 										{item.title1}
 									</Text>
-								</Flex>
+								</MotionFlex>
 							))}
 						</Flex>
 					</Flex>

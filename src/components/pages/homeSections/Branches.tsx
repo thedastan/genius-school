@@ -146,7 +146,7 @@ const Branches = () => {
 					</Text>
 				</Flex>
 				<Flex justifyContent="center" flexWrap="wrap" gap={5}>
-					<Box
+					<Box 
 						backgroundSize="cover"
 						backgroundPosition="center"
 						w={{ md: "380px", base: "100%" }}

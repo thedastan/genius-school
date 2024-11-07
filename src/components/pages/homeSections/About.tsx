@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
 import {
 	Box,
@@ -22,8 +22,14 @@ import img7 from "@/assets/about7.png";
 import Image from "next/image";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const MotionFlex = motion(Flex as any);
+
 const About = () => {
 	const { t } = useLanguageStore();
+	const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
 	const data = [
 		{
@@ -112,19 +118,22 @@ const About = () => {
 	];
 
 	return (
-		<Box id="#about"  pb={{ md: 20, base: 20 }}>
+		<Box id="#about" py={{ md: 20, base: 0 }} pb={{ md: 20, base: 20 }} ref={ref}>
 			<Container maxW={CONTAINER_WIDTH}>
 				<Text textAlign="center" pb={10} fontSize={{ md: 60, base: 32 }} fontWeight={500}>
 					{t("Что предлагает", "биздин сунуш")}{" "}
 					<span style={{ color: "#118A39", textTransform: "uppercase" }}>
-						 {t("GENIUS.KG", "GENIUS.KG")}
+						{t("GENIUS.KG", "GENIUS.KG")}
 					</span>
 				</Text>
 
 				<Box>
 					<Flex gap={3} flexWrap="wrap">
 						{data.map((el, index) => (
-							<Flex
+							<MotionFlex
+								initial={{ opacity: 0, y: 20 }}
+								animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+								transition={{ delay: index * 0.3, duration: 0.5 }}
 								alignItems="start"
 								gap={4}
 								flexDirection={{ md: "column", base: "row" }}
@@ -132,7 +141,8 @@ const About = () => {
 								borderRadius={10}
 								w={{ md: 321, base: "100%" }}
 								bg="#118A39"
-								p={5}>
+								p={5}
+							>
 								<Image width={56} height={56} src={el.url} alt="img" />
 								<Box>
 									<Text color="white" fontSize={22} fontWeight={600}>
@@ -148,10 +158,13 @@ const About = () => {
 										))}
 									</UnorderedList>
 								</Box>
-							</Flex>
+							</MotionFlex>
 						))}
 						{data2.map((el, index) => (
-							<Flex
+							<MotionFlex
+								initial={{ opacity: 0, y: 20 }}
+								animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+								transition={{ delay: index * 0.3, duration: 0.5 }}
 								alignItems="start"
 								gap={4}
 								flexDirection={{ md: "column", base: "row" }}
@@ -159,7 +172,8 @@ const About = () => {
 								borderRadius={10}
 								w={{ md: 321, base: "100%" }}
 								bg="#E3E3E3"
-								p={5}>
+								p={5}
+							>
 								<Image width={56} height={56} src={el.url} alt="img" />
 								<Box>
 									<Text fontSize={22} fontWeight={600}>
@@ -169,7 +183,7 @@ const About = () => {
 										{el.desc}
 									</Text>
 								</Box>
-							</Flex>
+							</MotionFlex>
 						))}
 					</Flex>
 				</Box>

@@ -114,7 +114,7 @@ const Stories = () => {
 	}, []);
 
 	return (
-		<Box padding={{ md: "100px 0", base: "50px 0" }}>
+		<Box bg={{ md: "white", base: "#F8F5FE" }} padding={{ md: "100px 0", base: "50px 0" }}>
 			<Container maxW={CONTAINER_WIDTH}>
 				<Tabs
 					p={{ md: "50px 30px", base: "50px 0" }}

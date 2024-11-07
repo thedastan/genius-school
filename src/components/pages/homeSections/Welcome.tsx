@@ -20,36 +20,35 @@ const Welcome = () => {
 			mt={{ md: 0, base: 10 }}
 			padding="100px 0"
 			overflow="hidden">
+			<Box display={{ md: "flex", base: "none" }}>
+				<video
+					autoPlay
+					loop
+					muted
+					style={{
+						position: "absolute",
+						top: 0,
+						left: 0,
+						width: "100%",
+						height: "100%",
+						objectFit: "cover",
+						borderRadius: "30px",
+						zIndex: -1,
+					}}>
+					<source src="/genius.mp4" type="video/mp4" />
+				</video>
+				<Box
+					position="absolute"
+					top="0"
+					left="0"
+					width="100%"
+					height="100%"
+					borderRadius="30px"
+					bgGradient="linear(to-b, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"
+					zIndex={0}
+				/>
+			</Box>
 			<Container maxW={CONTAINER_WIDTH} position="relative">
-				<Box display={{ md: "flex", base: "none" }}>
-					<video
-						autoPlay
-						loop
-						muted
-						style={{
-							position: "absolute",
-							top: 0,
-							left: 0,
-							width: "100%",
-							height: "100%",
-							objectFit: "cover",
-							borderRadius: "30px",
-							zIndex: -1,
-						}}>
-						<source src="/genius.mp4" type="video/mp4" />
-					</video>
-					<Box
-						position="absolute"
-						top="0"
-						left="0"
-						width="100%"
-						height="100%"
-						borderRadius="30px"
-						bgGradient="linear(to-b, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"
-						zIndex={0}
-					/>
-				</Box>
-
 				<Flex
 					className="fon"
 					bgSize="cover"
@@ -86,16 +85,14 @@ const Welcome = () => {
 								"Развиваем таланты \n ваших детей с заботой \n и вниманием",
 								"Балдарыңыздын таланттарын \n камкордук жана көңүл \n буруу менен өстүрөбүз."
 							)
-							.split("\n")
+								.split("\n")
 								.map((line, index) => (
 									<React.Fragment key={index}>
 										{line}
 										<br />
-									</React.Fragment>))
-							}
+									</React.Fragment>
+								))}
 						</Text>
-
-						 
 					</Flex>
 
 					<Link href={WHATSAPP_LINK} target={"_blank"}>

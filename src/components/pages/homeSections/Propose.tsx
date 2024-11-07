@@ -14,9 +14,16 @@ import { GoArrowRight } from "react-icons/go";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 import { Link } from "react-scroll";
 
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const MotionFlex = motion(Flex as any);
 
 const Propose = () => {
 	const { t } = useLanguageStore();
+
+	const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
 	const data = [
 		{
 			url: img1,
@@ -63,7 +70,7 @@ const Propose = () => {
 			bgPosition="center"
 			bgRepeat="no-repeat">
 			<Container maxW={CONTAINER_WIDTH} display="flex" justifyContent="center">
-				<Box w={{ md: "1235px", base: "100%" }}>
+				<Box ref={ref} w={{ md: "1235px", base: "100%" }}>
 					<Flex
 						alignItems="start"
 						flexDirection="column"
@@ -101,7 +108,10 @@ const Propose = () => {
 					</Flex>
 					<Flex justifyContent="center" flexWrap="wrap" gap={6}>
 						{data.map((el, index) => (
-							<Flex
+							<MotionFlex
+								initial={{ opacity: 0, y: 20 }}
+								animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+								transition={{ delay: index * 0.3, duration: 0.5 }}
 								alignItems="start"
 								gap={4}
 								flexDirection={{ md: "column", base: "row" }}
@@ -121,7 +131,7 @@ const Propose = () => {
 										{el.desc}
 									</Text>
 								</Box>
-							</Flex>
+							</MotionFlex>
 						))}
 					</Flex>
 				</Box>
