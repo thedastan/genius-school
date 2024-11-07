@@ -131,7 +131,7 @@ const About = () => {
 					<Flex gap={3} flexWrap="wrap">
 						{data.map((el, index) => (
 							<MotionFlex
-								initial={{ opacity: 0, y: 20 }}
+								initial={{ opacity: 0, y: 22 }}
 								animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
 								transition={{ delay: index * 0.3, duration: 0.5 }}
 								alignItems="start"

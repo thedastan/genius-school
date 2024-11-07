@@ -58,7 +58,7 @@ const Mugs = () => {
 	];
 
 	return (
-		<Box w="100%" p="70px 0">
+		<Box w="100%" p="68px 0">
 			<Container maxWidth={CONTAINER_WIDTH}>
 				<Box textAlign="center">
 					<Title
