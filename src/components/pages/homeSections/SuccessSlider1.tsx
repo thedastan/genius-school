@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 import { useEffect, useRef } from "react";
 
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
-import url1 from "@/assets/gallerea/gal.jpg";
+import url1 from "@/assets/gallerea/gal12.jpg";
 import url2 from "@/assets/gallerea/gal1.jpg";
 import url3 from "@/assets/gallerea/gal2.jpg";
 import url4 from "@/assets/gallerea/gal3.jpg";
