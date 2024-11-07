@@ -1,27 +1,25 @@
 "use client";
 import Description from "@/components/ui/texts/Description";
 import Title from "@/components/ui/texts/Title";
+import TitleComponent from "@/components/ui/texts/TitleComponent";
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
 import { WHATSAPP_LINK } from "@/constants/admin";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 import { Box, Button, Container, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import { GoArrowUpRight } from "react-icons/go";
+import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
 
 const Welcome = () => {
 	const { t } = useLanguageStore();
 
-	useEffect(() => {
-		const link = document.createElement("link");
-		link.href =
-			"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap";
-		link.rel = "stylesheet";
-		document.head.appendChild(link);
-	}, []);
-
 	return (
-		<Box id="#home" position="relative" mt={{ md: 0, base: 10 }} padding="100px 0" overflow="hidden">
+		<Box
+			id="#home"
+			position="relative"
+			mt={{ md: 0, base: 10 }}
+			padding="100px 0"
+			overflow="hidden">
 			<Container maxW={CONTAINER_WIDTH} position="relative">
 				<Box display={{ md: "flex", base: "none" }}>
 					<video
@@ -39,7 +37,6 @@ const Welcome = () => {
 							zIndex: -1,
 						}}>
 						<source src="/genius.mp4" type="video/mp4" />
-						Your browser does not support the video tag.
 					</video>
 					<Box
 						position="absolute"
@@ -68,128 +65,78 @@ const Welcome = () => {
 					zIndex={1}
 					textAlign={{ md: "start", base: "center" }}>
 					<Flex
-						alignItems={{ md: "start", base: "center" }}
-						flexDirection={{ md: "row", base: "column" }}
-						gap={2}>
-						<Box
-							mt={{ md: "16px", base: "-15px" }}
-							h={{ md: "64px", base: "50px" }}
-							p={1}
-							borderRadius={10}
-							bg="#FF9100 "
-							transform="rotate(2deg)">
-							<Text
-								mt={{ md: "-16px", base: "-10px" }}
-								color="#D3D3D3"
-								transform="rotate(-2deg)"
-								fontFamily="Montserrat ,sans-serif"
-								fontSize={{ md: 56, base: 40 }}
-								fontWeight={600}>
-								{t("GENIUS.KG", "Гениус.Кейжи")}
-							</Text>
-						</Box>
+						color="white"
+						zIndex={1}
+						textAlign="center"
+						flexDirection="column">
 						<Text
-						display={{ md: "flex", base: "none" }}
-							color={{ md: "white", base: "black" }}
-							fontFamily="Montserrat ,sans-serif"
-							fontSize={{ md: 56, base: 36 }}
-							fontWeight={500}
-							zIndex={1}>
-							 {t("SCHOOL", "")}
+							color={{ md: "white", base: "#118A39" }}
+							fontSize={{ md: 70, base: 58 }}
+							fontWeight={700}>
+							GENIUS.KG
 						</Text>
+
+						<Text
+							color={{ md: "white", base: "black" }}
+							lineHeight={{ md: "52px", base: "32px" }}
+							// w={{ md: 620, base: "100%" }}
+							fontSize={{ md: 52, base: 28 }}
+							fontWeight={600}>
+							{t(
+								"Развиваем таланты \n ваших детей с заботой \n и вниманием",
+								"Балдарыңыздын таланттарын \n камкордук жана көңүл \n буруу менен өстүрөбүз."
+							)
+							.split("\n")
+								.map((line, index) => (
+									<React.Fragment key={index}>
+										{line}
+										<br />
+									</React.Fragment>))
+							}
+						</Text>
+
+						 
 					</Flex>
 
-					<Title
-						color={{ md: "white", base: "black" }}
-						fontFamily="Montserrat ,sans-serif"
-						fontSize={{ md: 56, base: 36 }}
-						fontWeight={500}
-						zIndex={1}>
-						{t("образование будущего", "Келечектин билими")}
-					</Title>
-					<Text
-					display={{ md: "flex", base: "none" }}
-						textAlign={{ md: "start", base: "center" }}
-						color={{ md: "white", base: "black" }}
-						zIndex={1}
-						mt={4}
-						fontSize={{ md: 20, base: 20 }}>
-						{t(
-							"Развиваем таланты ваших детей  с  заботой и вниманием",
-							"Балдарыңыздын таланттарын камкордук жана көңүл буруу менен өнүктүрөбүз."
-						)
-						.split("\n")
-								.map((line, index) => (
-									<React.Fragment key={index}>
-										{line}
-										<br />
-									</React.Fragment>))
-						}
-					</Text>
-					<Text
-					display={{ md: "none", base: "block" }}
-						textAlign={{ md: "start", base: "center" }}
-						color={{ md: "white", base: "black" }}
-						zIndex={1}
-						mt={4}
-						fontSize={{ md: 20, base: 20 }}>
-						{t(
-							"Развиваем таланты ваших детей \n с  заботой и вниманием",
-							"Балдарыңыздын таланттарын камкордук жана көңүл буруу менен өнүктүрөбүз."
-						)
-						.split("\n")
-								.map((line, index) => (
-									<React.Fragment key={index}>
-										{line}
-										<br />
-									</React.Fragment>))
-						}
-					</Text>
 					<Link href={WHATSAPP_LINK} target={"_blank"}>
 						<Button
 							mt={8}
 							fontFamily="Arial"
 							display="flex"
 							gap="10px"
-							bg={{ md: "white", base: "#FFFBE6" }}
+							bg={{ md: "#FF9100", base: "#FF9100" }}
 							borderRadius="50px"
-							p="25px 10px 25px 25px"
-							fontSize={14}
-							fontWeight={600}
+							p="25px"
+							fontSize={16}
+							fontWeight={500}
 							zIndex={1}
-							color="#00712D"
-							textTransform="uppercase"
-							letterSpacing="2px">
+							color="white"
+							textTransform="uppercase">
 							{t("Записаться на экскурсию", "Экскурсияга жазылыңыз")}
 							<span
 								style={{
-									background: "#00712D",
-									color: "white",
-									borderRadius: "50px",
-									padding: "5px",
 									fontSize: "20px",
 								}}>
-								<GoArrowUpRight />
+								<GoArrowRight />
 							</span>
 						</Button>
 					</Link>
 					<Box mt={20} display={{ md: "none", base: "block" }}>
-					<video
-						autoPlay
-						loop
-						muted
-						style={{
-							width: "100%",
-							height: "100%",
-							objectFit: "cover",
-							borderRadius: "6px",
-							zIndex: -1,
-						}}>
-						<source src="/genius.mp4" type="video/mp4" />
-					</video>
-				</Box>
+						<video
+							autoPlay
+							loop
+							muted
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+								borderRadius: "6px",
+								zIndex: -1,
+							}}>
+							<source src="/genius.mp4" type="video/mp4" />
+						</video>
+					</Box>
 				</Flex>
-				 
 			</Container>
 		</Box>
 	);

@@ -34,6 +34,7 @@ import img8 from "@/assets/gallerea/medal4.jpg";
 
 import Image from "next/image";
 import { useLanguageStore } from "@/stores/useLanguageStore";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Stories = () => {
 	const { t } = useLanguageStore();
@@ -113,31 +114,37 @@ const Stories = () => {
 	}, []);
 
 	return (
-		<Box bg="#F8F5FE" padding="100px 0">
+		<Box padding={{ md: "100px 0", base: "50px 0" }}>
 			<Container maxW={CONTAINER_WIDTH}>
 				<Tabs
+					p={{ md: "50px 30px", base: "50px 0" }}
+					bg="#F8F5FE"
+					borderRadius={20}
 					display="flex"
 					flexDirection="column"
 					justifyContent="center"
 					alignItems="center">
 					<TabList>
 						<Tab
+							color="#D4D4D4"
 							fontWeight={700}
 							sx={{
 								_selected: {
-									color: "#FF9100",
-									borderBottom: "2px solid #FF9100",
+									color: "black",
+									borderBottom: "2px solid black",
 								},
 								_focus: { boxShadow: "none" },
 							}}>
 							{t("Истории", "Тарыхтар")}
 						</Tab>
+
 						<Tab
+							color="#D4D4D4"
 							fontWeight={700}
 							sx={{
 								_selected: {
-									color: "#FF9100",
-									borderBottom: "2px solid #FF9100",
+									color: "black",
+									borderBottom: "2px solid black",
 								},
 								_focus: { boxShadow: "none" },
 							}}>
@@ -145,56 +152,37 @@ const Stories = () => {
 						</Tab>
 					</TabList>
 
-					<Flex
-						textAlign="center"
-						justifyContent="center"
-						alignItems="center"
-						p="30px 0"
-						flexDirection={{ md: "row", base: "column" }}
-						gap={2}>
-						<Text
-							color="black"
-							fontFamily="Montserrat ,sans-serif"
-							fontSize={{ md: 56, base: 32  }}
-							fontWeight={500}>
-							{t("Истории &", "Тарыхтар &")}
-						</Text>
-						<Box
-							mt={{ md: "16px", base: "-15px" }}
-							borderRadius={10}
-							p={1}
-							bg="#FF9100"
-							transform="rotate(-2deg)">
-							<Text
-								mt={{ md: "-16px", base: "-10px" }}
-								color="white"
-								transform="rotate(2deg)"
-								fontFamily="Montserrat ,sans-serif"
-								fontSize={{ md: 56, base: 32  }}
-								fontWeight={500}
-								p={1}>
-								{t("Награды", "Сыйлыктар")}
-							</Text>
-						</Box>
-					</Flex>
-
 					<TabPanels>
-						<TabPanel>
+						<TabPanel display="flex" flexDirection={{ md: "column", base: "column-reverse" }}>
 							<Flex
-								justifyContent="flex-end"
+								justifyContent="space-between"
 								alignItems="center"
 								position="relative"
-								mt="0px">
+								flexDirection="row-reverse"
+								mt="20px">
 								<Button
 									onClick={() => sliderRef1.current?.slickNext()}
 									border="solid 1px #D4D4D4"
 									padding="8px 12px"
 									bg="white"
 									color="black"
-									marginTop={300}
-									position="absolute"
+									marginTop={{ md: 300, base: 0 }}
+									position={{ md: "absolute", base: "relative" }}
+									right={{ md:-10, base: 28 }}
 									zIndex={1}>
-									<FaAngleRight />
+									<FaChevronRight />
+								</Button>
+								<Button
+									onClick={() => sliderRef1.current?.slickPrev()}
+									border="solid 1px #D4D4D4"
+									padding="8px 12px"
+									bg="white"
+									color="black"
+									marginTop={{ md: 300, base: 0 }}
+									left={{ md:-10, base: 28 }}
+									position={{ md: "absolute", base: "relative" }}
+									zIndex={1}>
+									<FaChevronLeft />
 								</Button>
 							</Flex>
 							<Box
@@ -217,15 +205,12 @@ const Stories = () => {
 													objectFit="cover"
 													overflow="hidden"
 													w="100%"
-													h={200}
-													 
-													>
+													h={200}>
 													<Image
 														style={{
 															objectFit: "cover",
 															width: "100%",
 															height: "100%",
-															 
 														}}
 														src={el.url}
 														alt=""
@@ -248,22 +233,36 @@ const Stories = () => {
 							</Box>
 						</TabPanel>
 
-						<TabPanel>
-							<Flex
-								justifyContent="flex-end"
+						<TabPanel display="flex" flexDirection={{ md: "column", base: "column-reverse" }}>
+						<Flex
+								justifyContent="space-between"
 								alignItems="center"
 								position="relative"
-								mt="30px">
+								flexDirection="row-reverse"
+								mt="20px">
 								<Button
 									onClick={() => sliderRef2.current?.slickNext()}
 									border="solid 1px #D4D4D4"
 									padding="8px 12px"
 									bg="white"
-									marginTop={350}
-									position="absolute"
 									color="black"
+									marginTop={{ md: 300, base: 0 }}
+									position={{ md: "absolute", base: "relative" }}
+									right={{ md:-10, base: 28 }}
 									zIndex={1}>
-									<FaAngleRight />
+									<FaChevronRight />
+								</Button>
+								<Button
+									onClick={() => sliderRef2.current?.slickPrev()}
+									border="solid 1px #D4D4D4"
+									padding="8px 12px"
+									bg="white"
+									color="black"
+									marginTop={{ md: 300, base: 0 }}
+									left={{ md:-10, base: 28 }}
+									position={{ md: "absolute", base: "relative" }}
+									zIndex={1}>
+									<FaChevronLeft />
 								</Button>
 							</Flex>
 							<Box
@@ -286,8 +285,7 @@ const Stories = () => {
 													objectFit="cover"
 													overflow="hidden"
 													w="100%"
-													h={330}
-													>
+													h={330}>
 													<Image
 														style={{
 															objectFit: "cover",

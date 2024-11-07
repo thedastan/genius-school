@@ -87,6 +87,8 @@ const Header = () => {
 		};
 	}, [lastScrollY]);
 
+	
+
 	return (
 		<Box
 			position="fixed"

@@ -65,50 +65,15 @@ const Parentschildren = () => {
 							color="black"
 							textAlign="center"
 							gap={0}>
-							<Title
-								textAlign="center"
-								color="black"
-								fontFamily="Montserrat ,sans-serif"
-								fontSize={{ md: 50, base: 34 }}
-								fontWeight={500}
-								zIndex={1}>
-								{t("", "")}
-							</Title>
-							<Flex
-								flexWrap="wrap"
-								textAlign="center"
-								alignItems={{ md: "start", base: "center" }}
-								flexDirection={{ md: "row", base: "column" }}
-								gap={2}>
-								<Text
-									color="black"
-									fontFamily="Montserrat ,sans-serif"
-									fontSize={{ md: 50, base: 34 }}
-									fontWeight={500}
-									zIndex={1}>
-									{t("Почему нас ", "Бизди тандоо")}
-								</Text>
-
-								<Box
-									p={1}
-									borderRadius={10}
-									bg="#D5ED9F"
-									transform="rotate(-2deg)">
-									<Text
-										color="#00712D"
-										transform="rotate(2deg)"
-										fontFamily="Montserrat ,sans-serif"
-										fontSize={{ md: 50, base: 34 }}
-										fontWeight={500}>
-										{t("выбирают", "   себеби")}
-									</Text>
-								</Box>
-							</Flex>
-
+							 
+							 <Text  lineHeight={{ md: "81px", base: "41px" }} textAlign="start" color="black" fontSize={{ md: 70, base: 30 }} fontWeight={500}>
+                  {t("Почему родители и дети выбирают наc", "Ата-энелер бизди тандоо себеби")}
+									 
+                </Text>
 							<Description
 								color="black"
 								mt={6}
-								w={{ md: "80%", base: "100%" }}
+								w={{ md: "90%", base: "100%" }}
 								fontSize={20}
 								textAlign="start">
 								{t(

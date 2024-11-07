@@ -27,12 +27,12 @@ const SuccessSlider1 = () => {
 	const sliderRef2 = useRef<Slider | null>(null);
 
 	const settings = {
-		dots: false,
+		dots: true,  // Отключаем точки
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: false,
+		arrows: false,  // Отключаем стрелки
 		responsive: [
 			{
 				breakpoint: 1024,
@@ -44,6 +44,8 @@ const SuccessSlider1 = () => {
 			},
 		],
 	};
+	
+			
 
 	useEffect(() => {
 		const link = document.createElement("link");
@@ -90,7 +92,7 @@ const SuccessSlider1 = () => {
 				display={{ md: "flex", base: "none" }}
 				flexDirection="column"
 				mt="50px">
-				<Slider ref={sliderRef} {...settings}>
+				<Slider ref={sliderRef} arrows={false}>
 					<Box w="100%">
 						<Flex justifyContent="center" gap={4}>
 							<Flex gap={4} flexDirection="column">
@@ -243,20 +245,149 @@ const SuccessSlider1 = () => {
 				</Slider>
 			</Box>
 
-			<Box
+			<Box w="100%" display={{ md: "none", base: "block" }} mt="50px">
+				<Slider
+					ref={sliderRef2}
+					{...settings}
+					appendDots={(dots) => (
+						<Box display="flex" justifyContent="center" mt="10px">
+							<Box w={40} position="absolute"   as="ul"  >
+								{dots}
+							</Box>
+						</Box>
+					)}>
+					<Box w="100%" h={300}>
+						<Image
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+								borderRadius: "10px",
+							}}
+							src={url2}
+							alt="Image 1"
+						/>
+					</Box>
+
+					<Box w="100%" h={300}>
+						<Image
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+								borderRadius: "10px",
+							}}
+							src={url3}
+							alt="Image 1"
+						/>
+					</Box>
+
+					<Box w="100%" h={300}>
+						<Image
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+								borderRadius: "10px",
+							}}
+							src={url4}
+							alt="Image 1"
+						/>
+					</Box>
+
+					<Box w="100%" h={300}>
+						<Image
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+								borderRadius: "10px",
+							}}
+							src={url5}
+							alt="Image 1"
+						/>
+					</Box>
+
+					<Box w="100%" h={300}>
+						<Image
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+								borderRadius: "10px",
+							}}
+							src={url10}
+							alt="Image 1"
+						/>
+					</Box>
+
+					<Box w="100%" h={300}>
+						<Image
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+								borderRadius: "10px",
+							}}
+							src={url6}
+							alt="Image 1"
+						/>
+					</Box>
+
+					<Box w="100%" h={300}>
+						<Image
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+								borderRadius: "10px",
+							}}
+							src={url7}
+							alt="Image 1"
+						/>
+					</Box>
+
+					<Box w="100%" h={300}>
+						<Image
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+								borderRadius: "10px",
+							}}
+							src={url8}
+							alt="Image 1"
+						/>
+					</Box>
+
+					<Box w="100%" h={300}>
+						<Image
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+								borderRadius: "10px",
+							}}
+							src={url9}
+							alt="Image 1"
+						/>
+					</Box>
+				</Slider>
+			</Box>
+
+			<Box  
 				display={{ md: "none", base: "block" }}
 				justifyContent="space-between"
-				position="relative">
+				position="relative" h={20}>
 				<Button
 					onClick={() => sliderRef2.current?.slickPrev()}
 					border="1px solid #D4D4D4"
 					bg="white"
 					color="black"
-					position="absolute"
-					left={0}
-					mt={150}
-					// ml={14}
+					ml="-140px"
 					p={2}
+					position="absolute"
+					mt={8}
 					zIndex={1}>
 					<FaAngleLeft />
 				</Button>
@@ -265,152 +396,14 @@ const SuccessSlider1 = () => {
 					border="1px solid #D4D4D4"
 					bg="white"
 					color="black"
-					position="absolute"
-					right={0}
-					mt={150}
-					// ml={-14}
 					p={2}
+					mt={8}
+					ml="100px"
+					position="absolute"
+
 					zIndex={1}>
 					<FaAngleRight />
 				</Button>
-			</Box>
-
-			<Box w="100%" display={{ md: "none", base: "block" }} mt="50px">
-				<Slider ref={sliderRef2} {...settings}>
-					 
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
-								src={url1}
-								alt="Image 1"
-							/>
-						</Box>
-
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
-								src={url2}
-								alt="Image 1"
-							/>
-						</Box>
-
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
-								src={url3}
-								alt="Image 1"
-							/>
-						</Box>
-
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
-								src={url4}
-								alt="Image 1"
-							/>
-						</Box>
-
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
-								src={url5}
-								alt="Image 1"
-							/>
-						</Box>
-					 
-
-					 	 
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
-								src={url10}
-								alt="Image 1"
-							/>
-						</Box>
-
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
-								src={url6}
-								alt="Image 1"
-							/>
-						</Box>
-
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
-								src={url7}
-								alt="Image 1"
-							/>
-						</Box>
-
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
-								src={url8}
-								alt="Image 1"
-							/>
-						</Box>
-
-						<Box w="100%" h={300}>
-							<Image
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "10px",
-								}}
-								src={url9}
-								alt="Image 1"
-							/>
-						</Box>
-					 
-				</Slider>
 			</Box>
 		</Box>
 	);

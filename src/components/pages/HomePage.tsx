@@ -20,7 +20,7 @@ const HomePage = () => {
       <Success/>
       <Branches/>
       <Stories/>
-      {/* <Video/> */}
+      <Video/>
       <Parentschildren/>
       <Questions/>
       
@@ -29,3 +29,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+ 

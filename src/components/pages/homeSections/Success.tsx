@@ -20,7 +20,7 @@ import { useLanguageStore } from "@/stores/useLanguageStore";
 const Success = () => {
 	const { t } = useLanguageStore();
 	return (
-		<Box w="100%">
+		<Box py={30} w="100%">
 			<Container maxW={CONTAINER_WIDTH}>
 				<Box
 					bg="#F2F5EB"
@@ -37,41 +37,43 @@ const Success = () => {
 							<TabList
 								// w={{ md: 400, base: "100%" }}
 								display="flex"
-								
 								justifyContent="center"
 								alignItems="center"
 								textAlign="center">
 								<Tab
 									fontWeight={700}
+									color="#D4D4D4"
 									fontSize={{ md: 16, base: 12 }}
 									sx={{
 										_selected: {
-											color: "#FF9100",
-											borderBottom: "2px solid #FF9100",
+											color: "black",
+											borderBottom: "2px solid black",
 										},
 										_focus: { boxShadow: "none" },
 									}}>
 									{t("Занятия", "Сабактар")}
 								</Tab>
 								<Tab
+									color="#D4D4D4"
 									fontWeight={700}
 									fontSize={{ md: 16, base: 12 }}
 									sx={{
 										_selected: {
-											color: "#FF9100",
-											borderBottom: "2px solid #FF9100",
+											color: "black",
+											borderBottom: "2px solid black",
 										},
 										_focus: { boxShadow: "none" },
 									}}>
 									{t("Мероприятия", "Иш-чаралар")}
 								</Tab>
 								<Tab
-								fontSize={{ md: 16, base: 12 }}
+									color="#D4D4D4"
+									fontSize={{ md: 16, base: 12 }}
 									fontWeight={700}
 									sx={{
 										_selected: {
-											color: "#FF9100",
-											borderBottom: "2px solid #FF9100",
+											color: "black",
+											borderBottom: "2px solid black",
 										},
 										_focus: { boxShadow: "none" },
 									}}>
@@ -79,48 +81,15 @@ const Success = () => {
 								</Tab>
 							</TabList>
 
-							<Flex
-								textAlign="center"
-								justifyContent="center"
-								alignItems="center"
-								mt="30px"
-								flexDirection={{ md: "row", base: "column" }}
-								gap={2}>
-								<Text
-									color="black"
-									fontFamily="Montserrat ,sans-serif"
-									fontSize={{ md: 50, base: 32  }}
-									fontWeight={500}>
-									{t("Успех в", "Ар бир сүрөттө")}
-								</Text>
-								<Box
-									mt={{ md: "16px", base: "-15px" }}
-									borderRadius={10}
-									p={1}
-									bg="#FF9100"
-									transform="rotate(-2deg)">
-									<Text
-										mt={{ md: "-16px", base: "-10px" }}
-										color="white"
-										transform="rotate(2deg)"
-										fontFamily="Montserrat ,sans-serif"
-										fontSize={{ md: 50, base: 32  }}
-										fontWeight={500}
-										p={1}>
-										{t("каждом кадре", "ийгилик")}
-									</Text>
-								</Box>
-							</Flex>
-
 							<TabPanels>
 								<TabPanel>
-									<SuccessSlider1 />
+									<SuccessSlider1 key="slider1" />
 								</TabPanel>
 								<TabPanel>
-									<SuccessSlider2 />
+									<SuccessSlider2 key="slider2" />
 								</TabPanel>
 								<TabPanel>
-									<SuccessSlider3 />
+									<SuccessSlider3 key="slider3" />
 								</TabPanel>
 							</TabPanels>
 						</Tabs>

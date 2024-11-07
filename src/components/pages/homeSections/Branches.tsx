@@ -1,6 +1,7 @@
 "use client";
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
 import { Box, Container, Flex, Text, Button } from "@chakra-ui/react";
+import { HiArrowUpRight } from "react-icons/hi2";
 import Image from "next/image";
 import twogis from "@/assets/2gis.png";
 import phone from "@/assets/whatsapp.png";
@@ -13,11 +14,10 @@ import director5 from "@/assets/director5.png";
 import director6 from "@/assets/director6.png";
 import director7 from "@/assets/director7.png";
 import director8 from "@/assets/director8.png";
+import director9 from "@/assets/director9.png";
+
 import { useLanguageStore } from "@/stores/useLanguageStore";
 import Link from "next/link";
-import cardfon1 from "@/assets/cardfon1.png";
-import cardfon2 from "@/assets/cardfon2.png";
-import cardfon3 from "@/assets/cardfon3.png";
 
 import {
 	FIFEILIAL,
@@ -33,8 +33,9 @@ import {
 	WHATSAPP_LINK,
 } from "@/constants/admin";
 
-import { FaPhone } from "react-icons/fa";
 import { useEffect } from "react";
+
+import fon from "@/assets/fon2.png";
 
 const Branches = () => {
 	const { t } = useLanguageStore();
@@ -51,17 +52,17 @@ const Branches = () => {
 		{
 			url: director,
 			title: t("Директор", "Директор"),
-			disc: t("Айтиева Кымбат Сайтбековна", "Айтиева Кымбат Сайтбековна"),
+			disc: t("Айтиева Кымбат Сайтбековна", "Айтиева Кымбат Сайтбекова"),
 		},
 		{
 			url: director2,
 			title: t("Академический директор", "Академиялык директор"),
-			disc: t("Старокожева Анна Владимировна", "Старокожева Анна Владимировна"),
+			disc: t("Старокожева Анна Владимировна", "Старокожева Анна Владимирова"),
 		},
 		{
 			url: director3,
 			title: t("Куратор воспитательной работы", "Тарбиялык иш боюнча куратор"),
-			disc: t("Жээналиева Асель Мусаевна", "Жээналиева Асель Мусаевна"),
+			disc: t("Жээналиева Асель Мусаевна", "Жээналиева Асель Мусаева"),
 		},
 	];
 
@@ -69,7 +70,7 @@ const Branches = () => {
 		{
 			url: director,
 			title: t("Директор", "Директор"),
-			disc: t("Айтиева Кымбат Сайтбековна", "Айтиева Кымбат Сайтбековна"),
+			disc: t("Айтиева Кымбат Сайтбековна", "Айтиева Кымбат Сайтбекова"),
 		},
 		{
 			url: director4,
@@ -82,7 +83,7 @@ const Branches = () => {
 		{
 			url: director5,
 			title: t("Куратор воспитательной работы", "Тарбиялык иш боюнча куратор"),
-			disc: t("Бекташова Элеонора Кыркбаевна", "Бекташова Элеонора Кыркбаевна"),
+			disc: t("Бекташова Элеонора Кыркбаевна", "Бекташова Элеонора Кыркбаева"),
 		},
 	];
 
@@ -90,14 +91,14 @@ const Branches = () => {
 		{
 			url: director6,
 			title: t("Директор", "Директор"),
-			disc: t("Никитенко Светлана Викторовна", "Никитенко Светлана Викторовна"),
+			disc: t("Никитенко Светлана Викторовна", "Никитенко Светлана Викторова"),
 		},
 		{
 			url: director7,
 			title: t("Академический директор", "Академиялык директор"),
 			disc: t(
 				"Чынгышова Айнура Айтманбетовна",
-				"Чынгышова Айнура Айтманбетовна"
+				"Чынгышова Айнура Айтманбетова"
 			),
 		},
 	];
@@ -106,58 +107,110 @@ const Branches = () => {
 		{
 			url: director8,
 			title: t("Академический директор", "Академиялык директор"),
-			disc: t("Кекер Лариса Анатольевна", "Кекер Лариса Анатольевна"),
+			disc: t("Кекер Лариса Анатольевна", "Кекер Лариса Анатольева"),
+		},
+	];
+
+	const box5 = [
+		{
+			url: director9,
+			title: t("Академический директор", "Академиялык директор"),
+			disc: t("Рубанова Анна Викторовна", "Рубанова Анна Викторова"),
 		},
 	];
 
 	return (
-		<Box id="#branches" w="100%" p="100px 0">
+		<Box id="#branches"
+			alignItems="center"
+			justifyContent="center"
+			w="100%"
+			p="100px 0"
+			bgImage={`url(${fon.src})`}
+			bgSize="cover"
+			bgPosition="center"
+			bgRepeat="no-repeat">
 			<Container maxW={CONTAINER_WIDTH}>
 				<Flex
 					textAlign="center"
 					justifyContent="center"
 					alignItems="center"
-					p="50px 0"
+					pb="50px"
 					flexDirection={{ md: "row", base: "column" }}
 					gap={2}>
 					<Text
-						color="black"
+						color="white"
 						fontFamily="Montserrat ,sans-serif"
-						fontSize={{ md: 56, base: 32 }}
+						fontSize={{ md: 60, base: 32 }}
 						fontWeight={500}>
-						{t("Филиалы по", "Бишкектеги")}
+						{t("Филиалы по Бишкеку", "Бишкектеги Филиалдар")}
 					</Text>
-					<Box
-						mt={{ md: "16px", base: "-15px" }}
-						h={{ md: "69px", base: "100%" }}
-						borderRadius={10}
-						bg="#D5ED9F"
-						transform="rotate(-2deg)">
-						<Text
-							mt={{ md: "-16px", base: "-10px" }}
-							color="#00712D"
-							transform="rotate(2deg)"
-							fontFamily="Montserrat ,sans-serif"
-							fontSize={{ md: 56, base: 32 }}
-							fontWeight={500}
-							p={1}>
-							{t("Бишкеку", "Филиалдар")}
-						</Text>
-					</Box>
 				</Flex>
 				<Flex justifyContent="center" flexWrap="wrap" gap={5}>
 					<Box
-						backgroundImage={`url(${cardfon1.src})`}
 						backgroundSize="cover"
 						backgroundPosition="center"
 						w={{ md: "380px", base: "100%" }}
+						h="100%"
 						borderRadius={30}
-						// bg="#2D7A73"
+						bg="#0D0D0D"
 						p="18px 18px 10px 18px">
+						<Flex flexDirection="column" gap={2}>
+							<Flex
+								// p="8px 0"
+								justifyContent="space-between"
+								alignItems="center">
+								<Text fontSize={18} fontWeight={700} color="#FF9100">
+									Филиал 1
+								</Text>
+								<Link href={`tel:${ONEFILIAL}`} target={"_blank"}>
+									<Text
+										fontSize={14}
+										fontWeight={400}
+										display="flex"
+										alignItems="center"
+										gap={2}
+										color="grey">
+										{ONEFILIAL} <HiArrowUpRight />
+									</Text>
+								</Link>
+							</Flex>
+							{box.map((item, index) => (
+								<Flex
+									key={index}
+									p={2}
+									bg="#212121"
+									borderRadius={10}
+									alignItems="center"
+									gap={4}>
+									<Image
+										style={{ borderRadius: "50%" }}
+										width={80}
+										height={80}
+										src={item.url}
+										alt="img"
+									/>
+
+									<Flex flexDirection="column" gap={1}>
+										<Text color="grey" fontSize={14} fontWeight={400}>
+											{item.title}
+										</Text>
+										<Text
+											color="white"
+											lineHeight="20px"
+											fontSize={16}
+											fontWeight={400}>
+											{item.disc}
+										</Text>
+									</Flex>
+								</Flex>
+							))}
+						</Flex>
 						<Flex
 							alignItems="center"
 							justifyContent="space-between"
 							gap={4}
+							p="8px 0"
+							mt={6}
 							width="100%">
 							<Box width="calc(100% - 51px)">
 								{" "}
@@ -165,8 +218,8 @@ const Branches = () => {
 									<Flex
 										alignItems="center"
 										justifyContent="start"
-										bg="white"
-										w="100%" // Keeps 100% width within parent Box
+										bg="#212121"
+										w="100%"
 										p={2}
 										gap={2}
 										borderRadius="50px">
@@ -177,7 +230,9 @@ const Branches = () => {
 											height={36}
 											alt="img"
 										/>
-										<Text>{t("ул.Чуйкова, 132А", "Чуйков көчөсү, 132А")}</Text>
+										<Text color="white">
+											{t("ул.Чуйкова, 132А", "Чуйков көчөсү, 132А")}
+										</Text>
 									</Flex>
 								</Link>
 							</Box>
@@ -201,13 +256,39 @@ const Branches = () => {
 								</Link>
 							</Box>
 						</Flex>
+					</Box>
 
-						<Flex mt={4} flexDirection="column" gap={2}>
-							{box.map((item, index) => (
+					<Box
+						backgroundSize="cover"
+						backgroundPosition="center"
+						w={{ md: "380px", base: "100%" }}
+						h="100%"
+						borderRadius={30}
+						bg="#0D0D0D"
+						p="18px 18px 10px 18px">
+						<Flex flexDirection="column" gap={2}>
+							<Flex justifyContent="space-between" alignItems="center">
+								<Text fontSize={18} fontWeight={700} color="#FF9100">
+									Филиал 2
+								</Text>
+								<Link href={`tel:${TWOFILIAL}`} target={"_blank"}>
+									<Text
+										fontSize={14}
+										fontWeight={400}
+										display="flex"
+										alignItems="center"
+										gap={2}
+										color="grey">
+										{TWOFILIAL} <HiArrowUpRight />
+									</Text>
+								</Link>
+							</Flex>
+							{box2.map((item, index) => (
 								<Flex
 									key={index}
 									p={2}
-									bg="white"
+									bg="#212121"
+									color="white"
 									borderRadius={10}
 									alignItems="center"
 									gap={4}>
@@ -229,42 +310,13 @@ const Branches = () => {
 									</Flex>
 								</Flex>
 							))}
-							<Flex
-								p="8px 0"
-								justifyContent="space-between"
-								alignItems="center">
-								<Text
-									fontSize={18}
-									fontWeight={700}
-									color="#00712D"
-									display="flex"
-									alignItems="center"
-									justifyContent="center"
-									w="38px"
-									h="38px"
-									borderRadius="50px"
-									bg="white">
-									1
-								</Text>
-								<Link href={`tel:${ONEFILIAL}`} target={"_blank"}>
-									<Text color="white">{ONEFILIAL}</Text>
-								</Link>
-							</Flex>
 						</Flex>
-					</Box>
-
-					<Box
-						backgroundImage={`url(${cardfon2.src})`}
-						backgroundSize="cover"
-						backgroundPosition="center"
-						w={{ md: "380px", base: "100%" }}
-						borderRadius={30}
-						// bg="#B698CA"
-						p="18px 18px 10px 18px">
 						<Flex
 							alignItems="center"
 							justifyContent="space-between"
 							gap={4}
+							p="8px 0"
+							mt={6}
 							width="100%">
 							<Box width="calc(100% - 51px)">
 								{" "}
@@ -272,8 +324,9 @@ const Branches = () => {
 									<Flex
 										alignItems="center"
 										justifyContent="start"
-										bg="white"
-										w="100%" // Keeps 100% width within parent Box
+										bg="#212121"
+										color="white"
+										w="100%"
 										p={2}
 										gap={2}
 										borderRadius="50px">
@@ -310,12 +363,40 @@ const Branches = () => {
 								</Link>
 							</Box>
 						</Flex>
-						<Flex mt={4} flexDirection="column" gap={2}>
-							{box2.map((item, index) => (
+					</Box>
+
+					<Box
+						w={{ md: "380px", base: "100%" }}
+						h={{ md: "458px", base: "486px" }}
+						borderRadius={30}
+						bg="#0D0D0D"
+						p="18px 18px 10px 18px"
+						display="flex"
+						flexDirection="column"
+						justifyContent="space-between">
+						<Flex flexDirection="column" gap={2}>
+							<Flex justifyContent="space-between" alignItems="center">
+								<Text fontSize={18} fontWeight={700} color="#FF9100">
+									Филиал 3
+								</Text>
+								<Link href={`tel:${THREEIFILIAL}`} target={"_blank"}>
+									<Text
+										fontSize={14}
+										fontWeight={400}
+										display="flex"
+										alignItems="center"
+										gap={2}
+										color="grey">
+										{THREEIFILIAL} <HiArrowUpRight />
+									</Text>
+								</Link>
+							</Flex>
+							{box3.map((item, index) => (
 								<Flex
 									key={index}
 									p={2}
-									bg="white"
+									bg="#212121"
+									color="white"
 									borderRadius={10}
 									alignItems="center"
 									gap={4}>
@@ -326,7 +407,6 @@ const Branches = () => {
 										src={item.url}
 										alt="img"
 									/>
-
 									<Flex flexDirection="column" gap={1}>
 										<Text color="grey" fontSize={14} fontWeight={400}>
 											{item.title}
@@ -337,42 +417,13 @@ const Branches = () => {
 									</Flex>
 								</Flex>
 							))}
-							<Flex
-								p="8px 0"
-								justifyContent="space-between"
-								alignItems="center">
-								<Text
-									fontSize={18}
-									fontWeight={700}
-									color="#00712D"
-									display="flex"
-									alignItems="center"
-									justifyContent="center"
-									w="38px"
-									h="38px"
-									borderRadius="50px"
-									bg="white">
-									2
-								</Text>
-								<Link href={`tel:${TWOFILIAL}`} target={"_blank"}>
-									<Text color="white">{TWOFILIAL}</Text>
-								</Link>
-							</Flex>
 						</Flex>
-					</Box>
-
-					<Box
-						backgroundImage={`url(${cardfon3.src})`}
-						backgroundSize="cover"
-						backgroundPosition="center"
-						w={{ md: "380px", base: "100%" }}
-						borderRadius={30}
-						// bg="#F0926C"
-						p="18px 18px 10px 18px">
 						<Flex
 							alignItems="center"
 							justifyContent="space-between"
 							gap={4}
+							p="8px 0"
+							mt={6}
 							width="100%">
 							<Box width="calc(100% - 51px)">
 								{" "}
@@ -380,8 +431,9 @@ const Branches = () => {
 									<Flex
 										alignItems="center"
 										justifyContent="start"
-										bg="white"
-										w="100%" // Keeps 100% width within parent Box
+										bg="#212121"
+										w="100%"
+										color="white"
 										p={2}
 										gap={2}
 										borderRadius="50px">
@@ -418,83 +470,33 @@ const Branches = () => {
 								</Link>
 							</Box>
 						</Flex>
-						<Flex mt={4} flexDirection="column" gap={2}>
-							{box3.map((item, index) => (
-								<Flex
-									key={index}
-									p={2}
-									bg="white"
-									borderRadius={10}
-									alignItems="center"
-									gap={4}>
-									<Image
-										style={{ borderRadius: "50%" }}
-										width={80}
-										height={80}
-										src={item.url}
-										alt="img"
-									/>
-									<Flex flexDirection="column" gap={1}>
-										<Text color="grey" fontSize={14} fontWeight={400}>
-											{item.title}
-										</Text>
-										<Text lineHeight="20px" fontSize={16} fontWeight={400}>
-											{item.disc}
-										</Text>
-									</Flex>
-								</Flex>
-							))}
-							<Flex
-								p="8px 0"
-								justifyContent="space-between"
-								alignItems="center"
-								mt="105px">
-								<Text
-									fontSize={18}
-									fontWeight={700}
-									color="#00712D"
-									display="flex"
-									alignItems="center"
-									justifyContent="center"
-									w="38px"
-									h="38px"
-									borderRadius="50px"
-									bg="white">
-									3
-								</Text>
-								<Link href={`tel:${THREEIFILIAL}`} target={"_blank"}>
-									<Text color="white">{THREEIFILIAL}</Text>
-								</Link>
-							</Flex>
-						</Flex>
 					</Box>
 
 					<Box
-						w={{ md: "775px", base: "100%" }}
+						w={{ md: "580px", base: "100%" }}
+						h={{ md: "100%", base: "100%" }}
 						borderRadius={30}
-						bg="#F8F5FE"
+						bg="#0D0D0D"
 						p="18px 18px 18px 18px">
-						<Flex
-							flexDirection={{ md: "row", base: "column-reverse" }}
-							gap={4}
-							justifyContent="space-between">
-							<Box display={{ md: "none", base: "block" }}>
-								<Flex alignItems="center" gap={6}>
-									<Text
-										fontSize={18}
-										fontWeight={700}
-										color="#00712D"
-										display="flex"
-										alignItems="center"
-										justifyContent="center"
-										w="38px"
-										h="38px"
-										borderRadius="50px"
-										bg="white">
-										4
+						<Flex flexDirection="column" gap={4} justifyContent="space-between">
+							<Box w="100%">
+								<Flex
+									alignItems="center"
+									justifyContent="space-between"
+									gap={6}>
+									<Text fontSize={18} fontWeight={700} color="#FF9100">
+										Филиал 4
 									</Text>
 									<Link href={`tel:${FOFILIAL}`} target={"_blank"}>
-										<Text color="black">{FOFILIAL}</Text>
+										<Text
+											fontSize={14}
+											fontWeight={400}
+											display="flex"
+											alignItems="center"
+											gap={2}
+											color="grey">
+											{FOFILIAL} <HiArrowUpRight />
+										</Text>
 									</Link>
 								</Flex>
 							</Box>
@@ -503,7 +505,8 @@ const Branches = () => {
 								<Flex
 									key={index}
 									p={2}
-									bg="white"
+									bg="#212121"
+									color="white"
 									w={{ md: "100%", base: "100%" }}
 									borderRadius={10}
 									alignItems="center"
@@ -538,7 +541,7 @@ const Branches = () => {
 											<Flex
 												alignItems="center"
 												justifyContent="start"
-												bg="white"
+												bg="#212121"
 												w="100%"
 												p={2}
 												gap={2}
@@ -550,7 +553,7 @@ const Branches = () => {
 													height={36}
 													alt="img"
 												/>
-												<Text>
+												<Text color="white">
 													{t(
 														"ул.Байтик Баатыра, 5К",
 														"Байтик Баатыр көчөсү, 5К."
@@ -579,36 +582,67 @@ const Branches = () => {
 										</Link>
 									</Box>
 								</Flex>
-								<Box display={{ md: "flex", base: "none" }}>
-									<Flex p="8px 0" alignItems="center" gap={6}>
-										<Text
-											fontSize={18}
-											fontWeight={700}
-											color="#00712D"
-											display="flex"
-											alignItems="center"
-											justifyContent="center"
-											w="38px"
-											h="38px"
-											borderRadius="50px"
-											bg="white">
-											4
-										</Text>
-										<Link href={`tel:${FOFILIAL}`} target={"_blank"}>
-											<Text color="black">{FOFILIAL}</Text>
-										</Link>
-									</Flex>
-								</Box>
 							</Flex>
 						</Flex>
 					</Box>
 
 					<Box
-						w={{ md: "385px", base: "100%" }}
+						w={{ md: "580px", base: "100%" }}
 						borderRadius={30}
-						bg="#F8F5FE"
+						h={{ md: "100%", base: "100%" }}
+						bg="#0D0D0D"
 						p="18px 18px 18px 18px">
-						<Flex gap={8} justifyContent="space-between">
+						<Flex flexDirection="column" gap={4} justifyContent="space-between">
+							<Box w="100%">
+								<Flex
+									alignItems="center"
+									justifyContent="space-between"
+									gap={6}>
+									<Text fontSize={18} fontWeight={700} color="#FF9100">
+										Филиал 5
+									</Text>
+									<Link href={`tel:${FIFEILIAL}`} target={"_blank"}>
+										<Text
+											fontSize={14}
+											fontWeight={400}
+											display="flex"
+											alignItems="center"
+											gap={2}
+											color="grey">
+											{FIFEILIAL} <HiArrowUpRight />
+										</Text>
+									</Link>
+								</Flex>
+							</Box>
+
+							{box5.map((item, index) => (
+								<Flex
+									key={index}
+									p={2}
+									bg="#212121"
+									color="white"
+									w={{ md: "100%", base: "100%" }}
+									borderRadius={10}
+									alignItems="center"
+									gap={4}>
+									<Image
+										style={{ borderRadius: "50%" }}
+										width={80}
+										height={80}
+										src={item.url}
+										alt="img"
+									/>
+									<Flex flexDirection="column" gap={1}>
+										<Text color="grey" fontSize={14} fontWeight={400}>
+											{item.title}
+										</Text>
+										<Text lineHeight="20px" fontSize={16} fontWeight={400}>
+											{item.disc}
+										</Text>
+									</Flex>
+								</Flex>
+							))}
+
 							<Flex w="100%" flexDirection="column" gap={2}>
 								<Flex
 									alignItems="center"
@@ -621,7 +655,7 @@ const Branches = () => {
 											<Flex
 												alignItems="center"
 												justifyContent="start"
-												bg="white"
+												bg="#212121"
 												w="100%"
 												p={2}
 												gap={2}
@@ -633,7 +667,7 @@ const Branches = () => {
 													height={36}
 													alt="img"
 												/>
-												<Text>
+												<Text color="white">
 													{t("ул.Чуйкова, 132/6", "Чуйков көчөсү, 132/6")}
 												</Text>
 											</Flex>
@@ -658,24 +692,6 @@ const Branches = () => {
 											/>
 										</Link>
 									</Box>
-								</Flex>
-								<Flex p="8px 0" alignItems="center" gap={6}>
-									<Text
-										fontSize={18}
-										fontWeight={700}
-										color="#00712D"
-										display="flex"
-										alignItems="center"
-										justifyContent="center"
-										w="38px"
-										h="38px"
-										borderRadius="50px"
-										bg="white">
-										5
-									</Text>
-									<Link href={`tel:${FIFEILIAL}`} target={"_blank"}>
-										<Text color="black">{FIFEILIAL}</Text>
-									</Link>
 								</Flex>
 							</Flex>
 						</Flex>

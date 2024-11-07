@@ -1,182 +1,174 @@
 "use client";
-import { CONTAINER_ABOUT } from "@/config/_variables.config";
-import { Box, Button, Container, Flex, Text } from "@chakra-ui/react";
-import Image from "next/image";
-import React, { useEffect } from "react";
-import img from "../../../assets/about.png";
+import { CONTAINER_WIDTH } from "@/config/_variables.config";
+import {
+	Box,
+	Container,
+	Flex,
+	ListItem,
+	OrderedList,
+	Text,
+	UnorderedList,
+} from "@chakra-ui/react";
 
-import image1 from "../../../assets/about1.png";
-import image2 from "../../../assets/about2.png";
-import image3 from "../../../assets/about3.png";
-import image4 from "../../../assets/about4.png";
+import img from "@/assets/about.png";
+import img1 from "@/assets/about1.png";
+import img2 from "@/assets/about2.png";
+import img3 from "@/assets/about3.png";
+import img4 from "@/assets/about4.png";
+import img5 from "@/assets/about5.png";
+import img6 from "@/assets/about6.png";
+import img7 from "@/assets/about7.png";
+
+import Image from "next/image";
 import { useLanguageStore } from "@/stores/useLanguageStore";
-import { Link as ScrollLink } from "react-scroll";
-import { IoArrowDownSharp } from "react-icons/io5";
 
 const About = () => {
 	const { t } = useLanguageStore();
-	useEffect(() => {
-		const link = document.createElement("link");
-		link.href =
-			"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap";
-		link.rel = "stylesheet";
-		document.head.appendChild(link);
-	}, []);
 
-	const card = [
+	const data = [
 		{
-			url: image1,
-			title: t(
-				"Достижения учеников и школы",
-				"Окуучулар менен мектептин жетишкендиктери"
-			),
-			disc: t(
-				"Наши ученики — победители республиканских и международных олимпиад.",
-				"Биздин окуучулар — республикалык жана эл аралык олимпиадалардын жеңүүчүлөрү."
+			url: img,
+			title: t("Школа полного дня", "Толук күндүк мектеп"),
+			descrip: [
+				{
+					desc: t(
+						"8:00 - 17:00 дети заняты,",
+						"8:00 - 17:00 балдар мектепте алек болушат."
+					),
+				},
+				{
+					desc: t(
+						"17:00 дети садятся на трансфер, ",
+						"17:00 балдар трансферге отурушат."
+					),
+				},
+				{
+					desc: t(
+						"ожидание родителей до 18:30.",
+						"18:30 чейин ата-энелерин күтүп турушат."
+					),
+				},
+			],
+		},
+	];
+
+	const data2 = [
+		{
+			url: img1,
+			title: t("До 16 учеников", "16 окуучуго чейин"),
+			desc: t(
+				"Учителя могут уделить внимание каждому ребенку благодаря малочисленным классам.",
+				"Кичи класстар ар бир окуучуга мугалимдердин жетиштүү көңүл буруусуна шарт түзөт."
 			),
 		},
 		{
-			url: image2,
-			title: t("Цели обучения", "Окуу максаттары"),
-			disc: t(
-				"Мы воспитываем социально ответственных и уверенных в своих силах учеников.",
-				"Биз социалдык жоопкерчиликтүү жана өзүнө ишенген окуучуларды тарбиялайбыз."
+			url: img2,
+			title: t("3-разовое питание", "3 маал тамактануу"),
+			desc: t(
+				"В течение дня дети получают полноценное питание, что помогает поддерживать их энергию и здоровье.",
+				"Күн ичинде балдар толук кандуу тамактануу менен энергиясын жана ден соолугун сакташат."
 			),
 		},
 		{
-			url: image3,
-			title: t("Современные методики", "Заманбап методдор"),
-			disc: t(
-				"Мы успешно сочетаем проверенные практики прошлого и современные подходы.",
-				"Биз өткөндүн текшерилген тажрыйбаларын жана заманбап ыкмаларды ийгиликтүү айкалыштырабыз."
+			url: img3,
+			title: t("Изучение 5 языков", "5 тилди үйрөнүү"),
+			desc: t(
+				"Мы обучаем английскому, русскому, китайскому, кыргызскому и программированию.",
+				"Биз англис, орус, кытай, кыргыз тилдерин жана программалоону окутабыз."
 			),
 		},
 		{
-			url: image4,
-			title: t("Genius School", "Genius School"),
-			disc: t(
-				"Наша школа — это лестница, по которой ученики развиваются всесторонне.",
-				"Биздин мектебибиз — окуучуларды ар тараптан өнүктүргөн баскыч."
+			url: img4,
+			title: t("Выполнение Д/З в школе", "Үй тапшырмасын мектепте аткаруу"),
+			desc: t(
+				"Домашние задания выполняются под присмотром учителей, что освобождает время для семьи.",
+				"Үй тапшырмалары мугалимдердин көзөмөлүндө аткарылат, бул үй-бүлөгө көбүрөөк убакыт калтырат."
+			),
+		},
+		{
+			url: img5,
+			title: t("5 филиалов по Бишкеку", "Бишкек боюнча 5 филиал"),
+			desc: t(
+				"Удобное расположение филиалов по городу позволяет легко выбрать школу рядом с домом.",
+				"Шаар боюнча филиалдардын ыңгайлуу жайгашуусу мектепти үйгө жакын жерден тандоого мүмкүнчүлүк берет."
+			),
+		},
+		{
+			url: img6,
+			title: t("Комфортный трансфер", "Ыңгайлуу трансфер"),
+			desc: t(
+				"Мы обеспечиваем удобный и безопасный трансфер детей из дома в школу и обратно.",
+				"Биз балдарды үйдөн мектепке жана кайра коопсуз жана ыңгайлуу жеткирүү менен камсыздайбыз."
+			),
+		},
+		{
+			url: img7,
+			title: t("Кружки", "Кружоктор"),
+			desc: t(
+				"Мы предлагаем спортивные секции, творческие студии, интеллектуальные игры и музыкальные занятия.",
+				"Биз спорт секцияларын, чыгармачыл студияларды, интеллектуалдык оюндарды жана музыкалык сабактарды сунуштайбыз."
 			),
 		},
 	];
 
-	const links = [
-		{
-			name: t("УЗНАТЬ БОЛЬШЕ", "КӨБҮРӨӨК МААЛЫМАТ АЛУУ"),
-			link: "#what",
-		},
-	];
 	return (
-		<Box id="#about" w="100%" p="0px 0px 100px 0px">
-			<Container maxW={CONTAINER_ABOUT}>
+		<Box id="#about"  pb={{ md: 20, base: 20 }}>
+			<Container maxW={CONTAINER_WIDTH}>
+				<Text textAlign="center" pb={10} fontSize={{ md: 60, base: 32 }} fontWeight={500}>
+					{t("Что предлагает", "биздин сунуш")}{" "}
+					<span style={{ color: "#118A39", textTransform: "uppercase" }}>
+						 {t("GENIUS.KG", "GENIUS.KG")}
+					</span>
+				</Text>
+
 				<Box>
-					<Flex
-						alignItems="center"
-						justifyContent="start"
-						flexDirection={{ md: "row", base: "column" }}
-						gap={2}>
-						<Text
-							color="black"
-							fontFamily="Montserrat ,sans-serif"
-							fontSize={{ md: 56, base: 34 }}
-							fontWeight={500}>
-							{t("О Школе", "Мектеп жөнүндө ")}
-						</Text>
-					</Flex>
-
-					<Flex mt="40px" flexWrap="wrap" justifyContent="center" gap={10}>
-						<Box
-							w={{ md: 760, base: "100%" }}
-							p={{ md: 8, base: 4 }}
-							bg="#F5F7F1"
-							borderRadius={20}>
-							<Image width={23} height={23} src={img} alt="" />
-							<Box p={{ md: 8, base: "4px 0" }}>
-								<Text
-									color="#00712D"
-									fontSize={{ md: 40, base: 22 }}
-									fontWeight={400}
-									lineHeight={{ md: "40px", base: "30px" }}>
-									&quot;{t("Гениус.Кейджи", "Гениус.Кейджи")}&quot;{" "}
-									{t("– частная", "")}
-									<Box ml={{ md: "12px", base: "0px" }}>
-										{t(
-											"общеобразовательная \n школа.",
-											"Жалпы билим берүү мектеби."
-										)
-											.split("\n")
-											.map((line, index) => (
-												<React.Fragment key={index}>
-													{line}
-													<br />
-												</React.Fragment>
-											))}
-									</Box>
-								</Text>
-
-								{links.map((item, index) => (
-									<Button
-										key={index}
-										bg="#00712D"
-										w={{ md: "270px", base: "100%" }}
-										mt={{ md: 8, base: 4 }}
-										fontFamily="Arial"
-										display="flex"
-										alignItems="center"
-										gap="10px"
-										borderRadius="50px"
-										p={{
-											md: "20px 10px 20px 20px",
-											base: "25px 20px 25px 20px",
-										}}
-										fontSize="14px"
-										fontWeight="700"
-										color="white">
-										<ScrollLink
-											activeClass="active"
-											to={item.link}
-											spy={true}
-											smooth={true}
-											offset={0}
-											duration={700}
-											style={{
-												display: "flex",
-												alignItems: "center",
-												gap: "10px",
-											}}>
-											{item.name}
-											<Box
-												bg="white"
-												color="#00712D"
-												borderRadius="50px"
-												p={{ md: "5px", base: "8px" }}
-												fontSize="14px">
-												<IoArrowDownSharp />
-											</Box>
-										</ScrollLink>
-									</Button>
-								))}
-							</Box>
-						</Box>
-
-						{card.map((item, index) => (
+					<Flex gap={3} flexWrap="wrap">
+						{data.map((el, index) => (
 							<Flex
-								boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-								flexDirection="column"
+								alignItems="start"
 								gap={4}
-								w={{ md: 360, base: "100%" }}
-								bg="#FFFFFF"
-								borderRadius={20}
-								p={8}
-								key={index}>
-								<Image width={80} height={80} src={item.url} alt="" />
-								<Text fontSize={22} fontWeight={700}>
-									{item.title}
-								</Text>
-								<Text color="#636363" fontSize={16} fontWeight={400}>
-									{item.disc}
-								</Text>
+								flexDirection={{ md: "column", base: "row" }}
+								key={index}
+								borderRadius={10}
+								w={{ md: 321, base: "100%" }}
+								bg="#118A39"
+								p={5}>
+								<Image width={56} height={56} src={el.url} alt="img" />
+								<Box>
+									<Text color="white" fontSize={22} fontWeight={600}>
+										{el.title}
+									</Text>
+									<UnorderedList color="white">
+										{el.descrip.map((el, index) => (
+											<ListItem key={index}>
+												<Text fontSize={15} fontWeight={400} color="white">
+													{el.desc}
+												</Text>
+											</ListItem>
+										))}
+									</UnorderedList>
+								</Box>
+							</Flex>
+						))}
+						{data2.map((el, index) => (
+							<Flex
+								alignItems="start"
+								gap={4}
+								flexDirection={{ md: "column", base: "row" }}
+								key={index}
+								borderRadius={10}
+								w={{ md: 321, base: "100%" }}
+								bg="#E3E3E3"
+								p={5}>
+								<Image width={56} height={56} src={el.url} alt="img" />
+								<Box>
+									<Text fontSize={22} fontWeight={600}>
+										{el.title}
+									</Text>
+									<Text fontSize={15} fontWeight={400} color="#8A8A8A">
+										{el.desc}
+									</Text>
+								</Box>
 							</Flex>
 						))}
 					</Flex>
