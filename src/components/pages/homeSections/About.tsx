@@ -1,4 +1,4 @@
- "use client";
+"use client";
 import { CONTAINER_WIDTH } from "@/config/_variables.config";
 import {
 	Box,
@@ -118,9 +118,17 @@ const About = () => {
 	];
 
 	return (
-		<Box id="#about" py={{ md: 22, base: 0 }} pb={{ md: 20, base: 20 }} ref={ref}>
+		<Box
+			id="#about"
+			py={{ md: 22, base: 0 }}
+			pb={{ md: 20, base: 20 }}
+			ref={ref}>
 			<Container maxW={CONTAINER_WIDTH}>
-				<Text textAlign="center" pb={10} fontSize={{ md: 60, base: 32 }} fontWeight={500}>
+				<Text
+					textAlign="center"
+					pb={10}
+					fontSize={{ md: 60, base: 32 }}
+					fontWeight={500}>
 					{t("Что предлагает", "биздин сунуш")}{" "}
 					<span style={{ color: "#118A39", textTransform: "uppercase" }}>
 						{t("GENIUS.KG", "GENIUS.KG")}
@@ -140,18 +148,22 @@ const About = () => {
 								key={index}
 								borderRadius={10}
 								w={{ md: 321, base: "100%" }}
-								bg="#118A39"
-								p={5}
-							>
+								bg="#E3E3E3"
+								className="about_card"
+								p={5}>
 								<Image width={56} height={56} src={el.url} alt="img" />
 								<Box>
-									<Text color="white" fontSize={22} fontWeight={600}>
+									<Text fontSize={22} fontWeight={600}>
 										{el.title}
 									</Text>
-									<UnorderedList color="white">
+									<UnorderedList className="text" color="#8A8A8A">
 										{el.descrip.map((el, index) => (
 											<ListItem key={index}>
-												<Text fontSize={15} fontWeight={400} color="white">
+												<Text
+													className="text"
+													color="#8A8A8A"
+													fontSize={15}
+													fontWeight={400}>
 													{el.desc}
 												</Text>
 											</ListItem>
@@ -171,15 +183,20 @@ const About = () => {
 								key={index}
 								borderRadius={10}
 								w={{ md: 321, base: "100%" }}
+								_hover={{ bg: "#118A39", transition: "0.3s", color: "white" }}
 								bg="#E3E3E3"
 								p={5}
-							>
+								className="about_card">
 								<Image width={56} height={56} src={el.url} alt="img" />
 								<Box>
 									<Text fontSize={22} fontWeight={600}>
 										{el.title}
 									</Text>
-									<Text fontSize={15} fontWeight={400} color="#8A8A8A">
+									<Text
+										className="text"
+										fontSize={15}
+										fontWeight={400}
+										color="#8A8A8A">
 										{el.desc}
 									</Text>
 								</Box>

@@ -152,8 +152,8 @@ const Stories = () => {
 						</Tab>
 					</TabList>
 
-					<TabPanels>
-						<TabPanel display="flex" flexDirection={{ md: "column", base: "column-reverse" }}>
+					<TabPanels   >
+						<TabPanel   p={{ md: "20px", base: "0" }} display="flex" flexDirection={{ md: "column", base: "column-reverse" }}>
 							<Flex
 								justifyContent="space-between"
 								alignItems="center"
@@ -189,10 +189,10 @@ const Stories = () => {
 								display="flex"
 								justifyContent="space-between"
 								gap={20}
-								flexDirection="column">
+								flexDirection="column" mt={{ md: 0, base: 10 }}>
 								<Slider ref={sliderRef1} {...settings}>
 									{box.map((el, index) => (
-										<Box key={index} px={2}>
+										<Box key={index} px={{ md: 2, base: 0 }}>
 											<Box
 												display="flex"
 												flexDirection="column"
@@ -233,7 +233,7 @@ const Stories = () => {
 							</Box>
 						</TabPanel>
 
-						<TabPanel display="flex" flexDirection={{ md: "column", base: "column-reverse" }}>
+						<TabPanel  p={{ md: "20px", base: "0" }}  display="flex" flexDirection={{ md: "column", base: "column-reverse" }}>
 						<Flex
 								justifyContent="space-between"
 								alignItems="center"
@@ -269,7 +269,7 @@ const Stories = () => {
 								display="flex"
 								justifyContent="space-between"
 								gap={20}
-								flexDirection="column">
+								flexDirection="column" mt={{ md: 0, base: 10 }}>
 								<Slider ref={sliderRef2} {...settings}>
 									{box2.map((el, index) => (
 										<Box key={index} px={2}>
