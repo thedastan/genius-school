@@ -6,7 +6,6 @@ import Image from "next/image";
 import twogis from "@/assets/2gis.png";
 import phone from "@/assets/whatsapp.png";
 
-import director from "@/assets/director.png";
 import director2 from "@/assets/director2.png";
 import director3 from "@/assets/director3.png";
 import director4 from "@/assets/director4.png";
@@ -50,11 +49,6 @@ const Branches = () => {
 
 	const box = [
 		{
-			url: director,
-			title: t("Директор", "Директор"),
-			disc: t("Айтиева Кымбат Сайтбековна", "Айтиева Кымбат Сайтбекова"),
-		},
-		{
 			url: director2,
 			title: t("Академический директор", "Академиялык директор"),
 			disc: t("Старокожева Анна Владимировна", "Старокожева Анна Владимирова"),
@@ -67,11 +61,6 @@ const Branches = () => {
 	];
 
 	const box2 = [
-		{
-			url: director,
-			title: t("Директор", "Директор"),
-			disc: t("Айтиева Кымбат Сайтбековна", "Айтиева Кымбат Сайтбекова"),
-		},
 		{
 			url: director4,
 			title: t("Академический директор", "Академиялык директор"),
