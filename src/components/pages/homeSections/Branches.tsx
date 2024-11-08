@@ -388,7 +388,7 @@ const Branches = () => {
 									color="white"
 									borderRadius={10}
 									alignItems="center"
-									gap={4}>
+									gap={2}>
 									<Image
 										style={{ borderRadius: "50%" }}
 										width={80}
